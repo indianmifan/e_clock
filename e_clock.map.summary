@@ -1,7 +1,5 @@
-Analysis & Synthesis Status : Successful - Fri Mar 29 11:44:18 2019
+Analysis & Synthesis Status : Failed - Fri Mar 29 13:14:39 2019
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : e_clock
 Top-level Entity Name : e_clock
 Family : MAX7000S
-Total macrocells : 120
-Total pins : 40

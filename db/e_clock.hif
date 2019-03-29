@@ -78,6 +78,7 @@ ON
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20
+time_core:inst10|lpm_compare1:inst20
 time_core:inst8|lpm_compare1:inst20
 }
 # lmf
@@ -666,6 +667,8 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
+time_core:inst10|counter_60_160:inst1
+time_core:inst10|counter_60_160:inst3
 time_core:inst8|counter_60_160:inst1
 time_core:inst8|counter_60_160:inst3
 }
@@ -715,6 +718,7 @@ ON
 }
 # hierarchies {
 e_clock_counter:inst14|BCD_seven:inst2
+time_core:inst10|BCD_seven:inst2
 time_core:inst8|BCD_seven:inst2
 }
 # lmf
@@ -749,6 +753,7 @@ ON
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19
+time_core:inst10|lpm_compare2:inst19
 time_core:inst8|lpm_compare2:inst19
 }
 # lmf
@@ -2756,6 +2761,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
+time_core:inst10|counter_24_160:inst8
 time_core:inst8|counter_24_160:inst8
 }
 # macro_sequence
@@ -2776,6 +2782,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
+time_core:inst10
 time_core:inst8
 }
 # macro_sequence
@@ -2974,6 +2981,7 @@ datab13
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component
+time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 }
 # macro_sequence
@@ -3136,6 +3144,7 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
+time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
@@ -3322,6 +3331,7 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
@@ -3362,6 +3372,10 @@ SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb
 SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
@@ -3385,6 +3399,12 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
+time_core:inst10|counter_60_160:inst1|74160:inst1
+time_core:inst10|counter_60_160:inst1|74160:inst
+time_core:inst10|counter_60_160:inst3|74160:inst1
+time_core:inst10|counter_60_160:inst3|74160:inst
+time_core:inst10|counter_24_160:inst8|74160:inst1
+time_core:inst10|counter_24_160:inst8|74160:inst
 time_core:inst8|counter_60_160:inst1|74160:inst1
 time_core:inst8|counter_60_160:inst1|74160:inst
 time_core:inst8|counter_60_160:inst3|74160:inst1
@@ -3636,6 +3656,7 @@ datab21
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component
+time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component
 }
 # macro_sequence
@@ -3846,6 +3867,7 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
+time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
@@ -4080,6 +4102,7 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
@@ -5143,7 +5166,7 @@ db|e_clock.(0).cnf
 # case_insensitive
 # source_file
 e_clock.bdf
-b788aee25e565bb21f6d1d4167ad029
+c1d2c27b32e5846a3a4dbeb25ab5d561
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
