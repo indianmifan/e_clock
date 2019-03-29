@@ -103,7 +103,6 @@ set_global_assignment -name BDF_FILE SHOWCONTROLER.bdf
 set_global_assignment -name MISC_FILE "G:/ssss/e_clock-master/e_clock.dpf"
 set_location_assignment PIN_63 -to Set1
 set_location_assignment PIN_64 -to Set2
-set_location_assignment PIN_69 -to SelDir
 set_location_assignment PIN_80 -to SetAlarm
 set_location_assignment PIN_81 -to SetTime
 set_location_assignment PIN_57 -to SoundCLK
@@ -112,6 +111,7 @@ set_location_assignment PIN_65 -to StopCounter
 set_location_assignment PIN_58 -to CLK
 set_location_assignment PIN_70 -to CLR
 set_location_assignment PIN_79 -to choose
-set_location_assignment PIN_67 -to aa
 set_location_assignment PIN_68 -to ALARM
 set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/e_clock29/e_clock.dpf"
+set_global_assignment -name BDF_FILE SoundCtr.bdf
+set_location_assignment PIN_67 -to SetDir

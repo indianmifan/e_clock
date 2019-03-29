@@ -1,5 +1,5 @@
 Flow report for e_clock
-Fri Mar 29 11:10:49 2019
+Fri Mar 29 11:44:22 2019
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Fri Mar 29 11:10:49 2019    ;
+; Flow Status             ; Successful - Fri Mar 29 11:44:22 2019    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; e_clock                                  ;
 ; Top-level Entity Name   ; e_clock                                  ;
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/29/2019 11:10:43 ;
+; Start date & time ; 03/29/2019 11:44:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; e_clock             ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                                  ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 2200299517014.155382904204644                                          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 2200299517014.155383105502352                                          ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                            ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                            ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                            ; --            ; --          ; --             ;
@@ -101,9 +101,9 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 220 MB              ; 00:00:02                           ;
 ; Fitter                  ; 00:00:01     ; 1.0                     ; 166 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 166 MB              ; 00:00:00                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 166 MB              ; 00:00:00                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 141 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:06     ; --                      ; --                  ; 00:00:04                           ;
+; Total                   ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for e_clock
-Fri Mar 29 11:10:45 2019
+Fri Mar 29 11:44:18 2019
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -13,13 +13,13 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Source assignments for DigitalClock:inst15|lpm_counter:clk_rtl_0
-  9. Parameter Settings for User Entity Instance: lpm_compare1:inst20|lpm_compare:lpm_compare_component
- 10. Parameter Settings for User Entity Instance: time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component
- 11. Parameter Settings for User Entity Instance: time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component
- 12. Parameter Settings for User Entity Instance: lpm_compare0:inst|lpm_compare:lpm_compare_component
- 13. Parameter Settings for User Entity Instance: lpm_compare2:inst19|lpm_compare:lpm_compare_component
- 14. Parameter Settings for Inferred Entity Instance: DigitalClock:inst15|lpm_counter:clk_rtl_0
+  8. Source assignments for SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0
+  9. Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component
+ 10. Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component
+ 11. Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component
+ 12. Parameter Settings for User Entity Instance: time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component
+ 13. Parameter Settings for User Entity Instance: time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component
+ 14. Parameter Settings for Inferred Entity Instance: SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0
  15. Analysis & Synthesis Messages
 
 
@@ -46,7 +46,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Mar 29 11:10:45 2019    ;
+; Analysis & Synthesis Status ; Successful - Fri Mar 29 11:44:18 2019    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; e_clock                                  ;
 ; Top-level Entity Name       ; e_clock                                  ;
@@ -145,19 +145,20 @@ applicable agreement for further details.
 ; lpm_compare1.vhd                 ; yes             ; User Wizard-Generated File               ; C:/Users/Administrator/Desktop/e_clock29/lpm_compare1.vhd      ;
 ; lpm_compare2.vhd                 ; yes             ; User Wizard-Generated File               ; C:/Users/Administrator/Desktop/e_clock29/lpm_compare2.vhd      ;
 ; SHOWCONTROLER.bdf                ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Administrator/Desktop/e_clock29/SHOWCONTROLER.bdf     ;
+; SoundCtr.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Administrator/Desktop/e_clock29/SoundCtr.bdf          ;
 ; digitalclock.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/Administrator/Desktop/e_clock29/digitalclock.vhd      ;
 ; lpm_compare.tdf                  ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/lpm_compare.tdf   ;
 ; comptree.tdf                     ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/comptree.tdf      ;
 ; cmpchain.tdf                     ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/cmpchain.tdf      ;
 ; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/altshift.tdf      ;
-; counter_60_160.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/e_clock29/counter_60_160.bdf    ;
-; 74160.bdf                        ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/others/maxplus2/74160.bdf       ;
-; counter_24_160.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/e_clock29/counter_24_160.bdf    ;
 ; lpm_compare0.tdf                 ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/Administrator/Desktop/e_clock29/lpm_compare0.tdf      ;
 ; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/lpm_compare.inc   ;
 ; e_clock_counter.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/e_clock29/e_clock_counter.bdf   ;
 ; counter60_counter.vhd            ; yes             ; Auto-Found VHDL File                     ; C:/Users/Administrator/Desktop/e_clock29/counter60_counter.vhd ;
 ; counter24_counter.vhd            ; yes             ; Auto-Found VHDL File                     ; C:/Users/Administrator/Desktop/e_clock29/counter24_counter.vhd ;
+; counter_60_160.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/e_clock29/counter_60_160.bdf    ;
+; 74160.bdf                        ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/others/maxplus2/74160.bdf       ;
+; counter_24_160.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Administrator/Desktop/e_clock29/counter_24_160.bdf    ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/altera/91/quartus/libraries/megafunctions/lpm_counter.tdf   ;
 +----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+
 
@@ -172,80 +173,129 @@ applicable agreement for further details.
 ; I/O pins             ; 40                   ;
 ; Shareable expanders  ; 62                   ;
 ; Parallel expanders   ; 14                   ;
-; Maximum fan-out node ; aa                   ;
+; Maximum fan-out node ; SetDir               ;
 ; Maximum fan-out      ; 37                   ;
 ; Total fan-out        ; 1170                 ;
 ; Average fan-out      ; 5.27                 ;
 +----------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
-+-------------------------------------------+------------+------+-----------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; Macrocells ; Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
-+-------------------------------------------+------------+------+-----------------------------------------------------------------------------------------------------+--------------+
-; |e_clock                                  ; 120        ; 40   ; |e_clock                                                                                            ; work         ;
-;    |DigitalClock:inst15|                  ; 16         ; 0    ; |e_clock|DigitalClock:inst15                                                                        ; work         ;
-;       |lpm_counter:clk_rtl_0|             ; 6          ; 0    ; |e_clock|DigitalClock:inst15|lpm_counter:clk_rtl_0                                                  ; work         ;
-;    |SHOWCONTROLER:inst17|                 ; 29         ; 0    ; |e_clock|SHOWCONTROLER:inst17                                                                       ; work         ;
-;    |e_clock_counter:inst14|               ; 31         ; 0    ; |e_clock|e_clock_counter:inst14                                                                     ; work         ;
-;       |counter24_counter:inst4|           ; 11         ; 0    ; |e_clock|e_clock_counter:inst14|counter24_counter:inst4                                             ; work         ;
-;       |counter60_counter:inst18|          ; 10         ; 0    ; |e_clock|e_clock_counter:inst14|counter60_counter:inst18                                            ; work         ;
-;       |counter60_counter:inst|            ; 10         ; 0    ; |e_clock|e_clock_counter:inst14|counter60_counter:inst                                              ; work         ;
-;    |lpm_compare0:inst|                    ; 17         ; 0    ; |e_clock|lpm_compare0:inst                                                                          ; work         ;
-;       |lpm_compare:lpm_compare_component| ; 17         ; 0    ; |e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component                                        ; work         ;
-;          |comptree:comparator|            ; 17         ; 0    ; |e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator                    ; work         ;
-;             |cmpchain:cmp[0]|             ; 8          ; 0    ; |e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]    ; work         ;
-;             |cmpchain:cmp_end|            ; 9          ; 0    ; |e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end   ; work         ;
-;    |lpm_compare1:inst20|                  ; 1          ; 0    ; |e_clock|lpm_compare1:inst20                                                                        ; work         ;
-;       |lpm_compare:lpm_compare_component| ; 1          ; 0    ; |e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component                                      ; work         ;
-;          |comptree:comparator|            ; 1          ; 0    ; |e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator                  ; work         ;
-;             |cmpchain:cmp_end|            ; 1          ; 0    ; |e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end ; work         ;
-;    |time_core:inst8|                      ; 24         ; 0    ; |e_clock|time_core:inst8                                                                            ; work         ;
-;       |counter_24_160:inst8|              ; 8          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8                                                       ; work         ;
-;          |74160:inst1|                    ; 4          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8|74160:inst1                                           ; work         ;
-;          |74160:inst|                     ; 4          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8|74160:inst                                            ; work         ;
-;       |counter_60_160:inst1|              ; 8          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1                                                       ; work         ;
-;          |74160:inst1|                    ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1|74160:inst1                                           ; work         ;
-;          |74160:inst|                     ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1|74160:inst                                            ; work         ;
-;       |counter_60_160:inst3|              ; 8          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3                                                       ; work         ;
-;          |74160:inst1|                    ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3|74160:inst1                                           ; work         ;
-;          |74160:inst|                     ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3|74160:inst                                            ; work         ;
-+-------------------------------------------+------------+------+-----------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
++----------------------------------------------+------------+------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Macrocells ; Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
++----------------------------------------------+------------+------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; |e_clock                                     ; 120        ; 40   ; |e_clock                                                                                                            ; work         ;
+;    |SHOWCONTROLER:inst17|                    ; 29         ; 0    ; |e_clock|SHOWCONTROLER:inst17                                                                                       ; work         ;
+;    |SoundCtr:inst31|                         ; 35         ; 0    ; |e_clock|SoundCtr:inst31                                                                                            ; work         ;
+;       |DigitalClock:inst15|                  ; 16         ; 0    ; |e_clock|SoundCtr:inst31|DigitalClock:inst15                                                                        ; work         ;
+;          |lpm_counter:clk_rtl_0|             ; 6          ; 0    ; |e_clock|SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0                                                  ; work         ;
+;       |lpm_compare0:inst|                    ; 17         ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare0:inst                                                                          ; work         ;
+;          |lpm_compare:lpm_compare_component| ; 17         ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component                                        ; work         ;
+;             |comptree:comparator|            ; 17         ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator                    ; work         ;
+;                |cmpchain:cmp[0]|             ; 8          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]    ; work         ;
+;                |cmpchain:cmp_end|            ; 9          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end   ; work         ;
+;       |lpm_compare1:inst20|                  ; 1          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare1:inst20                                                                        ; work         ;
+;          |lpm_compare:lpm_compare_component| ; 1          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component                                      ; work         ;
+;             |comptree:comparator|            ; 1          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator                  ; work         ;
+;                |cmpchain:cmp_end|            ; 1          ; 0    ; |e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end ; work         ;
+;    |e_clock_counter:inst14|                  ; 31         ; 0    ; |e_clock|e_clock_counter:inst14                                                                                     ; work         ;
+;       |counter24_counter:inst4|              ; 11         ; 0    ; |e_clock|e_clock_counter:inst14|counter24_counter:inst4                                                             ; work         ;
+;       |counter60_counter:inst18|             ; 10         ; 0    ; |e_clock|e_clock_counter:inst14|counter60_counter:inst18                                                            ; work         ;
+;       |counter60_counter:inst|               ; 10         ; 0    ; |e_clock|e_clock_counter:inst14|counter60_counter:inst                                                              ; work         ;
+;    |time_core:inst8|                         ; 24         ; 0    ; |e_clock|time_core:inst8                                                                                            ; work         ;
+;       |counter_24_160:inst8|                 ; 8          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8                                                                       ; work         ;
+;          |74160:inst1|                       ; 4          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8|74160:inst1                                                           ; work         ;
+;          |74160:inst|                        ; 4          ; 0    ; |e_clock|time_core:inst8|counter_24_160:inst8|74160:inst                                                            ; work         ;
+;       |counter_60_160:inst1|                 ; 8          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1                                                                       ; work         ;
+;          |74160:inst1|                       ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1|74160:inst1                                                           ; work         ;
+;          |74160:inst|                        ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst1|74160:inst                                                            ; work         ;
+;       |counter_60_160:inst3|                 ; 8          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3                                                                       ; work         ;
+;          |74160:inst1|                       ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3|74160:inst1                                                           ; work         ;
+;          |74160:inst|                        ; 4          ; 0    ; |e_clock|time_core:inst8|counter_60_160:inst3|74160:inst                                                            ; work         ;
++----------------------------------------------+------------+------+---------------------------------------------------------------------------------------------------------------------+--------------+
 
 
-+------------------------------------------------------------------+
-; Source assignments for DigitalClock:inst15|lpm_counter:clk_rtl_0 ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
++----------------------------------------------------------------------------------+
+; Source assignments for SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0 ;
++---------------------------+-------+------+---------------------------------------+
+; Assignment                ; Value ; From ; To                                    ;
++---------------------------+-------+------+---------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                     ;
++---------------------------+-------+------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_compare1:inst20|lpm_compare:lpm_compare_component ;
-+------------------------+----------+----------------------------------------------------------------+
-; Parameter Name         ; Value    ; Type                                                           ;
-+------------------------+----------+----------------------------------------------------------------+
-; lpm_width              ; 19       ; Signed Integer                                                 ;
-; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                        ;
-; LPM_PIPELINE           ; 0        ; Untyped                                                        ;
-; CHAIN_SIZE             ; 8        ; Untyped                                                        ;
-; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                        ;
-; CARRY_CHAIN            ; MANUAL   ; Untyped                                                        ;
-; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                        ;
-; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                             ;
-; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                           ;
-; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                        ;
-; CBXI_PARAMETER         ; cmpr_7ui ; Untyped                                                        ;
-; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                   ;
-; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                 ;
-+------------------------+----------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component ;
++------------------------+----------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                           ;
++------------------------+----------+--------------------------------------------------------------------------------+
+; lpm_width              ; 19       ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                        ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                        ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                             ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                           ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; cmpr_7ui ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                 ;
++------------------------+----------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component ;
++------------------------+----------+------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                         ;
++------------------------+----------+------------------------------------------------------------------------------+
+; lpm_width              ; 27       ; Untyped                                                                      ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                      ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                      ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                      ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                      ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                      ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                           ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                         ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                                      ;
+; CBXI_PARAMETER         ; cmpr_v7g ; Untyped                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                               ;
++------------------------+----------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component ;
++------------------------+----------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                           ;
++------------------------+----------+--------------------------------------------------------------------------------+
+; lpm_width              ; 27       ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                        ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                        ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                             ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                           ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; cmpr_6ui ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                 ;
++------------------------+----------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -297,78 +347,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_compare0:inst|lpm_compare:lpm_compare_component ;
-+------------------------+----------+--------------------------------------------------------------+
-; Parameter Name         ; Value    ; Type                                                         ;
-+------------------------+----------+--------------------------------------------------------------+
-; lpm_width              ; 27       ; Untyped                                                      ;
-; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                      ;
-; LPM_PIPELINE           ; 0        ; Untyped                                                      ;
-; CHAIN_SIZE             ; 8        ; Untyped                                                      ;
-; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                      ;
-; CARRY_CHAIN            ; MANUAL   ; Untyped                                                      ;
-; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                      ;
-; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                           ;
-; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                         ;
-; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                      ;
-; CBXI_PARAMETER         ; cmpr_v7g ; Untyped                                                      ;
-; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                               ;
-+------------------------+----------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_compare2:inst19|lpm_compare:lpm_compare_component ;
-+------------------------+----------+----------------------------------------------------------------+
-; Parameter Name         ; Value    ; Type                                                           ;
-+------------------------+----------+----------------------------------------------------------------+
-; lpm_width              ; 27       ; Signed Integer                                                 ;
-; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                        ;
-; LPM_PIPELINE           ; 0        ; Untyped                                                        ;
-; CHAIN_SIZE             ; 8        ; Untyped                                                        ;
-; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                        ;
-; CARRY_CHAIN            ; MANUAL   ; Untyped                                                        ;
-; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                        ;
-; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                             ;
-; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                           ;
-; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                        ;
-; CBXI_PARAMETER         ; cmpr_6ui ; Untyped                                                        ;
-; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                   ;
-; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                 ;
-+------------------------+----------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DigitalClock:inst15|lpm_counter:clk_rtl_0 ;
-+------------------------+-------------------+-----------------------------------------------+
-; Parameter Name         ; Value             ; Type                                          ;
-+------------------------+-------------------+-----------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                ;
-; LPM_WIDTH              ; 6                 ; Untyped                                       ;
-; LPM_DIRECTION          ; UP                ; Untyped                                       ;
-; LPM_MODULUS            ; 0                 ; Untyped                                       ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                       ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                       ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                       ;
-; DEVICE_FAMILY          ; MAX7000S          ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                       ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                            ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                            ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                       ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                       ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                       ;
-; CBXI_PARAMETER         ; NOTHING           ; Untyped                                       ;
-+------------------------+-------------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0 ;
++------------------------+-------------------+---------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                          ;
++------------------------+-------------------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 6                 ; Untyped                                                       ;
+; LPM_DIRECTION          ; UP                ; Untyped                                                       ;
+; LPM_MODULUS            ; 0                 ; Untyped                                                       ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                       ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                       ;
+; DEVICE_FAMILY          ; MAX7000S          ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                            ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                            ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                       ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                       ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                                       ;
++------------------------+-------------------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -378,7 +380,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Mar 29 11:10:42 2019
+    Info: Processing started: Fri Mar 29 11:44:15 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off e_clock -c e_clock
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file e_clock.bdf
@@ -424,70 +426,63 @@ Info: Found 2 design units, including 1 entities, in source file selshow.vhd
     Info: Found entity 1: selshow
 Info: Found 1 design units, including 1 entities, in source file showcontroler.bdf
     Info: Found entity 1: SHOWCONTROLER
+Info: Found 1 design units, including 1 entities, in source file soundctr.bdf
+    Info: Found entity 1: SoundCtr
 Info: Elaborating entity "e_clock" for the top level hierarchy
+Info: Elaborating entity "SoundCtr" for hierarchy "SoundCtr:inst31"
 Warning: Using design file digitalclock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: DigitalClock-behav
     Info: Found entity 1: DigitalClock
-Info: Elaborating entity "DigitalClock" for hierarchy "DigitalClock:inst15"
-Info: Elaborating entity "lpm_compare1" for hierarchy "lpm_compare1:inst20"
-Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare1:inst20|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "lpm_compare1:inst20|lpm_compare:lpm_compare_component" with the following parameter:
+Info: Elaborating entity "DigitalClock" for hierarchy "SoundCtr:inst31|DigitalClock:inst15"
+Info: Elaborating entity "lpm_compare1" for hierarchy "SoundCtr:inst31|lpm_compare1:inst20"
+Info: Elaborating entity "lpm_compare" for hierarchy "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component" with the following parameter:
     Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
     Info: Parameter "lpm_representation" = "UNSIGNED"
     Info: Parameter "lpm_type" = "LPM_COMPARE"
     Info: Parameter "lpm_width" = "19"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator"
-Info: Elaborated megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "altshift" for hierarchy "lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs"
-Info: Elaborated megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs", which is child of megafunction instantiation "lpm_compare1:inst20|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "time_core" for hierarchy "time_core:inst8"
-Info: Elaborating entity "BCD_seven" for hierarchy "time_core:inst8|BCD_seven:inst2"
-Warning: Using design file counter_60_160.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info: Found entity 1: counter_60_160
-Info: Elaborating entity "counter_60_160" for hierarchy "time_core:inst8|counter_60_160:inst1"
-Info: Elaborating entity "74160" for hierarchy "time_core:inst8|counter_60_160:inst1|74160:inst1"
-Info: Elaborated megafunction instantiation "time_core:inst8|counter_60_160:inst1|74160:inst1"
-Warning: Using design file counter_24_160.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info: Found entity 1: counter_24_160
-Info: Elaborating entity "counter_24_160" for hierarchy "time_core:inst8|counter_24_160:inst8"
-Info: Elaborating entity "lpm_compare2" for hierarchy "time_core:inst8|lpm_compare2:inst19"
-Info: Elaborating entity "lpm_compare" for hierarchy "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component" with the following parameter:
+Info: Elaborating entity "comptree" for hierarchy "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "altshift" for hierarchy "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component"
+Warning: Using design file lpm_compare0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_compare0
+Info: Elaborating entity "lpm_compare0" for hierarchy "SoundCtr:inst31|lpm_compare0:inst"
+Info: Elaborating entity "lpm_compare" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component" with the following parameter:
+    Info: Parameter "LPM_TYPE" = "LPM_COMPARE"
+    Info: Parameter "LPM_WIDTH" = "27"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+Info: Elaborating entity "comptree" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "comptree" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "lpm_compare2" for hierarchy "SoundCtr:inst31|lpm_compare2:inst19"
+Info: Elaborating entity "lpm_compare" for hierarchy "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component" with the following parameter:
     Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
     Info: Parameter "lpm_representation" = "UNSIGNED"
     Info: Parameter "lpm_type" = "LPM_COMPARE"
     Info: Parameter "lpm_width" = "27"
-Info: Elaborating entity "comptree" for hierarchy "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator"
-Info: Elaborated megafunction instantiation "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "dmux" for hierarchy "dmux:inst12"
-Warning: Using design file lpm_compare0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info: Found entity 1: lpm_compare0
-Info: Elaborating entity "lpm_compare0" for hierarchy "lpm_compare0:inst"
-Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "lpm_compare0:inst|lpm_compare:lpm_compare_component" with the following parameter:
-    Info: Parameter "LPM_TYPE" = "LPM_COMPARE"
-    Info: Parameter "LPM_WIDTH" = "27"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]", which is child of megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree", which is child of megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare0:inst|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "comptree" for hierarchy "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component"
 Warning: Using design file e_clock_counter.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: e_clock_counter
 Info: Elaborating entity "e_clock_counter" for hierarchy "e_clock_counter:inst14"
+Info: Elaborating entity "BCD_seven" for hierarchy "e_clock_counter:inst14|BCD_seven:inst2"
 Warning: Using design file counter60_counter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: counter60_counter-behave
     Info: Found entity 1: counter60_counter
@@ -498,92 +493,102 @@ Warning: Using design file counter24_counter.vhd, which is not specified as a de
 Info: Elaborating entity "counter24_counter" for hierarchy "e_clock_counter:inst14|counter24_counter:inst4"
 Warning (10631): VHDL Process Statement warning at counter24_counter.vhd(14): inferring latch(es) for signal or variable "c", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "c" at counter24_counter.vhd(14)
+Info: Elaborating entity "dmux" for hierarchy "dmux:inst12"
+Info: Elaborating entity "time_core" for hierarchy "time_core:inst8"
+Warning: Using design file counter_60_160.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: counter_60_160
+Info: Elaborating entity "counter_60_160" for hierarchy "time_core:inst8|counter_60_160:inst1"
+Info: Elaborating entity "74160" for hierarchy "time_core:inst8|counter_60_160:inst1|74160:inst1"
+Info: Elaborated megafunction instantiation "time_core:inst8|counter_60_160:inst1|74160:inst1"
+Warning: Using design file counter_24_160.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: counter_24_160
+Info: Elaborating entity "counter_24_160" for hierarchy "time_core:inst8|counter_24_160:inst8"
 Info: Elaborating entity "show" for hierarchy "show:inst9"
 Info: Elaborating entity "SHOWCONTROLER" for hierarchy "SHOWCONTROLER:inst17"
 Info: Inferred 1 megafunctions from design logic
-    Info: Inferred lpm_counter megafunction (LPM_WIDTH=6) from the following logic: "DigitalClock:inst15|clk[0]~0"
-Info: Elaborated megafunction instantiation "DigitalClock:inst15|lpm_counter:clk_rtl_0"
-Info: Instantiated megafunction "DigitalClock:inst15|lpm_counter:clk_rtl_0" with the following parameter:
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=6) from the following logic: "SoundCtr:inst31|DigitalClock:inst15|clk[0]~0"
+Info: Elaborated megafunction instantiation "SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0"
+Info: Instantiated megafunction "SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "6"
     Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
 Warning: The following nodes have both tri-state and non-tri-state drivers
-    Warning: Inserted always-enabled tri-state buffer between "inst13[7]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[6]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[5]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[4]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[3]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[2]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[1]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[0]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[15]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[14]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[13]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[12]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[11]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[10]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[9]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[8]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[15]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[14]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[13]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[12]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[11]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[10]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[9]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[8]" and its non-tri-state driver.
     Warning: Inserted always-enabled tri-state buffer between "e_clock_counter:inst14|BCD_seven:inst2|Mux2" and its non-tri-state driver.
     Warning: Inserted always-enabled tri-state buffer between "e_clock_counter:inst14|BCD_seven:inst2|Mux2" and its non-tri-state driver.
     Warning: Inserted always-enabled tri-state buffer between "e_clock_counter:inst14|BCD_seven:inst2|Mux2" and its non-tri-state driver.
     Warning: Inserted always-enabled tri-state buffer between "e_clock_counter:inst14|BCD_seven:inst2|Mux0" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[19]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[18]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[17]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "inst13[16]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[19]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[18]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[17]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SoundCtr:inst31|inst13[16]" and its non-tri-state driver.
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "inst13[1]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|ecasc[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[0]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|ecasc[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[3]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[2]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[5]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[4]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[7]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[6]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[9]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[8]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[11]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[10]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[13]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[12]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[15]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[14]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[17]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|ecasc[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[16]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|ecasc[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[19]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[18]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[21]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[20]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[23]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[22]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[25]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[24]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst13[26]" to the node "lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[1]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|ecasc[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[0]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|ecasc[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[3]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[2]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[5]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[4]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[7]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[6]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[9]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[8]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[11]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[10]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[13]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[12]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[15]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[14]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[17]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|ecasc[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[16]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|ecasc[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[19]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[18]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[21]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[20]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[23]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[22]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[25]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[24]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "SoundCtr:inst31|inst13[26]" to the node "SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|_" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q0[0]" to the node "e_clock_counter:inst14|BCD_seven:inst2|Mux2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q0[1]" to the node "e_clock_counter:inst14|BCD_seven:inst2|Mux2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q0[2]" to the node "e_clock_counter:inst14|BCD_seven:inst2|Mux2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q0[3]" to the node "e_clock_counter:inst14|BCD_seven:inst2|Mux0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[3]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[2]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[1]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[0]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[3]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[2]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[1]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[0]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[3]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[2]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[1]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[0]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[3]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[2]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[1]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[0]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[3]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[2]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[1]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[0]" to the node "lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[3]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[2]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[1]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q0[0]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[3]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[2]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[1]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter24_counter:inst4|q1[0]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[3]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[2]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[1]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q0[0]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[3]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[2]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[1]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst18|q1[0]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[3]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[2]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[1]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "e_clock_counter:inst14|counter60_counter:inst|q1[0]" to the node "SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out" into an OR gate
 Warning: TRI or OPNDRN buffers permanently enabled
     Warning: Node "SHOWCONTROLER:inst17|inst23[7]~synth"
     Warning: Node "SHOWCONTROLER:inst17|inst23[6]~synth"
@@ -612,7 +617,7 @@ Info: Implemented 222 device resources after synthesis - the final resource coun
     Info: Implemented 62 shareable expanders
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 106 warnings
     Info: Peak virtual memory: 220 megabytes
-    Info: Processing ended: Fri Mar 29 11:10:45 2019
+    Info: Processing ended: Fri Mar 29 11:44:18 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

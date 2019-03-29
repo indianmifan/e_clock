@@ -7,7 +7,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 32.000 ns
 From           : ALARM
-To             : DigitalClock:inst15|dotcnt[2]
+To             : SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]
 From Clock     : --
 To Clock       : SoundCLK
 Failed Paths   : 0
@@ -36,7 +36,7 @@ Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
 Actual Time    : 54.000 ns
-From           : aa
+From           : SetDir
 To             : e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0
 From Clock     : --
 To Clock       : CLK
@@ -106,20 +106,20 @@ Type           : Clock Setup: 'SoundCLK'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 34.48 MHz ( period = 29.000 ns )
-From           : DigitalClock:inst15|reset
-To             : DigitalClock:inst15|dotcnt[2]
+From           : SoundCtr:inst31|DigitalClock:inst15|reset
+To             : SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]
 From Clock     : SoundCLK
 To Clock       : SoundCLK
 Failed Paths   : 0
 
-Type           : Clock Setup: 'aa'
+Type           : Clock Setup: 'SetDir'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 76.92 MHz ( period = 13.000 ns )
 From           : inst6
 To             : inst6
-From Clock     : aa
-To Clock       : aa
+From Clock     : SetDir
+To Clock       : SetDir
 Failed Paths   : 0
 
 Type           : Clock Setup: 'StopCounter'

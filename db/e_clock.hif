@@ -44,7 +44,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-DigitalClock:inst15
+SoundCtr:inst31|DigitalClock:inst15
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -77,7 +77,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_compare1:inst20
+SoundCtr:inst31|lpm_compare1:inst20
 time_core:inst8|lpm_compare1:inst20
 }
 # lmf
@@ -714,8 +714,8 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-time_core:inst8|BCD_seven:inst2
 e_clock_counter:inst14|BCD_seven:inst2
+time_core:inst8|BCD_seven:inst2
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -748,8 +748,8 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
+SoundCtr:inst31|lpm_compare2:inst19
 time_core:inst8|lpm_compare2:inst19
-lpm_compare2:inst19
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -1637,7 +1637,7 @@ lpm_compare.inc
 bbd3e8c93afb7320934629e5fb11566
 }
 # hierarchies {
-lpm_compare0:inst
+SoundCtr:inst31|lpm_compare0:inst
 }
 # macro_sequence
 
@@ -2973,7 +2973,7 @@ datab13
 2
 }
 # hierarchies {
-lpm_compare1:inst20|lpm_compare:lpm_compare_component
+SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 }
 # macro_sequence
@@ -3135,7 +3135,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
+SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
@@ -3321,7 +3321,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
@@ -3356,16 +3356,16 @@ data0
 3
 }
 # hierarchies {
-lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 }
 # macro_sequence
 
@@ -3635,8 +3635,8 @@ datab21
 2
 }
 # hierarchies {
+SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component
-lpm_compare2:inst19|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -3845,8 +3845,8 @@ aeb
 3
 }
 # hierarchies {
+SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
-lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
 
@@ -4079,8 +4079,8 @@ aeb
 3
 }
 # hierarchies {
+SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
 
@@ -4325,7 +4325,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -4534,7 +4534,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
 
@@ -4701,7 +4701,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]
 }
 # macro_sequence
 
@@ -4838,7 +4838,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
 
@@ -4897,7 +4897,7 @@ datab0
 2
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree
 }
 # macro_sequence
 
@@ -4980,7 +4980,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end
+SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end
 }
 # macro_sequence
 
@@ -5116,6 +5116,26 @@ e_clock_counter:inst14
 
 # end
 # entity
+SoundCtr
+# storage
+db|e_clock.(45).cnf
+db|e_clock.(45).cnf
+# case_insensitive
+# source_file
+soundctr.bdf
+c8d19efb4496f53f566f997d95f5a89f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+SoundCtr:inst31
+}
+# macro_sequence
+
+# end
+# entity
 e_clock
 # storage
 db|e_clock.(0).cnf
@@ -5123,7 +5143,7 @@ db|e_clock.(0).cnf
 # case_insensitive
 # source_file
 e_clock.bdf
-1dd91198a0f7d07978a03f87391f7499
+b788aee25e565bb21f6d1d4167ad029
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

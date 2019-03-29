@@ -1,48 +1,22 @@
 |e_clock
-Speaker <= DigitalClock:inst15.spk
-SoundCLK => DigitalClock:inst15.soundclk
+Speaker <= SoundCtr:inst31.Speaker
+SetDir => inst7.IN0
+SetDir => inst2.IN1
+SetDir => e_clock_counter:inst14.sel
+ALARM => SoundCtr:inst31.AlarmFORB
+SoundCLK => SoundCtr:inst31.Stop_Counter
 Set1 => dmux:inst12.selone
 Set2 => dmux:inst12.seltwo
 qd => dmux:inst12.signallllll
-CLK => time_core:inst8.clk
 CLK => e_clock_counter:inst14.clk1
+CLK => time_core:inst8.clk
 CLK => SHOWCONTROLER:inst17.FLASH
-SetTime => time_core:inst8.stop
-SetTime => SHOWCONTROLER:inst17.SetTime
 StopCounter => inst29.IN0
-aa => inst7.IN0
-aa => inst2.IN1
-aa => e_clock_counter:inst14.sel
 SetAlarm => e_clock_counter:inst14.stop2
 SetAlarm => SHOWCONTROLER:inst17.SetAlarm
 CLR => e_clock_counter:inst14.clr
-ALARM => inst13[26].OE
-ALARM => inst13[25].OE
-ALARM => inst13[24].OE
-ALARM => inst13[23].OE
-ALARM => inst13[22].OE
-ALARM => inst13[21].OE
-ALARM => inst13[20].OE
-ALARM => inst13[19].OE
-ALARM => inst13[18].OE
-ALARM => inst13[17].OE
-ALARM => inst13[16].OE
-ALARM => inst13[15].OE
-ALARM => inst13[14].OE
-ALARM => inst13[13].OE
-ALARM => inst13[12].OE
-ALARM => inst13[11].OE
-ALARM => inst13[10].OE
-ALARM => inst13[9].OE
-ALARM => inst13[8].OE
-ALARM => inst13[7].OE
-ALARM => inst13[6].OE
-ALARM => inst13[5].OE
-ALARM => inst13[4].OE
-ALARM => inst13[3].OE
-ALARM => inst13[2].OE
-ALARM => inst13[1].OE
-ALARM => inst13[0].OE
+SetTime => time_core:inst8.stop
+SetTime => SHOWCONTROLER:inst17.SetTime
 h0[0] <= show:inst9.Hout_0[0]
 h0[1] <= show:inst9.Hout_0[1]
 h0[2] <= show:inst9.Hout_0[2]
@@ -73,7 +47,141 @@ s1[2] <= show:inst9.Sout_1[2]
 s1[3] <= show:inst9.Sout_1[3]
 
 
-|e_clock|DigitalClock:inst15
+|e_clock|SoundCtr:inst31
+Speaker <= DigitalClock:inst15.spk
+Stop_Counter => DigitalClock:inst15.soundclk
+time[0] => lpm_compare0:inst.dataa[0]
+time[1] => lpm_compare0:inst.dataa[1]
+time[2] => lpm_compare0:inst.dataa[2]
+time[3] => lpm_compare0:inst.dataa[3]
+time[4] => lpm_compare0:inst.dataa[4]
+time[5] => lpm_compare0:inst.dataa[5]
+time[6] => lpm_compare0:inst.dataa[6]
+time[7] => lpm_compare0:inst.dataa[7]
+time[8] => lpm_compare1:inst20.dataa[0]
+time[8] => lpm_compare0:inst.dataa[8]
+time[9] => lpm_compare1:inst20.dataa[1]
+time[9] => lpm_compare0:inst.dataa[9]
+time[10] => lpm_compare1:inst20.dataa[2]
+time[10] => lpm_compare0:inst.dataa[10]
+time[11] => lpm_compare1:inst20.dataa[3]
+time[11] => lpm_compare0:inst.dataa[11]
+time[12] => lpm_compare1:inst20.dataa[4]
+time[12] => lpm_compare0:inst.dataa[12]
+time[13] => lpm_compare1:inst20.dataa[5]
+time[13] => lpm_compare0:inst.dataa[13]
+time[14] => lpm_compare1:inst20.dataa[6]
+time[14] => lpm_compare0:inst.dataa[14]
+time[15] => lpm_compare1:inst20.dataa[7]
+time[15] => lpm_compare0:inst.dataa[15]
+time[16] => lpm_compare1:inst20.dataa[8]
+time[16] => lpm_compare0:inst.dataa[16]
+time[17] => lpm_compare1:inst20.dataa[9]
+time[17] => lpm_compare0:inst.dataa[17]
+time[18] => lpm_compare1:inst20.dataa[10]
+time[18] => lpm_compare0:inst.dataa[18]
+time[19] => lpm_compare1:inst20.dataa[11]
+time[19] => lpm_compare0:inst.dataa[19]
+time[20] => lpm_compare1:inst20.dataa[12]
+time[20] => lpm_compare0:inst.dataa[20]
+time[21] => lpm_compare1:inst20.dataa[13]
+time[21] => lpm_compare0:inst.dataa[21]
+time[22] => lpm_compare1:inst20.dataa[14]
+time[22] => lpm_compare0:inst.dataa[22]
+time[23] => lpm_compare1:inst20.dataa[15]
+time[23] => lpm_compare0:inst.dataa[23]
+time[24] => lpm_compare1:inst20.dataa[16]
+time[24] => lpm_compare0:inst.dataa[24]
+time[25] => lpm_compare1:inst20.dataa[17]
+time[25] => lpm_compare0:inst.dataa[25]
+time[26] => lpm_compare1:inst20.dataa[18]
+time[26] => lpm_compare0:inst.dataa[26]
+alarmtime[0] => inst13[0].DATAIN
+alarmtime[0] => lpm_compare2:inst19.dataa[0]
+alarmtime[1] => inst13[1].DATAIN
+alarmtime[1] => lpm_compare2:inst19.dataa[1]
+alarmtime[2] => inst13[2].DATAIN
+alarmtime[2] => lpm_compare2:inst19.dataa[2]
+alarmtime[3] => inst13[3].DATAIN
+alarmtime[3] => lpm_compare2:inst19.dataa[3]
+alarmtime[4] => inst13[4].DATAIN
+alarmtime[4] => lpm_compare2:inst19.dataa[4]
+alarmtime[5] => inst13[5].DATAIN
+alarmtime[5] => lpm_compare2:inst19.dataa[5]
+alarmtime[6] => inst13[6].DATAIN
+alarmtime[6] => lpm_compare2:inst19.dataa[6]
+alarmtime[7] => inst13[7].DATAIN
+alarmtime[7] => lpm_compare2:inst19.dataa[7]
+alarmtime[8] => inst13[8].DATAIN
+alarmtime[8] => lpm_compare2:inst19.dataa[8]
+alarmtime[9] => inst13[9].DATAIN
+alarmtime[9] => lpm_compare2:inst19.dataa[9]
+alarmtime[10] => inst13[10].DATAIN
+alarmtime[10] => lpm_compare2:inst19.dataa[10]
+alarmtime[11] => inst13[11].DATAIN
+alarmtime[11] => lpm_compare2:inst19.dataa[11]
+alarmtime[12] => inst13[12].DATAIN
+alarmtime[12] => lpm_compare2:inst19.dataa[12]
+alarmtime[13] => inst13[13].DATAIN
+alarmtime[13] => lpm_compare2:inst19.dataa[13]
+alarmtime[14] => inst13[14].DATAIN
+alarmtime[14] => lpm_compare2:inst19.dataa[14]
+alarmtime[15] => inst13[15].DATAIN
+alarmtime[15] => lpm_compare2:inst19.dataa[15]
+alarmtime[16] => inst13[16].DATAIN
+alarmtime[16] => lpm_compare2:inst19.dataa[16]
+alarmtime[17] => inst13[17].DATAIN
+alarmtime[17] => lpm_compare2:inst19.dataa[17]
+alarmtime[18] => inst13[18].DATAIN
+alarmtime[18] => lpm_compare2:inst19.dataa[18]
+alarmtime[19] => inst13[19].DATAIN
+alarmtime[19] => lpm_compare2:inst19.dataa[19]
+alarmtime[20] => inst13[20].DATAIN
+alarmtime[20] => lpm_compare2:inst19.dataa[20]
+alarmtime[21] => inst13[21].DATAIN
+alarmtime[21] => lpm_compare2:inst19.dataa[21]
+alarmtime[22] => inst13[22].DATAIN
+alarmtime[22] => lpm_compare2:inst19.dataa[22]
+alarmtime[23] => inst13[23].DATAIN
+alarmtime[23] => lpm_compare2:inst19.dataa[23]
+alarmtime[24] => inst13[24].DATAIN
+alarmtime[24] => lpm_compare2:inst19.dataa[24]
+alarmtime[25] => inst13[25].DATAIN
+alarmtime[25] => lpm_compare2:inst19.dataa[25]
+alarmtime[26] => inst13[26].DATAIN
+alarmtime[26] => lpm_compare2:inst19.dataa[26]
+AlarmFORB => inst13[26].OE
+AlarmFORB => inst13[25].OE
+AlarmFORB => inst13[24].OE
+AlarmFORB => inst13[23].OE
+AlarmFORB => inst13[22].OE
+AlarmFORB => inst13[21].OE
+AlarmFORB => inst13[20].OE
+AlarmFORB => inst13[19].OE
+AlarmFORB => inst13[18].OE
+AlarmFORB => inst13[17].OE
+AlarmFORB => inst13[16].OE
+AlarmFORB => inst13[15].OE
+AlarmFORB => inst13[14].OE
+AlarmFORB => inst13[13].OE
+AlarmFORB => inst13[12].OE
+AlarmFORB => inst13[11].OE
+AlarmFORB => inst13[10].OE
+AlarmFORB => inst13[9].OE
+AlarmFORB => inst13[8].OE
+AlarmFORB => inst13[7].OE
+AlarmFORB => inst13[6].OE
+AlarmFORB => inst13[5].OE
+AlarmFORB => inst13[4].OE
+AlarmFORB => inst13[3].OE
+AlarmFORB => inst13[2].OE
+AlarmFORB => inst13[1].OE
+AlarmFORB => inst13[0].OE
+Sel_dir => inst11.IN1
+zero <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|DigitalClock:inst15
 soundclk => soundcnt[0].CLK
 soundclk => soundcnt[1].CLK
 soundclk => waveout.CLK
@@ -96,7 +204,7 @@ turnOn2 => process_0.IN1
 spk <= waveout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|lpm_compare1:inst20
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20
 dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
 dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
 dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
@@ -119,7 +227,7 @@ dataa[18] => lpm_compare:lpm_compare_component.dataa[18]
 AeB <= lpm_compare:lpm_compare_component.AeB
 
 
-|e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 dataa[0] => comptree:comparator.dataa[0]
 dataa[1] => comptree:comparator.dataa[1]
 dataa[2] => comptree:comparator.dataa[2]
@@ -169,7 +277,7 @@ aneb <= aneb.DB_MAX_OUTPUT_PORT_TYPE
 ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 dataa[0] => cmpchain:cmp_end.dataa[0]
 dataa[1] => cmpchain:cmp_end.dataa[1]
 dataa[2] => cmpchain:cmp_end.dataa[2]
@@ -215,7 +323,7 @@ aeb <= cmpchain:cmp_end.aeb
 agb <= <GND>
 
 
-|e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 dataa[0] => ecasc[0].IN0
 dataa[1] => _.IN0
 dataa[2] => _.IN0
@@ -263,7 +371,7 @@ aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
 agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 data[0] => result[0].DATAIN
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
@@ -271,12 +379,740 @@ clken => ~NO_FANOUT~
 result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 data[0] => result[0].DATAIN
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
 result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst
+dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
+dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
+dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
+dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
+dataa[4] => lpm_compare:lpm_compare_component.dataa[4]
+dataa[5] => lpm_compare:lpm_compare_component.dataa[5]
+dataa[6] => lpm_compare:lpm_compare_component.dataa[6]
+dataa[7] => lpm_compare:lpm_compare_component.dataa[7]
+dataa[8] => lpm_compare:lpm_compare_component.dataa[8]
+dataa[9] => lpm_compare:lpm_compare_component.dataa[9]
+dataa[10] => lpm_compare:lpm_compare_component.dataa[10]
+dataa[11] => lpm_compare:lpm_compare_component.dataa[11]
+dataa[12] => lpm_compare:lpm_compare_component.dataa[12]
+dataa[13] => lpm_compare:lpm_compare_component.dataa[13]
+dataa[14] => lpm_compare:lpm_compare_component.dataa[14]
+dataa[15] => lpm_compare:lpm_compare_component.dataa[15]
+dataa[16] => lpm_compare:lpm_compare_component.dataa[16]
+dataa[17] => lpm_compare:lpm_compare_component.dataa[17]
+dataa[18] => lpm_compare:lpm_compare_component.dataa[18]
+dataa[19] => lpm_compare:lpm_compare_component.dataa[19]
+dataa[20] => lpm_compare:lpm_compare_component.dataa[20]
+dataa[21] => lpm_compare:lpm_compare_component.dataa[21]
+dataa[22] => lpm_compare:lpm_compare_component.dataa[22]
+dataa[23] => lpm_compare:lpm_compare_component.dataa[23]
+dataa[24] => lpm_compare:lpm_compare_component.dataa[24]
+dataa[25] => lpm_compare:lpm_compare_component.dataa[25]
+dataa[26] => lpm_compare:lpm_compare_component.dataa[26]
+datab[0] => lpm_compare:lpm_compare_component.datab[0]
+datab[1] => lpm_compare:lpm_compare_component.datab[1]
+datab[2] => lpm_compare:lpm_compare_component.datab[2]
+datab[3] => lpm_compare:lpm_compare_component.datab[3]
+datab[4] => lpm_compare:lpm_compare_component.datab[4]
+datab[5] => lpm_compare:lpm_compare_component.datab[5]
+datab[6] => lpm_compare:lpm_compare_component.datab[6]
+datab[7] => lpm_compare:lpm_compare_component.datab[7]
+datab[8] => lpm_compare:lpm_compare_component.datab[8]
+datab[9] => lpm_compare:lpm_compare_component.datab[9]
+datab[10] => lpm_compare:lpm_compare_component.datab[10]
+datab[11] => lpm_compare:lpm_compare_component.datab[11]
+datab[12] => lpm_compare:lpm_compare_component.datab[12]
+datab[13] => lpm_compare:lpm_compare_component.datab[13]
+datab[14] => lpm_compare:lpm_compare_component.datab[14]
+datab[15] => lpm_compare:lpm_compare_component.datab[15]
+datab[16] => lpm_compare:lpm_compare_component.datab[16]
+datab[17] => lpm_compare:lpm_compare_component.datab[17]
+datab[18] => lpm_compare:lpm_compare_component.datab[18]
+datab[19] => lpm_compare:lpm_compare_component.datab[19]
+datab[20] => lpm_compare:lpm_compare_component.datab[20]
+datab[21] => lpm_compare:lpm_compare_component.datab[21]
+datab[22] => lpm_compare:lpm_compare_component.datab[22]
+datab[23] => lpm_compare:lpm_compare_component.datab[23]
+datab[24] => lpm_compare:lpm_compare_component.datab[24]
+datab[25] => lpm_compare:lpm_compare_component.datab[25]
+datab[26] => lpm_compare:lpm_compare_component.datab[26]
+aeb <= lpm_compare:lpm_compare_component.aeb
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[0].dataa[4]
+dataa[5] => cmpchain:cmp[0].dataa[5]
+dataa[6] => cmpchain:cmp[0].dataa[6]
+dataa[7] => cmpchain:cmp[0].dataa[7]
+dataa[8] => cmpchain:cmp[0].dataa[8]
+dataa[9] => cmpchain:cmp[0].dataa[9]
+dataa[10] => cmpchain:cmp[0].dataa[10]
+dataa[11] => cmpchain:cmp[0].dataa[11]
+dataa[12] => cmpchain:cmp[0].dataa[12]
+dataa[13] => cmpchain:cmp[0].dataa[13]
+dataa[14] => cmpchain:cmp[0].dataa[14]
+dataa[15] => cmpchain:cmp[0].dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[0]
+dataa[17] => cmpchain:cmp_end.dataa[1]
+dataa[18] => cmpchain:cmp_end.dataa[2]
+dataa[19] => cmpchain:cmp_end.dataa[3]
+dataa[20] => cmpchain:cmp_end.dataa[4]
+dataa[21] => cmpchain:cmp_end.dataa[5]
+dataa[22] => cmpchain:cmp_end.dataa[6]
+dataa[23] => cmpchain:cmp_end.dataa[7]
+dataa[24] => cmpchain:cmp_end.dataa[8]
+dataa[25] => cmpchain:cmp_end.dataa[9]
+dataa[26] => cmpchain:cmp_end.dataa[10]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[0].datab[4]
+datab[5] => cmpchain:cmp[0].datab[5]
+datab[6] => cmpchain:cmp[0].datab[6]
+datab[7] => cmpchain:cmp[0].datab[7]
+datab[8] => cmpchain:cmp[0].datab[8]
+datab[9] => cmpchain:cmp[0].datab[9]
+datab[10] => cmpchain:cmp[0].datab[10]
+datab[11] => cmpchain:cmp[0].datab[11]
+datab[12] => cmpchain:cmp[0].datab[12]
+datab[13] => cmpchain:cmp[0].datab[13]
+datab[14] => cmpchain:cmp[0].datab[14]
+datab[15] => cmpchain:cmp[0].datab[15]
+datab[16] => cmpchain:cmp_end.datab[0]
+datab[17] => cmpchain:cmp_end.datab[1]
+datab[18] => cmpchain:cmp_end.datab[2]
+datab[19] => cmpchain:cmp_end.datab[3]
+datab[20] => cmpchain:cmp_end.datab[4]
+datab[21] => cmpchain:cmp_end.datab[5]
+datab[22] => cmpchain:cmp_end.datab[6]
+datab[23] => cmpchain:cmp_end.datab[7]
+datab[24] => cmpchain:cmp_end.datab[8]
+datab[25] => cmpchain:cmp_end.datab[9]
+datab[26] => cmpchain:cmp_end.datab[10]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]
+dataa[0] => ecasc[0].IN0
+dataa[1] => ecasc[0].IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[5] => _.IN0
+dataa[6] => _.IN0
+dataa[7] => _.IN0
+dataa[8] => _.IN0
+dataa[9] => _.IN0
+dataa[10] => _.IN0
+dataa[11] => _.IN0
+dataa[12] => _.IN0
+dataa[13] => _.IN0
+dataa[14] => _.IN0
+dataa[15] => _.IN0
+datab[0] => ecasc[0].IN1
+datab[1] => ecasc[0].IN1
+datab[2] => _.IN1
+datab[3] => _.IN1
+datab[4] => _.IN1
+datab[5] => _.IN1
+datab[6] => _.IN1
+datab[7] => _.IN1
+datab[8] => _.IN1
+datab[9] => _.IN1
+datab[10] => _.IN1
+datab[11] => _.IN1
+datab[12] => _.IN1
+datab[13] => _.IN1
+datab[14] => _.IN1
+datab[15] => _.IN1
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+dataa[0] => ecasc[0].IN0
+dataa[1] => ecasc[0].IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[5] => _.IN0
+dataa[6] => _.IN0
+dataa[7] => _.IN0
+dataa[8] => _.IN0
+dataa[9] => _.IN0
+dataa[9] => _.IN0
+dataa[10] => _.IN0
+datab[0] => ecasc[0].IN1
+datab[1] => ecasc[0].IN1
+datab[2] => _.IN1
+datab[3] => _.IN1
+datab[4] => _.IN1
+datab[5] => _.IN1
+datab[6] => _.IN1
+datab[7] => _.IN1
+datab[8] => _.IN1
+datab[9] => _.IN1
+datab[9] => _.IN1
+datab[10] => _.IN1
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+datab[0] => _.IN1
+datab[0] => _.IN0
+datab[1] => _.IN1
+datab[1] => _.IN0
+datab[1] => _.IN1
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19
+dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
+dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
+dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
+dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
+dataa[4] => lpm_compare:lpm_compare_component.dataa[4]
+dataa[5] => lpm_compare:lpm_compare_component.dataa[5]
+dataa[6] => lpm_compare:lpm_compare_component.dataa[6]
+dataa[7] => lpm_compare:lpm_compare_component.dataa[7]
+dataa[8] => lpm_compare:lpm_compare_component.dataa[8]
+dataa[9] => lpm_compare:lpm_compare_component.dataa[9]
+dataa[10] => lpm_compare:lpm_compare_component.dataa[10]
+dataa[11] => lpm_compare:lpm_compare_component.dataa[11]
+dataa[12] => lpm_compare:lpm_compare_component.dataa[12]
+dataa[13] => lpm_compare:lpm_compare_component.dataa[13]
+dataa[14] => lpm_compare:lpm_compare_component.dataa[14]
+dataa[15] => lpm_compare:lpm_compare_component.dataa[15]
+dataa[16] => lpm_compare:lpm_compare_component.dataa[16]
+dataa[17] => lpm_compare:lpm_compare_component.dataa[17]
+dataa[18] => lpm_compare:lpm_compare_component.dataa[18]
+dataa[19] => lpm_compare:lpm_compare_component.dataa[19]
+dataa[20] => lpm_compare:lpm_compare_component.dataa[20]
+dataa[21] => lpm_compare:lpm_compare_component.dataa[21]
+dataa[22] => lpm_compare:lpm_compare_component.dataa[22]
+dataa[23] => lpm_compare:lpm_compare_component.dataa[23]
+dataa[24] => lpm_compare:lpm_compare_component.dataa[24]
+dataa[25] => lpm_compare:lpm_compare_component.dataa[25]
+dataa[26] => lpm_compare:lpm_compare_component.dataa[26]
+AeB <= lpm_compare:lpm_compare_component.AeB
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+dataa[11] => cmpchain:cmp_end.dataa[11]
+dataa[12] => cmpchain:cmp_end.dataa[12]
+dataa[13] => cmpchain:cmp_end.dataa[13]
+dataa[14] => cmpchain:cmp_end.dataa[14]
+dataa[15] => cmpchain:cmp_end.dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[16]
+dataa[17] => cmpchain:cmp_end.dataa[17]
+dataa[18] => cmpchain:cmp_end.dataa[18]
+dataa[19] => cmpchain:cmp_end.dataa[19]
+dataa[20] => cmpchain:cmp_end.dataa[20]
+dataa[21] => cmpchain:cmp_end.dataa[21]
+dataa[22] => cmpchain:cmp_end.dataa[22]
+dataa[23] => cmpchain:cmp_end.dataa[23]
+dataa[24] => cmpchain:cmp_end.dataa[24]
+dataa[25] => cmpchain:cmp_end.dataa[25]
+dataa[26] => cmpchain:cmp_end.dataa[26]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+datab[11] => cmpchain:cmp_end.datab[11]
+datab[12] => cmpchain:cmp_end.datab[12]
+datab[13] => cmpchain:cmp_end.datab[13]
+datab[14] => cmpchain:cmp_end.datab[14]
+datab[15] => cmpchain:cmp_end.datab[15]
+datab[16] => cmpchain:cmp_end.datab[16]
+datab[17] => cmpchain:cmp_end.datab[17]
+datab[18] => cmpchain:cmp_end.datab[18]
+datab[19] => cmpchain:cmp_end.datab[19]
+datab[20] => cmpchain:cmp_end.datab[20]
+datab[21] => cmpchain:cmp_end.datab[21]
+datab[22] => cmpchain:cmp_end.datab[22]
+datab[23] => cmpchain:cmp_end.datab[23]
+datab[24] => cmpchain:cmp_end.datab[24]
+datab[25] => cmpchain:cmp_end.datab[25]
+datab[26] => cmpchain:cmp_end.datab[26]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
+dataa[0] => ecasc[0].IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[5] => _.IN0
+dataa[6] => _.IN0
+dataa[7] => _.IN0
+dataa[8] => _.IN0
+dataa[9] => _.IN0
+dataa[10] => _.IN0
+dataa[11] => _.IN0
+dataa[12] => _.IN0
+dataa[13] => _.IN0
+dataa[14] => _.IN0
+dataa[15] => _.IN0
+dataa[16] => _.IN0
+dataa[17] => _.IN0
+dataa[18] => _.IN0
+dataa[19] => _.IN0
+dataa[20] => _.IN0
+dataa[21] => _.IN0
+dataa[22] => _.IN0
+dataa[23] => _.IN0
+dataa[23] => _.IN0
+dataa[24] => _.IN0
+dataa[25] => _.IN0
+dataa[26] => _.IN0
+datab[0] => ecasc[0].IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+datab[3] => _.IN1
+datab[4] => _.IN1
+datab[5] => _.IN1
+datab[6] => _.IN1
+datab[7] => _.IN1
+datab[8] => _.IN1
+datab[9] => _.IN1
+datab[10] => _.IN1
+datab[11] => _.IN1
+datab[12] => _.IN1
+datab[13] => _.IN1
+datab[14] => _.IN1
+datab[15] => _.IN1
+datab[16] => _.IN1
+datab[17] => _.IN1
+datab[18] => _.IN1
+datab[19] => _.IN1
+datab[20] => _.IN1
+datab[21] => _.IN1
+datab[22] => _.IN1
+datab[23] => _.IN1
+datab[23] => _.IN1
+datab[24] => _.IN1
+datab[25] => _.IN1
+datab[26] => _.IN1
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|e_clock_counter:inst14
+counter_output[0] <= s[0].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[1] <= s[1].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[4] <= s[4].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[5] <= s[5].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[6] <= s[6].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[7] <= s[7].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[8] <= s[8].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[9] <= s[9].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[10] <= s[10].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[11] <= s[11].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[12] <= s[12].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[13] <= s[13].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[14] <= s[14].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[15] <= s[15].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[16] <= s[16].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[17] <= s[17].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[18] <= s[18].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[19] <= s[19].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[20] <= s[20].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[21] <= s[21].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[22] <= s[22].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[23] <= s[23].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[24] <= s[24].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[25] <= s[25].DB_MAX_OUTPUT_PORT_TYPE
+counter_output[26] <= s[26].DB_MAX_OUTPUT_PORT_TYPE
+alarm => inst1.IN0
+clk1 => inst1.IN1
+stop2 => inst26.IN0
+stop2 => inst21.IN1
+stop2 => inst20.IN1
+stop2 => inst15.IN1
+change_second => inst21.IN0
+sel => counter60_counter:inst.sel
+sel => counter60_counter:inst18.sel
+sel => counter24_counter:inst4.sel
+clr => counter60_counter:inst.clr
+clr => counter60_counter:inst18.clr
+clr => counter24_counter:inst4.clr
+change_min => inst20.IN0
+change_hour => inst15.IN0
+
+
+|e_clock|e_clock_counter:inst14|BCD_seven:inst2
+cin[0] => Mux0.IN19
+cin[0] => Mux1.IN10
+cin[0] => Mux2.IN10
+cin[0] => Mux3.IN19
+cin[0] => Mux4.IN10
+cin[0] => Mux5.IN19
+cin[0] => Mux6.IN19
+cin[1] => Mux0.IN18
+cin[1] => Mux1.IN9
+cin[1] => Mux2.IN9
+cin[1] => Mux3.IN18
+cin[1] => Mux4.IN9
+cin[1] => Mux5.IN18
+cin[1] => Mux6.IN18
+cin[2] => Mux0.IN17
+cin[2] => Mux1.IN8
+cin[2] => Mux2.IN8
+cin[2] => Mux3.IN17
+cin[2] => Mux4.IN8
+cin[2] => Mux5.IN17
+cin[2] => Mux6.IN17
+cin[3] => Mux0.IN16
+cin[3] => Mux3.IN16
+cin[3] => Mux5.IN16
+cin[3] => Mux6.IN16
+cout[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+cout[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+cout[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+cout[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+cout[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+cout[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+cout[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|e_clock_counter:inst14|counter60_counter:inst
+clk => C~reg0.CLK
+clk => q1[0]~reg0.CLK
+clk => q1[1]~reg0.CLK
+clk => q1[2]~reg0.CLK
+clk => q1[3]~reg0.CLK
+clk => q0[0]~reg0.CLK
+clk => q0[1]~reg0.CLK
+clk => q0[2]~reg0.CLK
+clk => q0[3]~reg0.CLK
+sel => process_0.IN0
+clr => C.OUTPUTSELECT
+clr => q1[0]~reg0.ACLR
+clr => q1[1]~reg0.ACLR
+clr => q1[2]~reg0.ACLR
+clr => q1[3]~reg0.ACLR
+clr => q0[0]~reg0.ACLR
+clr => q0[1]~reg0.ACLR
+clr => q0[2]~reg0.ACLR
+clr => q0[3]~reg0.ACLR
+q1[0] <> q1[0]~reg0
+q1[1] <> q1[1]~reg0
+q1[2] <> q1[2]~reg0
+q1[3] <> q1[3]~reg0
+q0[0] <> q0[0]~reg0
+q0[1] <> q0[1]~reg0
+q0[2] <> q0[2]~reg0
+q0[3] <> q0[3]~reg0
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|e_clock_counter:inst14|counter60_counter:inst18
+clk => C~reg0.CLK
+clk => q1[0]~reg0.CLK
+clk => q1[1]~reg0.CLK
+clk => q1[2]~reg0.CLK
+clk => q1[3]~reg0.CLK
+clk => q0[0]~reg0.CLK
+clk => q0[1]~reg0.CLK
+clk => q0[2]~reg0.CLK
+clk => q0[3]~reg0.CLK
+sel => process_0.IN0
+clr => C.OUTPUTSELECT
+clr => q1[0]~reg0.ACLR
+clr => q1[1]~reg0.ACLR
+clr => q1[2]~reg0.ACLR
+clr => q1[3]~reg0.ACLR
+clr => q0[0]~reg0.ACLR
+clr => q0[1]~reg0.ACLR
+clr => q0[2]~reg0.ACLR
+clr => q0[3]~reg0.ACLR
+q1[0] <> q1[0]~reg0
+q1[1] <> q1[1]~reg0
+q1[2] <> q1[2]~reg0
+q1[3] <> q1[3]~reg0
+q0[0] <> q0[0]~reg0
+q0[1] <> q0[1]~reg0
+q0[2] <> q0[2]~reg0
+q0[3] <> q0[3]~reg0
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|e_clock|e_clock_counter:inst14|counter24_counter:inst4
+clk => q1[0]~reg0.CLK
+clk => q1[1]~reg0.CLK
+clk => q1[2]~reg0.CLK
+clk => q1[3]~reg0.CLK
+clk => q0[0]~reg0.CLK
+clk => q0[1]~reg0.CLK
+clk => q0[2]~reg0.CLK
+clk => q0[3]~reg0.CLK
+sel => process_0.IN0
+clr => q1[0]~reg0.ACLR
+clr => q1[1]~reg0.ACLR
+clr => q1[2]~reg0.ACLR
+clr => q1[3]~reg0.ACLR
+clr => q0[0]~reg0.ACLR
+clr => q0[1]~reg0.ACLR
+clr => q0[2]~reg0.ACLR
+clr => q0[3]~reg0.ACLR
+clr => c$latch.ACLR
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+q1[0] <> q1[0]~reg0
+q1[1] <> q1[1]~reg0
+q1[2] <> q1[2]~reg0
+q1[3] <> q1[3]~reg0
+q0[0] <> q0[0]~reg0
+q0[1] <> q0[1]~reg0
+q0[2] <> q0[2]~reg0
+q0[3] <> q0[3]~reg0
+
+
+|e_clock|dmux:inst12
+no1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+selone => inst.IN0
+selone => inst5.IN0
+seltwo => inst7.IN0
+seltwo => inst4.IN1
+signallllll => inst3.IN2
+signallllll => inst4.IN2
+signallllll => inst5.IN2
+no2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+no3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |e_clock|time_core:inst8
@@ -991,734 +1827,6 @@ result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |e_clock|time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|dmux:inst12
-no1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-selone => inst.IN0
-selone => inst5.IN0
-seltwo => inst7.IN0
-seltwo => inst4.IN1
-signallllll => inst3.IN2
-signallllll => inst4.IN2
-signallllll => inst5.IN2
-no2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-no3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst
-dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
-dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
-dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
-dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
-dataa[4] => lpm_compare:lpm_compare_component.dataa[4]
-dataa[5] => lpm_compare:lpm_compare_component.dataa[5]
-dataa[6] => lpm_compare:lpm_compare_component.dataa[6]
-dataa[7] => lpm_compare:lpm_compare_component.dataa[7]
-dataa[8] => lpm_compare:lpm_compare_component.dataa[8]
-dataa[9] => lpm_compare:lpm_compare_component.dataa[9]
-dataa[10] => lpm_compare:lpm_compare_component.dataa[10]
-dataa[11] => lpm_compare:lpm_compare_component.dataa[11]
-dataa[12] => lpm_compare:lpm_compare_component.dataa[12]
-dataa[13] => lpm_compare:lpm_compare_component.dataa[13]
-dataa[14] => lpm_compare:lpm_compare_component.dataa[14]
-dataa[15] => lpm_compare:lpm_compare_component.dataa[15]
-dataa[16] => lpm_compare:lpm_compare_component.dataa[16]
-dataa[17] => lpm_compare:lpm_compare_component.dataa[17]
-dataa[18] => lpm_compare:lpm_compare_component.dataa[18]
-dataa[19] => lpm_compare:lpm_compare_component.dataa[19]
-dataa[20] => lpm_compare:lpm_compare_component.dataa[20]
-dataa[21] => lpm_compare:lpm_compare_component.dataa[21]
-dataa[22] => lpm_compare:lpm_compare_component.dataa[22]
-dataa[23] => lpm_compare:lpm_compare_component.dataa[23]
-dataa[24] => lpm_compare:lpm_compare_component.dataa[24]
-dataa[25] => lpm_compare:lpm_compare_component.dataa[25]
-dataa[26] => lpm_compare:lpm_compare_component.dataa[26]
-datab[0] => lpm_compare:lpm_compare_component.datab[0]
-datab[1] => lpm_compare:lpm_compare_component.datab[1]
-datab[2] => lpm_compare:lpm_compare_component.datab[2]
-datab[3] => lpm_compare:lpm_compare_component.datab[3]
-datab[4] => lpm_compare:lpm_compare_component.datab[4]
-datab[5] => lpm_compare:lpm_compare_component.datab[5]
-datab[6] => lpm_compare:lpm_compare_component.datab[6]
-datab[7] => lpm_compare:lpm_compare_component.datab[7]
-datab[8] => lpm_compare:lpm_compare_component.datab[8]
-datab[9] => lpm_compare:lpm_compare_component.datab[9]
-datab[10] => lpm_compare:lpm_compare_component.datab[10]
-datab[11] => lpm_compare:lpm_compare_component.datab[11]
-datab[12] => lpm_compare:lpm_compare_component.datab[12]
-datab[13] => lpm_compare:lpm_compare_component.datab[13]
-datab[14] => lpm_compare:lpm_compare_component.datab[14]
-datab[15] => lpm_compare:lpm_compare_component.datab[15]
-datab[16] => lpm_compare:lpm_compare_component.datab[16]
-datab[17] => lpm_compare:lpm_compare_component.datab[17]
-datab[18] => lpm_compare:lpm_compare_component.datab[18]
-datab[19] => lpm_compare:lpm_compare_component.datab[19]
-datab[20] => lpm_compare:lpm_compare_component.datab[20]
-datab[21] => lpm_compare:lpm_compare_component.datab[21]
-datab[22] => lpm_compare:lpm_compare_component.datab[22]
-datab[23] => lpm_compare:lpm_compare_component.datab[23]
-datab[24] => lpm_compare:lpm_compare_component.datab[24]
-datab[25] => lpm_compare:lpm_compare_component.datab[25]
-datab[26] => lpm_compare:lpm_compare_component.datab[26]
-aeb <= lpm_compare:lpm_compare_component.aeb
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component
-dataa[0] => comptree:comparator.dataa[0]
-dataa[1] => comptree:comparator.dataa[1]
-dataa[2] => comptree:comparator.dataa[2]
-dataa[3] => comptree:comparator.dataa[3]
-dataa[4] => comptree:comparator.dataa[4]
-dataa[5] => comptree:comparator.dataa[5]
-dataa[6] => comptree:comparator.dataa[6]
-dataa[7] => comptree:comparator.dataa[7]
-dataa[8] => comptree:comparator.dataa[8]
-dataa[9] => comptree:comparator.dataa[9]
-dataa[10] => comptree:comparator.dataa[10]
-dataa[11] => comptree:comparator.dataa[11]
-dataa[12] => comptree:comparator.dataa[12]
-dataa[13] => comptree:comparator.dataa[13]
-dataa[14] => comptree:comparator.dataa[14]
-dataa[15] => comptree:comparator.dataa[15]
-dataa[16] => comptree:comparator.dataa[16]
-dataa[17] => comptree:comparator.dataa[17]
-dataa[18] => comptree:comparator.dataa[18]
-dataa[19] => comptree:comparator.dataa[19]
-dataa[20] => comptree:comparator.dataa[20]
-dataa[21] => comptree:comparator.dataa[21]
-dataa[22] => comptree:comparator.dataa[22]
-dataa[23] => comptree:comparator.dataa[23]
-dataa[24] => comptree:comparator.dataa[24]
-dataa[25] => comptree:comparator.dataa[25]
-dataa[26] => comptree:comparator.dataa[26]
-datab[0] => comptree:comparator.datab[0]
-datab[1] => comptree:comparator.datab[1]
-datab[2] => comptree:comparator.datab[2]
-datab[3] => comptree:comparator.datab[3]
-datab[4] => comptree:comparator.datab[4]
-datab[5] => comptree:comparator.datab[5]
-datab[6] => comptree:comparator.datab[6]
-datab[7] => comptree:comparator.datab[7]
-datab[8] => comptree:comparator.datab[8]
-datab[9] => comptree:comparator.datab[9]
-datab[10] => comptree:comparator.datab[10]
-datab[11] => comptree:comparator.datab[11]
-datab[12] => comptree:comparator.datab[12]
-datab[13] => comptree:comparator.datab[13]
-datab[14] => comptree:comparator.datab[14]
-datab[15] => comptree:comparator.datab[15]
-datab[16] => comptree:comparator.datab[16]
-datab[17] => comptree:comparator.datab[17]
-datab[18] => comptree:comparator.datab[18]
-datab[19] => comptree:comparator.datab[19]
-datab[20] => comptree:comparator.datab[20]
-datab[21] => comptree:comparator.datab[21]
-datab[22] => comptree:comparator.datab[22]
-datab[23] => comptree:comparator.datab[23]
-datab[24] => comptree:comparator.datab[24]
-datab[25] => comptree:comparator.datab[25]
-datab[26] => comptree:comparator.datab[26]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-alb <= alb.DB_MAX_OUTPUT_PORT_TYPE
-aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
-aneb <= aneb.DB_MAX_OUTPUT_PORT_TYPE
-ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator
-dataa[0] => cmpchain:cmp[0].dataa[0]
-dataa[1] => cmpchain:cmp[0].dataa[1]
-dataa[2] => cmpchain:cmp[0].dataa[2]
-dataa[3] => cmpchain:cmp[0].dataa[3]
-dataa[4] => cmpchain:cmp[0].dataa[4]
-dataa[5] => cmpchain:cmp[0].dataa[5]
-dataa[6] => cmpchain:cmp[0].dataa[6]
-dataa[7] => cmpchain:cmp[0].dataa[7]
-dataa[8] => cmpchain:cmp[0].dataa[8]
-dataa[9] => cmpchain:cmp[0].dataa[9]
-dataa[10] => cmpchain:cmp[0].dataa[10]
-dataa[11] => cmpchain:cmp[0].dataa[11]
-dataa[12] => cmpchain:cmp[0].dataa[12]
-dataa[13] => cmpchain:cmp[0].dataa[13]
-dataa[14] => cmpchain:cmp[0].dataa[14]
-dataa[15] => cmpchain:cmp[0].dataa[15]
-dataa[16] => cmpchain:cmp_end.dataa[0]
-dataa[17] => cmpchain:cmp_end.dataa[1]
-dataa[18] => cmpchain:cmp_end.dataa[2]
-dataa[19] => cmpchain:cmp_end.dataa[3]
-dataa[20] => cmpchain:cmp_end.dataa[4]
-dataa[21] => cmpchain:cmp_end.dataa[5]
-dataa[22] => cmpchain:cmp_end.dataa[6]
-dataa[23] => cmpchain:cmp_end.dataa[7]
-dataa[24] => cmpchain:cmp_end.dataa[8]
-dataa[25] => cmpchain:cmp_end.dataa[9]
-dataa[26] => cmpchain:cmp_end.dataa[10]
-datab[0] => cmpchain:cmp[0].datab[0]
-datab[1] => cmpchain:cmp[0].datab[1]
-datab[2] => cmpchain:cmp[0].datab[2]
-datab[3] => cmpchain:cmp[0].datab[3]
-datab[4] => cmpchain:cmp[0].datab[4]
-datab[5] => cmpchain:cmp[0].datab[5]
-datab[6] => cmpchain:cmp[0].datab[6]
-datab[7] => cmpchain:cmp[0].datab[7]
-datab[8] => cmpchain:cmp[0].datab[8]
-datab[9] => cmpchain:cmp[0].datab[9]
-datab[10] => cmpchain:cmp[0].datab[10]
-datab[11] => cmpchain:cmp[0].datab[11]
-datab[12] => cmpchain:cmp[0].datab[12]
-datab[13] => cmpchain:cmp[0].datab[13]
-datab[14] => cmpchain:cmp[0].datab[14]
-datab[15] => cmpchain:cmp[0].datab[15]
-datab[16] => cmpchain:cmp_end.datab[0]
-datab[17] => cmpchain:cmp_end.datab[1]
-datab[18] => cmpchain:cmp_end.datab[2]
-datab[19] => cmpchain:cmp_end.datab[3]
-datab[20] => cmpchain:cmp_end.datab[4]
-datab[21] => cmpchain:cmp_end.datab[5]
-datab[22] => cmpchain:cmp_end.datab[6]
-datab[23] => cmpchain:cmp_end.datab[7]
-datab[24] => cmpchain:cmp_end.datab[8]
-datab[25] => cmpchain:cmp_end.datab[9]
-datab[26] => cmpchain:cmp_end.datab[10]
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
-agb <= <GND>
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]
-dataa[0] => ecasc[0].IN0
-dataa[1] => ecasc[0].IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[5] => _.IN0
-dataa[6] => _.IN0
-dataa[7] => _.IN0
-dataa[8] => _.IN0
-dataa[9] => _.IN0
-dataa[10] => _.IN0
-dataa[11] => _.IN0
-dataa[12] => _.IN0
-dataa[13] => _.IN0
-dataa[14] => _.IN0
-dataa[15] => _.IN0
-datab[0] => ecasc[0].IN1
-datab[1] => ecasc[0].IN1
-datab[2] => _.IN1
-datab[3] => _.IN1
-datab[4] => _.IN1
-datab[5] => _.IN1
-datab[6] => _.IN1
-datab[7] => _.IN1
-datab[8] => _.IN1
-datab[9] => _.IN1
-datab[10] => _.IN1
-datab[11] => _.IN1
-datab[12] => _.IN1
-datab[13] => _.IN1
-datab[14] => _.IN1
-datab[15] => _.IN1
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-dataa[0] => ecasc[0].IN0
-dataa[1] => ecasc[0].IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[5] => _.IN0
-dataa[6] => _.IN0
-dataa[7] => _.IN0
-dataa[8] => _.IN0
-dataa[9] => _.IN0
-dataa[9] => _.IN0
-dataa[10] => _.IN0
-datab[0] => ecasc[0].IN1
-datab[1] => ecasc[0].IN1
-datab[2] => _.IN1
-datab[3] => _.IN1
-datab[4] => _.IN1
-datab[5] => _.IN1
-datab[6] => _.IN1
-datab[7] => _.IN1
-datab[8] => _.IN1
-datab[9] => _.IN1
-datab[9] => _.IN1
-datab[10] => _.IN1
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree
-dataa[0] => cmpchain:cmp_end.dataa[0]
-dataa[1] => cmpchain:cmp_end.dataa[1]
-datab[0] => cmpchain:cmp_end.datab[0]
-datab[1] => cmpchain:cmp_end.datab[1]
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= cmpchain:cmp_end.aeb
-agb <= <GND>
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-datab[0] => _.IN1
-datab[0] => _.IN0
-datab[1] => _.IN1
-datab[1] => _.IN0
-datab[1] => _.IN1
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|e_clock_counter:inst14
-counter_output[0] <= s[0].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[1] <= s[1].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[3] <= s[3].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[4] <= s[4].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[5] <= s[5].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[6] <= s[6].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[7] <= s[7].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[8] <= s[8].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[9] <= s[9].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[10] <= s[10].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[11] <= s[11].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[12] <= s[12].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[13] <= s[13].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[14] <= s[14].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[15] <= s[15].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[16] <= s[16].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[17] <= s[17].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[18] <= s[18].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[19] <= s[19].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[20] <= s[20].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[21] <= s[21].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[22] <= s[22].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[23] <= s[23].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[24] <= s[24].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[25] <= s[25].DB_MAX_OUTPUT_PORT_TYPE
-counter_output[26] <= s[26].DB_MAX_OUTPUT_PORT_TYPE
-alarm => inst1.IN0
-clk1 => inst1.IN1
-stop2 => inst26.IN0
-stop2 => inst21.IN1
-stop2 => inst20.IN1
-stop2 => inst15.IN1
-change_second => inst21.IN0
-sel => counter60_counter:inst.sel
-sel => counter60_counter:inst18.sel
-sel => counter24_counter:inst4.sel
-clr => counter60_counter:inst.clr
-clr => counter60_counter:inst18.clr
-clr => counter24_counter:inst4.clr
-change_min => inst20.IN0
-change_hour => inst15.IN0
-
-
-|e_clock|e_clock_counter:inst14|BCD_seven:inst2
-cin[0] => Mux0.IN19
-cin[0] => Mux1.IN10
-cin[0] => Mux2.IN10
-cin[0] => Mux3.IN19
-cin[0] => Mux4.IN10
-cin[0] => Mux5.IN19
-cin[0] => Mux6.IN19
-cin[1] => Mux0.IN18
-cin[1] => Mux1.IN9
-cin[1] => Mux2.IN9
-cin[1] => Mux3.IN18
-cin[1] => Mux4.IN9
-cin[1] => Mux5.IN18
-cin[1] => Mux6.IN18
-cin[2] => Mux0.IN17
-cin[2] => Mux1.IN8
-cin[2] => Mux2.IN8
-cin[2] => Mux3.IN17
-cin[2] => Mux4.IN8
-cin[2] => Mux5.IN17
-cin[2] => Mux6.IN17
-cin[3] => Mux0.IN16
-cin[3] => Mux3.IN16
-cin[3] => Mux5.IN16
-cin[3] => Mux6.IN16
-cout[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-cout[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-cout[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-cout[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-cout[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-cout[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-cout[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|e_clock_counter:inst14|counter60_counter:inst
-clk => C~reg0.CLK
-clk => q1[0]~reg0.CLK
-clk => q1[1]~reg0.CLK
-clk => q1[2]~reg0.CLK
-clk => q1[3]~reg0.CLK
-clk => q0[0]~reg0.CLK
-clk => q0[1]~reg0.CLK
-clk => q0[2]~reg0.CLK
-clk => q0[3]~reg0.CLK
-sel => process_0.IN0
-clr => C.OUTPUTSELECT
-clr => q1[0]~reg0.ACLR
-clr => q1[1]~reg0.ACLR
-clr => q1[2]~reg0.ACLR
-clr => q1[3]~reg0.ACLR
-clr => q0[0]~reg0.ACLR
-clr => q0[1]~reg0.ACLR
-clr => q0[2]~reg0.ACLR
-clr => q0[3]~reg0.ACLR
-q1[0] <> q1[0]~reg0
-q1[1] <> q1[1]~reg0
-q1[2] <> q1[2]~reg0
-q1[3] <> q1[3]~reg0
-q0[0] <> q0[0]~reg0
-q0[1] <> q0[1]~reg0
-q0[2] <> q0[2]~reg0
-q0[3] <> q0[3]~reg0
-C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|e_clock_counter:inst14|counter60_counter:inst18
-clk => C~reg0.CLK
-clk => q1[0]~reg0.CLK
-clk => q1[1]~reg0.CLK
-clk => q1[2]~reg0.CLK
-clk => q1[3]~reg0.CLK
-clk => q0[0]~reg0.CLK
-clk => q0[1]~reg0.CLK
-clk => q0[2]~reg0.CLK
-clk => q0[3]~reg0.CLK
-sel => process_0.IN0
-clr => C.OUTPUTSELECT
-clr => q1[0]~reg0.ACLR
-clr => q1[1]~reg0.ACLR
-clr => q1[2]~reg0.ACLR
-clr => q1[3]~reg0.ACLR
-clr => q0[0]~reg0.ACLR
-clr => q0[1]~reg0.ACLR
-clr => q0[2]~reg0.ACLR
-clr => q0[3]~reg0.ACLR
-q1[0] <> q1[0]~reg0
-q1[1] <> q1[1]~reg0
-q1[2] <> q1[2]~reg0
-q1[3] <> q1[3]~reg0
-q0[0] <> q0[0]~reg0
-q0[1] <> q0[1]~reg0
-q0[2] <> q0[2]~reg0
-q0[3] <> q0[3]~reg0
-C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|e_clock_counter:inst14|counter24_counter:inst4
-clk => q1[0]~reg0.CLK
-clk => q1[1]~reg0.CLK
-clk => q1[2]~reg0.CLK
-clk => q1[3]~reg0.CLK
-clk => q0[0]~reg0.CLK
-clk => q0[1]~reg0.CLK
-clk => q0[2]~reg0.CLK
-clk => q0[3]~reg0.CLK
-sel => process_0.IN0
-clr => q1[0]~reg0.ACLR
-clr => q1[1]~reg0.ACLR
-clr => q1[2]~reg0.ACLR
-clr => q1[3]~reg0.ACLR
-clr => q0[0]~reg0.ACLR
-clr => q0[1]~reg0.ACLR
-clr => q0[2]~reg0.ACLR
-clr => q0[3]~reg0.ACLR
-clr => c$latch.ACLR
-c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
-q1[0] <> q1[0]~reg0
-q1[1] <> q1[1]~reg0
-q1[2] <> q1[2]~reg0
-q1[3] <> q1[3]~reg0
-q0[0] <> q0[0]~reg0
-q0[1] <> q0[1]~reg0
-q0[2] <> q0[2]~reg0
-q0[3] <> q0[3]~reg0
-
-
-|e_clock|lpm_compare2:inst19
-dataa[0] => lpm_compare:lpm_compare_component.dataa[0]
-dataa[1] => lpm_compare:lpm_compare_component.dataa[1]
-dataa[2] => lpm_compare:lpm_compare_component.dataa[2]
-dataa[3] => lpm_compare:lpm_compare_component.dataa[3]
-dataa[4] => lpm_compare:lpm_compare_component.dataa[4]
-dataa[5] => lpm_compare:lpm_compare_component.dataa[5]
-dataa[6] => lpm_compare:lpm_compare_component.dataa[6]
-dataa[7] => lpm_compare:lpm_compare_component.dataa[7]
-dataa[8] => lpm_compare:lpm_compare_component.dataa[8]
-dataa[9] => lpm_compare:lpm_compare_component.dataa[9]
-dataa[10] => lpm_compare:lpm_compare_component.dataa[10]
-dataa[11] => lpm_compare:lpm_compare_component.dataa[11]
-dataa[12] => lpm_compare:lpm_compare_component.dataa[12]
-dataa[13] => lpm_compare:lpm_compare_component.dataa[13]
-dataa[14] => lpm_compare:lpm_compare_component.dataa[14]
-dataa[15] => lpm_compare:lpm_compare_component.dataa[15]
-dataa[16] => lpm_compare:lpm_compare_component.dataa[16]
-dataa[17] => lpm_compare:lpm_compare_component.dataa[17]
-dataa[18] => lpm_compare:lpm_compare_component.dataa[18]
-dataa[19] => lpm_compare:lpm_compare_component.dataa[19]
-dataa[20] => lpm_compare:lpm_compare_component.dataa[20]
-dataa[21] => lpm_compare:lpm_compare_component.dataa[21]
-dataa[22] => lpm_compare:lpm_compare_component.dataa[22]
-dataa[23] => lpm_compare:lpm_compare_component.dataa[23]
-dataa[24] => lpm_compare:lpm_compare_component.dataa[24]
-dataa[25] => lpm_compare:lpm_compare_component.dataa[25]
-dataa[26] => lpm_compare:lpm_compare_component.dataa[26]
-AeB <= lpm_compare:lpm_compare_component.AeB
-
-
-|e_clock|lpm_compare2:inst19|lpm_compare:lpm_compare_component
-dataa[0] => comptree:comparator.dataa[0]
-dataa[1] => comptree:comparator.dataa[1]
-dataa[2] => comptree:comparator.dataa[2]
-dataa[3] => comptree:comparator.dataa[3]
-dataa[4] => comptree:comparator.dataa[4]
-dataa[5] => comptree:comparator.dataa[5]
-dataa[6] => comptree:comparator.dataa[6]
-dataa[7] => comptree:comparator.dataa[7]
-dataa[8] => comptree:comparator.dataa[8]
-dataa[9] => comptree:comparator.dataa[9]
-dataa[10] => comptree:comparator.dataa[10]
-dataa[11] => comptree:comparator.dataa[11]
-dataa[12] => comptree:comparator.dataa[12]
-dataa[13] => comptree:comparator.dataa[13]
-dataa[14] => comptree:comparator.dataa[14]
-dataa[15] => comptree:comparator.dataa[15]
-dataa[16] => comptree:comparator.dataa[16]
-dataa[17] => comptree:comparator.dataa[17]
-dataa[18] => comptree:comparator.dataa[18]
-dataa[19] => comptree:comparator.dataa[19]
-dataa[20] => comptree:comparator.dataa[20]
-dataa[21] => comptree:comparator.dataa[21]
-dataa[22] => comptree:comparator.dataa[22]
-dataa[23] => comptree:comparator.dataa[23]
-dataa[24] => comptree:comparator.dataa[24]
-dataa[25] => comptree:comparator.dataa[25]
-dataa[26] => comptree:comparator.dataa[26]
-datab[0] => comptree:comparator.datab[0]
-datab[1] => comptree:comparator.datab[1]
-datab[2] => comptree:comparator.datab[2]
-datab[3] => comptree:comparator.datab[3]
-datab[4] => comptree:comparator.datab[4]
-datab[5] => comptree:comparator.datab[5]
-datab[6] => comptree:comparator.datab[6]
-datab[7] => comptree:comparator.datab[7]
-datab[8] => comptree:comparator.datab[8]
-datab[9] => comptree:comparator.datab[9]
-datab[10] => comptree:comparator.datab[10]
-datab[11] => comptree:comparator.datab[11]
-datab[12] => comptree:comparator.datab[12]
-datab[13] => comptree:comparator.datab[13]
-datab[14] => comptree:comparator.datab[14]
-datab[15] => comptree:comparator.datab[15]
-datab[16] => comptree:comparator.datab[16]
-datab[17] => comptree:comparator.datab[17]
-datab[18] => comptree:comparator.datab[18]
-datab[19] => comptree:comparator.datab[19]
-datab[20] => comptree:comparator.datab[20]
-datab[21] => comptree:comparator.datab[21]
-datab[22] => comptree:comparator.datab[22]
-datab[23] => comptree:comparator.datab[23]
-datab[24] => comptree:comparator.datab[24]
-datab[25] => comptree:comparator.datab[25]
-datab[26] => comptree:comparator.datab[26]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-alb <= alb.DB_MAX_OUTPUT_PORT_TYPE
-aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
-aneb <= aneb.DB_MAX_OUTPUT_PORT_TYPE
-ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
-dataa[0] => cmpchain:cmp_end.dataa[0]
-dataa[1] => cmpchain:cmp_end.dataa[1]
-dataa[2] => cmpchain:cmp_end.dataa[2]
-dataa[3] => cmpchain:cmp_end.dataa[3]
-dataa[4] => cmpchain:cmp_end.dataa[4]
-dataa[5] => cmpchain:cmp_end.dataa[5]
-dataa[6] => cmpchain:cmp_end.dataa[6]
-dataa[7] => cmpchain:cmp_end.dataa[7]
-dataa[8] => cmpchain:cmp_end.dataa[8]
-dataa[9] => cmpchain:cmp_end.dataa[9]
-dataa[10] => cmpchain:cmp_end.dataa[10]
-dataa[11] => cmpchain:cmp_end.dataa[11]
-dataa[12] => cmpchain:cmp_end.dataa[12]
-dataa[13] => cmpchain:cmp_end.dataa[13]
-dataa[14] => cmpchain:cmp_end.dataa[14]
-dataa[15] => cmpchain:cmp_end.dataa[15]
-dataa[16] => cmpchain:cmp_end.dataa[16]
-dataa[17] => cmpchain:cmp_end.dataa[17]
-dataa[18] => cmpchain:cmp_end.dataa[18]
-dataa[19] => cmpchain:cmp_end.dataa[19]
-dataa[20] => cmpchain:cmp_end.dataa[20]
-dataa[21] => cmpchain:cmp_end.dataa[21]
-dataa[22] => cmpchain:cmp_end.dataa[22]
-dataa[23] => cmpchain:cmp_end.dataa[23]
-dataa[24] => cmpchain:cmp_end.dataa[24]
-dataa[25] => cmpchain:cmp_end.dataa[25]
-dataa[26] => cmpchain:cmp_end.dataa[26]
-datab[0] => cmpchain:cmp_end.datab[0]
-datab[1] => cmpchain:cmp_end.datab[1]
-datab[2] => cmpchain:cmp_end.datab[2]
-datab[3] => cmpchain:cmp_end.datab[3]
-datab[4] => cmpchain:cmp_end.datab[4]
-datab[5] => cmpchain:cmp_end.datab[5]
-datab[6] => cmpchain:cmp_end.datab[6]
-datab[7] => cmpchain:cmp_end.datab[7]
-datab[8] => cmpchain:cmp_end.datab[8]
-datab[9] => cmpchain:cmp_end.datab[9]
-datab[10] => cmpchain:cmp_end.datab[10]
-datab[11] => cmpchain:cmp_end.datab[11]
-datab[12] => cmpchain:cmp_end.datab[12]
-datab[13] => cmpchain:cmp_end.datab[13]
-datab[14] => cmpchain:cmp_end.datab[14]
-datab[15] => cmpchain:cmp_end.datab[15]
-datab[16] => cmpchain:cmp_end.datab[16]
-datab[17] => cmpchain:cmp_end.datab[17]
-datab[18] => cmpchain:cmp_end.datab[18]
-datab[19] => cmpchain:cmp_end.datab[19]
-datab[20] => cmpchain:cmp_end.datab[20]
-datab[21] => cmpchain:cmp_end.datab[21]
-datab[22] => cmpchain:cmp_end.datab[22]
-datab[23] => cmpchain:cmp_end.datab[23]
-datab[24] => cmpchain:cmp_end.datab[24]
-datab[25] => cmpchain:cmp_end.datab[25]
-datab[26] => cmpchain:cmp_end.datab[26]
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= cmpchain:cmp_end.aeb
-agb <= <GND>
-
-
-|e_clock|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-dataa[0] => ecasc[0].IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[5] => _.IN0
-dataa[6] => _.IN0
-dataa[7] => _.IN0
-dataa[8] => _.IN0
-dataa[9] => _.IN0
-dataa[10] => _.IN0
-dataa[11] => _.IN0
-dataa[12] => _.IN0
-dataa[13] => _.IN0
-dataa[14] => _.IN0
-dataa[15] => _.IN0
-dataa[16] => _.IN0
-dataa[17] => _.IN0
-dataa[18] => _.IN0
-dataa[19] => _.IN0
-dataa[20] => _.IN0
-dataa[21] => _.IN0
-dataa[22] => _.IN0
-dataa[23] => _.IN0
-dataa[23] => _.IN0
-dataa[24] => _.IN0
-dataa[25] => _.IN0
-dataa[26] => _.IN0
-datab[0] => ecasc[0].IN1
-datab[1] => _.IN1
-datab[2] => _.IN1
-datab[3] => _.IN1
-datab[4] => _.IN1
-datab[5] => _.IN1
-datab[6] => _.IN1
-datab[7] => _.IN1
-datab[8] => _.IN1
-datab[9] => _.IN1
-datab[10] => _.IN1
-datab[11] => _.IN1
-datab[12] => _.IN1
-datab[13] => _.IN1
-datab[14] => _.IN1
-datab[15] => _.IN1
-datab[16] => _.IN1
-datab[17] => _.IN1
-datab[18] => _.IN1
-datab[19] => _.IN1
-datab[20] => _.IN1
-datab[21] => _.IN1
-datab[22] => _.IN1
-datab[23] => _.IN1
-datab[23] => _.IN1
-datab[24] => _.IN1
-datab[25] => _.IN1
-datab[26] => _.IN1
-clk => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
-agb <= agb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|e_clock|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 data[0] => result[0].DATAIN
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~

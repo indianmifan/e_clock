@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for e_clock
-Fri Mar 29 11:10:49 2019
+Fri Mar 29 11:44:22 2019
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -19,7 +19,7 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
  11. Clock Setup: 'SoundCLK'
  12. Clock Setup: 'StopCounter'
  13. Clock Setup: 'SetAlarm'
- 14. Clock Setup: 'aa'
+ 14. Clock Setup: 'SetDir'
  15. Clock Hold: 'qd'
  16. Clock Hold: 'Set1'
  17. Clock Hold: 'SetTime'
@@ -58,18 +58,18 @@ applicable agreement for further details.
 +------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+-------------+-------------+--------------+
 ; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                      ; To                                                        ; From Clock  ; To Clock    ; Failed Paths ;
 +------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+-------------+-------------+--------------+
-; Worst-case tsu               ; N/A                                      ; None          ; 32.000 ns                        ; ALARM                                                     ; DigitalClock:inst15|dotcnt[2]                             ; --          ; SoundCLK    ; 0            ;
+; Worst-case tsu               ; N/A                                      ; None          ; 32.000 ns                        ; ALARM                                                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]             ; --          ; SoundCLK    ; 0            ;
 ; Worst-case tco               ; N/A                                      ; None          ; 133.000 ns                       ; time_core:inst8|counter_24_160:inst8|74160:inst1|6        ; h1[0]                                                     ; CLK         ; --          ; 0            ;
 ; Worst-case tpd               ; N/A                                      ; None          ; 23.000 ns                        ; SetAlarm                                                  ; s0[5]                                                     ; --          ; --          ; 0            ;
-; Worst-case th                ; N/A                                      ; None          ; 54.000 ns                        ; aa                                                        ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0 ; --          ; CLK         ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 54.000 ns                        ; SetDir                                                    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0 ; --          ; CLK         ; 0            ;
 ; Clock Setup: 'Set2'          ; N/A                                      ; None          ; 11.24 MHz ( period = 89.000 ns ) ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; Set2        ; Set2        ; 0            ;
 ; Clock Setup: 'SetTime'       ; N/A                                      ; None          ; 11.24 MHz ( period = 89.000 ns ) ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; SetTime     ; SetTime     ; 0            ;
 ; Clock Setup: 'Set1'          ; N/A                                      ; None          ; 11.24 MHz ( period = 89.000 ns ) ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; Set1        ; Set1        ; 0            ;
 ; Clock Setup: 'qd'            ; N/A                                      ; None          ; 11.24 MHz ( period = 89.000 ns ) ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; time_core:inst8|counter_24_160:inst8|74160:inst1|8        ; qd          ; qd          ; 0            ;
 ; Clock Setup: 'SetAlarm'      ; N/A                                      ; None          ; 18.18 MHz ( period = 55.000 ns ) ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0 ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0 ; SetAlarm    ; SetAlarm    ; 0            ;
 ; Clock Setup: 'CLK'           ; N/A                                      ; None          ; 21.28 MHz ( period = 47.000 ns ) ; inst6                                                     ; inst6                                                     ; CLK         ; CLK         ; 0            ;
-; Clock Setup: 'SoundCLK'      ; N/A                                      ; None          ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|reset                                 ; DigitalClock:inst15|dotcnt[2]                             ; SoundCLK    ; SoundCLK    ; 0            ;
-; Clock Setup: 'aa'            ; N/A                                      ; None          ; 76.92 MHz ( period = 13.000 ns ) ; inst6                                                     ; inst6                                                     ; aa          ; aa          ; 0            ;
+; Clock Setup: 'SoundCLK'      ; N/A                                      ; None          ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                 ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]             ; SoundCLK    ; SoundCLK    ; 0            ;
+; Clock Setup: 'SetDir'        ; N/A                                      ; None          ; 76.92 MHz ( period = 13.000 ns ) ; inst6                                                     ; inst6                                                     ; SetDir      ; SetDir      ; 0            ;
 ; Clock Setup: 'StopCounter'   ; N/A                                      ; None          ; 76.92 MHz ( period = 13.000 ns ) ; inst6                                                     ; inst6                                                     ; StopCounter ; StopCounter ; 0            ;
 ; Clock Hold: 'qd'             ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; time_core:inst8|counter_24_160:inst8|74160:inst1|6        ; time_core:inst8|counter_24_160:inst8|74160:inst1|6        ; qd          ; qd          ; 153          ;
 ; Clock Hold: 'Set1'           ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; time_core:inst8|counter_24_160:inst8|74160:inst1|6        ; time_core:inst8|counter_24_160:inst8|74160:inst1|6        ; Set1        ; Set1        ; 153          ;
@@ -128,7 +128,7 @@ applicable agreement for further details.
 ; SoundCLK        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; StopCounter     ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; SetAlarm        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; aa              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SetDir          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
 
@@ -1059,119 +1059,119 @@ applicable agreement for further details.
 +-----------------------------------------+-----------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'SoundCLK'                                                                                                                                                                                                                                      ;
-+-------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)             ; From                                              ; To                                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|freq[0]                       ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|freq[1]                       ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|soundcnt[0]                   ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|soundcnt[1]                   ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; DigitalClock:inst15|waveout                       ; DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|melody                        ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|melody                        ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[0]                       ; DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|melody                        ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[0]                     ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[1]                     ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|dotcnt[2]                     ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[1]                       ; DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[0]                       ; DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[1]                       ; DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|soundcnt[0]                   ; DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|soundcnt[1]                   ; DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|reset                         ; DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[0]                       ; DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|freq[1]                       ; DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|soundcnt[0]                   ; DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; DigitalClock:inst15|soundcnt[1]                   ; DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
-+-------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'SoundCLK'                                                                                                                                                                                                                                                                      ;
++-------+----------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)             ; From                                                              ; To                                                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+----------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 34.48 MHz ( period = 29.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 24.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 47.62 MHz ( period = 21.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCtr:inst31|DigitalClock:inst15|waveout                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 16.000 ns               ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[1] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[2] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[3] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[4] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[5] ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|melody                        ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]                     ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|reset                         ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[0]                       ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|freq[1]                       ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[0]                   ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCtr:inst31|DigitalClock:inst15|soundcnt[1]                   ; SoundCLK   ; SoundCLK ; None                        ; None                      ; 8.000 ns                ;
++-------+----------------------------------+-------------------------------------------------------------------+-------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1352,11 +1352,11 @@ applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'aa'                                                                                                                                                    ;
+; Clock Setup: 'SetDir'                                                                                                                                                ;
 +-------+----------------------------------+-------+-------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)             ; From  ; To    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+----------------------------------+-------+-------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; inst6 ; inst6 ; aa         ; aa       ; None                        ; None                      ; 8.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; inst6 ; inst6 ; SetDir     ; SetDir   ; None                        ; None                      ; 8.000 ns                ;
 +-------+----------------------------------+-------+-------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -2021,147 +2021,147 @@ applicable agreement for further details.
 +------------------------------------------+------------------------------------------------------------+------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; tsu                                                                                                               ;
-+-------+--------------+------------+-------+------------------------------------------------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From  ; To                                                         ; To Clock ;
-+-------+--------------+------------+-------+------------------------------------------------------------+----------+
-; N/A   ; None         ; 32.000 ns  ; ALARM ; DigitalClock:inst15|reset                                  ; SoundCLK ;
-; N/A   ; None         ; 32.000 ns  ; ALARM ; DigitalClock:inst15|dotcnt[0]                              ; SoundCLK ;
-; N/A   ; None         ; 32.000 ns  ; ALARM ; DigitalClock:inst15|dotcnt[1]                              ; SoundCLK ;
-; N/A   ; None         ; 32.000 ns  ; ALARM ; DigitalClock:inst15|dotcnt[2]                              ; SoundCLK ;
-; N/A   ; None         ; 24.000 ns  ; ALARM ; DigitalClock:inst15|melody                                 ; SoundCLK ;
-; N/A   ; None         ; 21.000 ns  ; aa    ; DigitalClock:inst15|dotcnt[2]                              ; SoundCLK ;
-; N/A   ; None         ; 13.000 ns  ; aa    ; DigitalClock:inst15|melody                                 ; SoundCLK ;
-; N/A   ; None         ; 13.000 ns  ; aa    ; DigitalClock:inst15|reset                                  ; SoundCLK ;
-; N/A   ; None         ; 13.000 ns  ; aa    ; DigitalClock:inst15|dotcnt[0]                              ; SoundCLK ;
-; N/A   ; None         ; 13.000 ns  ; aa    ; DigitalClock:inst15|dotcnt[1]                              ; SoundCLK ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set1     ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; qd       ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set2     ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; CLK      ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; qd       ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set1     ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set2     ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; qd       ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set1     ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -4.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set2     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set1     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; qd       ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set2     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; CLK      ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; qd       ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set1     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set2     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; qd       ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set1     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set2     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; qd       ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set1     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set2     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; qd       ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set1     ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -11.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; qd       ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
-; N/A   ; None         ; -12.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
-; N/A   ; None         ; -21.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; CLK      ;
-; N/A   ; None         ; -28.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; CLK      ;
-; N/A   ; None         ; -29.000 ns ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
-; N/A   ; None         ; -38.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; CLK      ;
-; N/A   ; None         ; -45.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; CLK      ;
-; N/A   ; None         ; -45.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; CLK      ;
-; N/A   ; None         ; -45.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; CLK      ;
-; N/A   ; None         ; -46.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; CLK      ;
-; N/A   ; None         ; -46.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; CLK      ;
-; N/A   ; None         ; -46.000 ns ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; CLK      ;
-+-------+--------------+------------+-------+------------------------------------------------------------+----------+
++--------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                ;
++-------+--------------+------------+--------+------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                                                         ; To Clock ;
++-------+--------------+------------+--------+------------------------------------------------------------+----------+
+; N/A   ; None         ; 32.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|reset                  ; SoundCLK ;
+; N/A   ; None         ; 32.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]              ; SoundCLK ;
+; N/A   ; None         ; 32.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]              ; SoundCLK ;
+; N/A   ; None         ; 32.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]              ; SoundCLK ;
+; N/A   ; None         ; 24.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|melody                 ; SoundCLK ;
+; N/A   ; None         ; 21.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]              ; SoundCLK ;
+; N/A   ; None         ; 13.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|melody                 ; SoundCLK ;
+; N/A   ; None         ; 13.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|reset                  ; SoundCLK ;
+; N/A   ; None         ; 13.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]              ; SoundCLK ;
+; N/A   ; None         ; 13.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]              ; SoundCLK ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set1     ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; qd       ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set2     ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; CLK      ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; qd       ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set1     ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set2     ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; qd       ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set1     ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -4.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set2     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set1     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; qd       ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set2     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; CLK      ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; qd       ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set1     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set2     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; qd       ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set1     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set2     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; qd       ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set1     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set2     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; qd       ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set1     ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -11.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; qd       ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
+; N/A   ; None         ; -12.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
+; N/A   ; None         ; -21.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; CLK      ;
+; N/A   ; None         ; -28.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; CLK      ;
+; N/A   ; None         ; -29.000 ns ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
+; N/A   ; None         ; -38.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; CLK      ;
+; N/A   ; None         ; -45.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; CLK      ;
+; N/A   ; None         ; -45.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; CLK      ;
+; N/A   ; None         ; -45.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; CLK      ;
+; N/A   ; None         ; -46.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; CLK      ;
+; N/A   ; None         ; -46.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; CLK      ;
+; N/A   ; None         ; -46.000 ns ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; CLK      ;
++-------+--------------+------------+--------+------------------------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2489,147 +2489,147 @@ applicable agreement for further details.
 +-------+-------------------+-----------------+----------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; th                                                                                                                       ;
-+---------------+-------------+------------+-------+------------------------------------------------------------+----------+
-; Minimum Slack ; Required th ; Actual th  ; From  ; To                                                         ; To Clock ;
-+---------------+-------------+------------+-------+------------------------------------------------------------+----------+
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; CLK      ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; CLK      ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; CLK      ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; CLK      ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; CLK      ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; qd       ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set1     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set2     ;
-; N/A           ; None        ; 54.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; CLK      ;
-; N/A           ; None        ; 46.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; qd       ;
-; N/A           ; None        ; 46.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set1     ;
-; N/A           ; None        ; 46.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; SetAlarm ;
-; N/A           ; None        ; 46.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set2     ;
-; N/A           ; None        ; 46.000 ns  ; aa    ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; CLK      ;
-; N/A           ; None        ; 37.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
-; N/A           ; None        ; 37.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
-; N/A           ; None        ; 37.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
-; N/A           ; None        ; 37.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
-; N/A           ; None        ; 37.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
-; N/A           ; None        ; 29.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; qd       ;
-; N/A           ; None        ; 29.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set1     ;
-; N/A           ; None        ; 29.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; SetAlarm ;
-; N/A           ; None        ; 29.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set2     ;
-; N/A           ; None        ; 29.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
-; N/A           ; None        ; 20.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
-; N/A           ; None        ; 20.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
-; N/A           ; None        ; 20.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
-; N/A           ; None        ; 20.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
-; N/A           ; None        ; 20.000 ns  ; CLR   ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
-; N/A           ; None        ; 12.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set1     ;
-; N/A           ; None        ; 12.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; qd       ;
-; N/A           ; None        ; 12.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set2     ;
-; N/A           ; None        ; 12.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; SetAlarm ;
-; N/A           ; None        ; 12.000 ns  ; aa    ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; CLK      ;
-; N/A           ; None        ; -5.000 ns  ; aa    ; DigitalClock:inst15|melody                                 ; SoundCLK ;
-; N/A           ; None        ; -5.000 ns  ; aa    ; DigitalClock:inst15|reset                                  ; SoundCLK ;
-; N/A           ; None        ; -5.000 ns  ; aa    ; DigitalClock:inst15|dotcnt[0]                              ; SoundCLK ;
-; N/A           ; None        ; -5.000 ns  ; aa    ; DigitalClock:inst15|dotcnt[1]                              ; SoundCLK ;
-; N/A           ; None        ; -5.000 ns  ; ALARM ; DigitalClock:inst15|melody                                 ; SoundCLK ;
-; N/A           ; None        ; -13.000 ns ; aa    ; DigitalClock:inst15|dotcnt[2]                              ; SoundCLK ;
-; N/A           ; None        ; -13.000 ns ; ALARM ; DigitalClock:inst15|reset                                  ; SoundCLK ;
-; N/A           ; None        ; -13.000 ns ; ALARM ; DigitalClock:inst15|dotcnt[0]                              ; SoundCLK ;
-; N/A           ; None        ; -13.000 ns ; ALARM ; DigitalClock:inst15|dotcnt[1]                              ; SoundCLK ;
-; N/A           ; None        ; -13.000 ns ; ALARM ; DigitalClock:inst15|dotcnt[2]                              ; SoundCLK ;
-+---------------+-------------+------------+-------+------------------------------------------------------------+----------+
++---------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                        ;
++---------------+-------------+------------+--------+------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th  ; From   ; To                                                         ; To Clock ;
++---------------+-------------+------------+--------+------------------------------------------------------------+----------+
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0  ; CLK      ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0  ; CLK      ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0  ; CLK      ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[1]~reg0  ; CLK      ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0  ; CLK      ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; qd       ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set1     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; Set2     ;
+; N/A           ; None        ; 54.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0  ; CLK      ;
+; N/A           ; None        ; 46.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; qd       ;
+; N/A           ; None        ; 46.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set1     ;
+; N/A           ; None        ; 46.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; SetAlarm ;
+; N/A           ; None        ; 46.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; Set2     ;
+; N/A           ; None        ; 46.000 ns  ; SetDir ; e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0  ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[2]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[3]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0 ; CLK      ;
+; N/A           ; None        ; 37.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; qd       ;
+; N/A           ; None        ; 37.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set1     ;
+; N/A           ; None        ; 37.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; SetAlarm ;
+; N/A           ; None        ; 37.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; Set2     ;
+; N/A           ; None        ; 37.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst18|C          ; CLK      ;
+; N/A           ; None        ; 29.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; qd       ;
+; N/A           ; None        ; 29.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set1     ;
+; N/A           ; None        ; 29.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; SetAlarm ;
+; N/A           ; None        ; 29.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; Set2     ;
+; N/A           ; None        ; 29.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst18|q0[1]~reg0 ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[3]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[2]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0   ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
+; N/A           ; None        ; 20.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set1     ;
+; N/A           ; None        ; 20.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; qd       ;
+; N/A           ; None        ; 20.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; Set2     ;
+; N/A           ; None        ; 20.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; SetAlarm ;
+; N/A           ; None        ; 20.000 ns  ; CLR    ; e_clock_counter:inst14|counter60_counter:inst|C            ; CLK      ;
+; N/A           ; None        ; 12.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set1     ;
+; N/A           ; None        ; 12.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; qd       ;
+; N/A           ; None        ; 12.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; Set2     ;
+; N/A           ; None        ; 12.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; SetAlarm ;
+; N/A           ; None        ; 12.000 ns  ; SetDir ; e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0   ; CLK      ;
+; N/A           ; None        ; -5.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|melody                 ; SoundCLK ;
+; N/A           ; None        ; -5.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|reset                  ; SoundCLK ;
+; N/A           ; None        ; -5.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]              ; SoundCLK ;
+; N/A           ; None        ; -5.000 ns  ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]              ; SoundCLK ;
+; N/A           ; None        ; -5.000 ns  ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|melody                 ; SoundCLK ;
+; N/A           ; None        ; -13.000 ns ; SetDir ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]              ; SoundCLK ;
+; N/A           ; None        ; -13.000 ns ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|reset                  ; SoundCLK ;
+; N/A           ; None        ; -13.000 ns ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[0]              ; SoundCLK ;
+; N/A           ; None        ; -13.000 ns ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[1]              ; SoundCLK ;
+; N/A           ; None        ; -13.000 ns ; ALARM  ; SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]              ; SoundCLK ;
++---------------+-------------+------------+--------+------------------------------------------------------------+----------+
 
 
 +--------------------------+
@@ -2638,7 +2638,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Mar 29 11:10:48 2019
+    Info: Processing started: Fri Mar 29 11:44:22 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off e_clock -c e_clock
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
@@ -2653,11 +2653,11 @@ Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "SoundCLK" is an undefined clock
     Info: Assuming node "StopCounter" is an undefined clock
     Info: Assuming node "SetAlarm" is an undefined clock
-    Info: Assuming node "aa" is an undefined clock
+    Info: Assuming node "SetDir" is an undefined clock
 Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0" as buffer
-    Info: Detected gated clock "e_clock_counter:inst14|inst15~2sexp" as buffer
+    Info: Detected gated clock "e_clock_counter:inst14|inst15~3sexp" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0" as buffer
@@ -2691,10 +2691,10 @@ Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or ga
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|q1[0]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|q1[1]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|q1[3]~reg0" as buffer
-    Info: Detected gated clock "inst11~4" as buffer
+    Info: Detected gated clock "SoundCtr:inst31|inst11~4" as buffer
     Info: Detected gated clock "inst29~2" as buffer
     Info: Detected ripple clock "inst6" as buffer
-    Info: Detected gated clock "time_core:inst8|inst15~4sexp" as buffer
+    Info: Detected gated clock "time_core:inst8|inst15~3sexp" as buffer
     Info: Detected gated clock "time_core:inst8|counter_60_160:inst3|74160:inst|49~18" as buffer
     Info: Detected gated clock "time_core:inst8|inst17~2sexp" as buffer
     Info: Detected gated clock "time_core:inst8|counter_60_160:inst1|74160:inst|49~18" as buffer
@@ -2725,7 +2725,7 @@ Info: Clock "qd" has Internal fmax of 11.24 MHz between source register "time_co
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "qd" to destination register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -2760,7 +2760,7 @@ Info: Clock "Set1" has Internal fmax of 11.24 MHz between source register "time_
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "Set1" to destination register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -2795,7 +2795,7 @@ Info: Clock "SetTime" has Internal fmax of 11.24 MHz between source register "ti
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "SetTime" to destination register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -2830,7 +2830,7 @@ Info: Clock "Set2" has Internal fmax of 11.24 MHz between source register "time_
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "Set2" to destination register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -2868,7 +2868,7 @@ Info: Clock "CLK" has Internal fmax of 21.28 MHz between source register "inst6"
             Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
@@ -2882,30 +2882,30 @@ Info: Clock "CLK" has Internal fmax of 21.28 MHz between source register "inst6"
             Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
             Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
             Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
             Info: Total interconnect delay = 10.000 ns ( 11.63 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
-Info: Clock "SoundCLK" has Internal fmax of 34.48 MHz between source register "DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]" and destination register "DigitalClock:inst15|dotcnt[2]" (period= 29.0 ns)
+Info: Clock "SoundCLK" has Internal fmax of 34.48 MHz between source register "SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]" and destination register "SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]" (period= 29.0 ns)
     Info: + Longest register to register delay is 24.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP7; Fanout = 9; COMB Node = 'DigitalClock:inst15|freq[0]~38'
-        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 18.000 ns; Loc. = SEXP13; Fanout = 1; COMB Node = 'DigitalClock:inst15|dotcnt~71'
-        Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 24.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'DigitalClock:inst15|dotcnt[2]'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP7; Fanout = 9; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|freq[0]~38'
+        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 18.000 ns; Loc. = SEXP13; Fanout = 1; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~71'
+        Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 24.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
         Info: Total cell delay = 22.000 ns ( 91.67 % )
         Info: Total interconnect delay = 2.000 ns ( 8.33 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "SoundCLK" to destination register is 10.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'DigitalClock:inst15|dotcnt[2]'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
             Info: Total cell delay = 8.000 ns ( 80.00 % )
             Info: Total interconnect delay = 2.000 ns ( 20.00 % )
         Info: - Longest clock path from clock "SoundCLK" to source register is 10.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
             Info: Total cell delay = 8.000 ns ( 80.00 % )
             Info: Total interconnect delay = 2.000 ns ( 20.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
@@ -2940,7 +2940,7 @@ Info: Clock "SetAlarm" has Internal fmax of 18.18 MHz between source register "e
     Info: - Smallest clock skew is -34.000 ns
         Info: + Shortest clock path from clock "SetAlarm" to destination register is 26.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_80; Fanout = 32; CLK Node = 'SetAlarm'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP115; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst15~2sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP115; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
             Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 26.000 ns; Loc. = LC114; Fanout = 17; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0'
             Info: Total cell delay = 24.000 ns ( 92.31 % )
@@ -2958,22 +2958,22 @@ Info: Clock "SetAlarm" has Internal fmax of 18.18 MHz between source register "e
             Info: Total interconnect delay = 6.000 ns ( 10.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
-Info: Clock "aa" has Internal fmax of 76.92 MHz between source register "inst6" and destination register "inst6" (period= 13.0 ns)
+Info: Clock "SetDir" has Internal fmax of 76.92 MHz between source register "inst6" and destination register "inst6" (period= 13.0 ns)
     Info: + Longest register to register delay is 8.000 ns
         Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
         Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is 0.000 ns
-        Info: + Shortest clock path from clock "aa" to destination register is 27.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'aa'
-            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+        Info: + Shortest clock path from clock "SetDir" to destination register is 27.000 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
+            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 23.000 ns ( 85.19 % )
             Info: Total interconnect delay = 4.000 ns ( 14.81 % )
-        Info: - Longest clock path from clock "aa" to source register is 27.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'aa'
-            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+        Info: - Longest clock path from clock "SetDir" to source register is 27.000 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
+            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 23.000 ns ( 85.19 % )
@@ -3003,7 +3003,7 @@ Info: Found hold time violation between source  pin or register "time_core:inst8
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "qd" to source register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -3039,7 +3039,7 @@ Info: Found hold time violation between source  pin or register "time_core:inst8
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "Set1" to source register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -3075,7 +3075,7 @@ Info: Found hold time violation between source  pin or register "time_core:inst8
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "SetTime" to source register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -3111,7 +3111,7 @@ Info: Found hold time violation between source  pin or register "time_core:inst8
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "Set2" to source register is 43.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~4sexp'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
             Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
@@ -3136,7 +3136,7 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
             Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
             Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
             Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
@@ -3146,7 +3146,7 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
             Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
@@ -3169,7 +3169,7 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
             Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
             Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
             Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
@@ -3179,7 +3179,7 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
             Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
             Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
             Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'inst11~4'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
             Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
             Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
@@ -3190,22 +3190,22 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
         Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
-Info: tsu for register "DigitalClock:inst15|reset" (data pin = "ALARM", clock pin = "SoundCLK") is 32.000 ns
+Info: tsu for register "SoundCtr:inst31|DigitalClock:inst15|reset" (data pin = "ALARM", clock pin = "SoundCLK") is 32.000 ns
     Info: + Longest pin to register delay is 38.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_68; Fanout = 71; PIN Node = 'ALARM'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP95; Fanout = 20; COMB Node = 'lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~21'
-        Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC83; Fanout = 1; COMB Node = 'lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~38'
-        Info: 4: + IC(0.000 ns) + CELL(1.000 ns) = 19.000 ns; Loc. = LC84; Fanout = 1; COMB Node = 'lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~44'
-        Info: 5: + IC(0.000 ns) + CELL(1.000 ns) = 20.000 ns; Loc. = LC85; Fanout = 1; COMB Node = 'lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~50'
-        Info: 6: + IC(0.000 ns) + CELL(2.000 ns) = 22.000 ns; Loc. = LC86; Fanout = 3; COMB Node = 'lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~27'
-        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 32.000 ns; Loc. = SEXP3; Fanout = 3; COMB Node = 'DigitalClock:inst15|dotcnt~52'
-        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 38.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'DigitalClock:inst15|reset'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP95; Fanout = 20; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~21'
+        Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC83; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~38'
+        Info: 4: + IC(0.000 ns) + CELL(1.000 ns) = 19.000 ns; Loc. = LC84; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~44'
+        Info: 5: + IC(0.000 ns) + CELL(1.000 ns) = 20.000 ns; Loc. = LC85; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~50'
+        Info: 6: + IC(0.000 ns) + CELL(2.000 ns) = 22.000 ns; Loc. = LC86; Fanout = 3; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~27'
+        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 32.000 ns; Loc. = SEXP3; Fanout = 3; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~52'
+        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 38.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
         Info: Total cell delay = 34.000 ns ( 89.47 % )
         Info: Total interconnect delay = 4.000 ns ( 10.53 % )
     Info: + Micro setup delay of destination is 4.000 ns
     Info: - Shortest clock path from clock "SoundCLK" to destination register is 10.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'DigitalClock:inst15|reset'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
 Info: tco from clock "qd" to destination pin "h1[1]" through register "time_core:inst8|counter_24_160:inst8|74160:inst1|7" is 133.000 ns
@@ -3241,7 +3241,7 @@ Info: Longest tpd from source pin "SetTime" to destination pin "s0[1]" is 23.000
     Info: 4: + IC(0.000 ns) + CELL(4.000 ns) = 23.000 ns; Loc. = PIN_50; Fanout = 0; PIN Node = 's0[1]'
     Info: Total cell delay = 21.000 ns ( 91.30 % )
     Info: Total interconnect delay = 2.000 ns ( 8.70 % )
-Info: th for register "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0" (data pin = "aa", clock pin = "qd") is 54.000 ns
+Info: th for register "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0" (data pin = "SetDir", clock pin = "qd") is 54.000 ns
     Info: + Longest clock path from clock "qd" to destination register is 60.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
         Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
@@ -3255,14 +3255,14 @@ Info: th for register "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0
         Info: Total interconnect delay = 6.000 ns ( 10.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
     Info: - Shortest pin to register delay is 10.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'aa'
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
         Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC113; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 152 megabytes
-    Info: Processing ended: Fri Mar 29 11:10:49 2019
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Mar 29 11:44:22 2019
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

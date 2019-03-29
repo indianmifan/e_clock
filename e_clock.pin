@@ -131,7 +131,7 @@ Set1                         : 63        : input  : TTL               :         
 Set2                         : 64        : input  : TTL               :         :           : Y              
 StopCounter                  : 65        : input  : TTL               :         :           : Y              
 VCCIO                        : 66        : power  :                   : 5.0V    :           :                
-aa                           : 67        : input  : TTL               :         :           : Y              
+SetDir                       : 67        : input  : TTL               :         :           : Y              
 ALARM                        : 68        : input  : TTL               :         :           : Y              
 RESERVED                     : 69        :        :                   :         :           :                
 CLR                          : 70        : input  : TTL               :         :           : Y              
