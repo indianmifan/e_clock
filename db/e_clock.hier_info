@@ -5,17 +5,17 @@ Set1 => dmux:inst12.selone
 Set2 => dmux:inst12.seltwo
 qd => dmux:inst12.signallllll
 CLK => time_core:inst8.clk
-CLK => e_clock_counter:inst36.clk1
+CLK => e_clock_counter:inst14.clk1
 CLK => SHOWCONTROLER:inst17.FLASH
 SetTime => time_core:inst8.stop
 SetTime => SHOWCONTROLER:inst17.SetTime
 StopCounter => inst29.IN0
 aa => inst7.IN0
 aa => inst2.IN1
-aa => e_clock_counter:inst36.sel
-SetAlarm => e_clock_counter:inst36.stop2
+aa => e_clock_counter:inst14.sel
+SetAlarm => e_clock_counter:inst14.stop2
 SetAlarm => SHOWCONTROLER:inst17.SetAlarm
-CLR => e_clock_counter:inst36.clr
+CLR => e_clock_counter:inst14.clr
 ALARM => inst13[26].OE
 ALARM => inst13[25].OE
 ALARM => inst13[24].OE
@@ -1315,7 +1315,7 @@ clken => ~NO_FANOUT~
 result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|e_clock_counter:inst36
+|e_clock|e_clock_counter:inst14
 counter_output[0] <= s[0].DB_MAX_OUTPUT_PORT_TYPE
 counter_output[1] <= s[1].DB_MAX_OUTPUT_PORT_TYPE
 counter_output[2] <= s[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1360,7 +1360,7 @@ change_min => inst20.IN0
 change_hour => inst15.IN0
 
 
-|e_clock|e_clock_counter:inst36|BCD_seven:inst2
+|e_clock|e_clock_counter:inst14|BCD_seven:inst2
 cin[0] => Mux0.IN19
 cin[0] => Mux1.IN10
 cin[0] => Mux2.IN10
@@ -1395,7 +1395,7 @@ cout[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 cout[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|e_clock_counter:inst36|counter60_counter:inst
+|e_clock|e_clock_counter:inst14|counter60_counter:inst
 clk => C~reg0.CLK
 clk => q1[0]~reg0.CLK
 clk => q1[1]~reg0.CLK
@@ -1426,7 +1426,7 @@ q0[3] <> q0[3]~reg0
 C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|e_clock_counter:inst36|counter60_counter:inst18
+|e_clock|e_clock_counter:inst14|counter60_counter:inst18
 clk => C~reg0.CLK
 clk => q1[0]~reg0.CLK
 clk => q1[1]~reg0.CLK
@@ -1457,7 +1457,7 @@ q0[3] <> q0[3]~reg0
 C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|e_clock|e_clock_counter:inst36|counter24_counter:inst4
+|e_clock|e_clock_counter:inst14|counter24_counter:inst4
 clk => q1[0]~reg0.CLK
 clk => q1[1]~reg0.CLK
 clk => q1[2]~reg0.CLK

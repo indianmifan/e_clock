@@ -107,7 +107,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -1112 -1088 -944 -1072)
+	(rect -1112 -960 -944 -944)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "alarm" (rect 5 0 32 12)(font "Arial" ))
 	(pt 168 8)
@@ -931,14 +931,6 @@ applicable agreement for further details.
 	(pt -856 -1024)
 )
 (connector
-	(pt -856 -1024)
-	(pt -856 -1080)
-)
-(connector
-	(pt -856 -1080)
-	(pt -944 -1080)
-)
-(connector
 	(pt -104 -920)
 	(pt -104 -720)
 )
@@ -975,6 +967,14 @@ applicable agreement for further details.
 (connector
 	(pt -664 -1000)
 	(pt -384 -1000)
+)
+(connector
+	(pt -856 -1024)
+	(pt -856 -952)
+)
+(connector
+	(pt -856 -952)
+	(pt -944 -952)
 )
 (junction (pt -488 -848))
 (junction (pt -504 -848))

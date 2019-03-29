@@ -40,22 +40,22 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "alarm" (rect 0 0 30 14)(font "Arial" (font_size 8)))
-		(text "alarm" (rect 21 59 51 73)(font "Arial" (font_size 8)))
+		(text "change_second" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "change_second" (rect 21 59 113 73)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "change_second" (rect 0 0 92 14)(font "Arial" (font_size 8)))
-		(text "change_second" (rect 21 75 113 89)(font "Arial" (font_size 8)))
+		(text "clk1" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "clk1" (rect 21 75 43 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "clk1" (rect 0 0 22 14)(font "Arial" (font_size 8)))
-		(text "clk1" (rect 21 91 43 105)(font "Arial" (font_size 8)))
+		(text "alarm" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "alarm" (rect 21 91 51 105)(font "Arial" (font_size 8)))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port

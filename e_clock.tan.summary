@@ -37,7 +37,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 54.000 ns
 From           : aa
-To             : e_clock_counter:inst36|counter24_counter:inst4|q1[2]~reg0
+To             : e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0
 From Clock     : --
 To Clock       : CLK
 Failed Paths   : 0
@@ -86,8 +86,8 @@ Type           : Clock Setup: 'SetAlarm'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 18.18 MHz ( period = 55.000 ns )
-From           : e_clock_counter:inst36|counter24_counter:inst4|q1[2]~reg0
-To             : e_clock_counter:inst36|counter24_counter:inst4|q1[0]~reg0
+From           : e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0
+To             : e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0
 From Clock     : SetAlarm
 To Clock       : SetAlarm
 Failed Paths   : 0

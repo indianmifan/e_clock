@@ -715,7 +715,7 @@ ON
 }
 # hierarchies {
 time_core:inst8|BCD_seven:inst2
-e_clock_counter:inst36|BCD_seven:inst2
+e_clock_counter:inst14|BCD_seven:inst2
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -2525,26 +2525,6 @@ aeb
 
 # end
 # entity
-e_clock_counter
-# storage
-db|e_clock.(24).cnf
-db|e_clock.(24).cnf
-# case_insensitive
-# source_file
-e_clock_counter.bdf
-9a33e853d7dc31567425ec58b46d49
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-e_clock_counter:inst36
-}
-# macro_sequence
-
-# end
-# entity
 counter60_counter
 # storage
 db|e_clock.(25).cnf
@@ -2569,8 +2549,8 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-e_clock_counter:inst36|counter60_counter:inst
-e_clock_counter:inst36|counter60_counter:inst18
+e_clock_counter:inst14|counter60_counter:inst
+e_clock_counter:inst14|counter60_counter:inst18
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -2603,7 +2583,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-e_clock_counter:inst36|counter24_counter:inst4
+e_clock_counter:inst14|counter24_counter:inst4
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -5116,6 +5096,26 @@ clock
 
 # end
 # entity
+e_clock_counter
+# storage
+db|e_clock.(24).cnf
+db|e_clock.(24).cnf
+# case_insensitive
+# source_file
+e_clock_counter.bdf
+6fd8f886a379d4301779cea1f8336917
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+e_clock_counter:inst14
+}
+# macro_sequence
+
+# end
+# entity
 e_clock
 # storage
 db|e_clock.(0).cnf
@@ -5123,7 +5123,7 @@ db|e_clock.(0).cnf
 # case_insensitive
 # source_file
 e_clock.bdf
-42ecdce964d889183d9d587e3e05980
+1dd91198a0f7d07978a03f87391f7499
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
