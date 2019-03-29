@@ -107,7 +107,7 @@ set_location_assignment PIN_80 -to SetAlarm
 set_location_assignment PIN_81 -to SetTime
 set_location_assignment PIN_57 -to SoundCLK
 set_location_assignment PIN_52 -to Speaker
-set_location_assignment PIN_65 -to StopCounter
+set_location_assignment PIN_61 -to StopCounter
 set_location_assignment PIN_58 -to CLK
 set_location_assignment PIN_70 -to CLR
 set_location_assignment PIN_79 -to choose

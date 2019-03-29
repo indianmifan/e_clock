@@ -78,8 +78,6 @@ ON
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20
-time_core:inst10|lpm_compare1:inst20
-time_core:inst8|lpm_compare1:inst20
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -667,8 +665,6 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-time_core:inst10|counter_60_160:inst1
-time_core:inst10|counter_60_160:inst3
 time_core:inst8|counter_60_160:inst1
 time_core:inst8|counter_60_160:inst3
 }
@@ -718,7 +714,6 @@ ON
 }
 # hierarchies {
 e_clock_counter:inst14|BCD_seven:inst2
-time_core:inst10|BCD_seven:inst2
 time_core:inst8|BCD_seven:inst2
 }
 # lmf
@@ -753,8 +748,6 @@ ON
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19
-time_core:inst10|lpm_compare2:inst19
-time_core:inst8|lpm_compare2:inst19
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -2761,29 +2754,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-time_core:inst10|counter_24_160:inst8
 time_core:inst8|counter_24_160:inst8
-}
-# macro_sequence
-
-# end
-# entity
-time_core
-# storage
-db|e_clock.(7).cnf
-db|e_clock.(7).cnf
-# case_insensitive
-# source_file
-time_core.bdf
-bf24acec8985b919327be406379a278
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-time_core:inst10
-time_core:inst8
 }
 # macro_sequence
 
@@ -2981,8 +2952,6 @@ datab13
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component
-time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component
-time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -3144,8 +3113,6 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
-time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
-time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
 
@@ -3331,8 +3298,6 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
 
@@ -3372,14 +3337,6 @@ SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:aeb
 SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
-time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 }
 # macro_sequence
 
@@ -3399,12 +3356,6 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-time_core:inst10|counter_60_160:inst1|74160:inst1
-time_core:inst10|counter_60_160:inst1|74160:inst
-time_core:inst10|counter_60_160:inst3|74160:inst1
-time_core:inst10|counter_60_160:inst3|74160:inst
-time_core:inst10|counter_24_160:inst8|74160:inst1
-time_core:inst10|counter_24_160:inst8|74160:inst
 time_core:inst8|counter_60_160:inst1|74160:inst1
 time_core:inst8|counter_60_160:inst1|74160:inst
 time_core:inst8|counter_60_160:inst3|74160:inst1
@@ -3656,8 +3607,6 @@ datab21
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component
-time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component
-time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -3867,8 +3816,6 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
-time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
-time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator
 }
 # macro_sequence
 
@@ -4102,8 +4049,6 @@ aeb
 }
 # hierarchies {
 SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 }
 # macro_sequence
 
@@ -5119,26 +5064,6 @@ clock
 
 # end
 # entity
-e_clock_counter
-# storage
-db|e_clock.(24).cnf
-db|e_clock.(24).cnf
-# case_insensitive
-# source_file
-e_clock_counter.bdf
-6fd8f886a379d4301779cea1f8336917
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-e_clock_counter:inst14
-}
-# macro_sequence
-
-# end
-# entity
 SoundCtr
 # storage
 db|e_clock.(45).cnf
@@ -5166,7 +5091,7 @@ db|e_clock.(0).cnf
 # case_insensitive
 # source_file
 e_clock.bdf
-c1d2c27b32e5846a3a4dbeb25ab5d561
+52b77b1b9f59df849f21d238302fa1aa
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -5174,6 +5099,46 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+e_clock_counter
+# storage
+db|e_clock.(7).cnf
+db|e_clock.(7).cnf
+# case_insensitive
+# source_file
+e_clock_counter.bdf
+ec94ae688db9b8cca31557fd53fa022
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+e_clock_counter:inst14
+}
+# macro_sequence
+
+# end
+# entity
+time_core
+# storage
+db|e_clock.(24).cnf
+db|e_clock.(24).cnf
+# case_insensitive
+# source_file
+time_core.bdf
+c586ebf651fe112226b34284f5cbe77
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+time_core:inst8
 }
 # macro_sequence
 

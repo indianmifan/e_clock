@@ -120,7 +120,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2088 304 2136 320))
+	(annotation_block (location)(rect 2096 312 2144 328))
 )
 (pin
 	(input)
@@ -188,7 +188,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2240 -656 2288 -640))
+	(annotation_block (location)(rect 2640 400 2688 416))
 )
 (pin
 	(input)
@@ -206,7 +206,7 @@ applicable agreement for further details.
 	)
 	(flipx)
 	(text "VCC" (rect 136 -1 156 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2984 -688 3032 -672))
+	(annotation_block (location)(rect 2584 440 2632 456))
 )
 (pin
 	(input)
@@ -223,7 +223,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 2088 256 2136 272))
+	(annotation_block (location)(rect 2152 216 2200 232))
 )
 (pin
 	(output)
@@ -890,10 +890,6 @@ applicable agreement for further details.
 	(pt 2016 -208)
 )
 (connector
-	(pt 2248 -144)
-	(pt 2304 -144)
-)
-(connector
 	(text "SetTime" (rect 2475 -160 2515 -148)(font "Arial" ))
 	(pt 2304 -144)
 	(pt 2680 -144)
@@ -1201,19 +1197,13 @@ applicable agreement for further details.
 	(pt 2664 296)
 )
 (connector
-	(pt 2304 320)
-	(pt 2312 320)
-)
-(connector
 	(pt 2312 320)
 	(pt 2520 320)
 )
 (junction (pt 2544 -208))
 (junction (pt 2528 -192))
 (junction (pt 2512 -176))
-(junction (pt 2304 -144))
 (junction (pt 2496 -160))
 (junction (pt 2984 -40))
 (junction (pt 2968 -208))
 (junction (pt 2392 224))
-(junction (pt 2312 320))

@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for e_clock
-Fri Mar 29 11:44:22 2019
+Fri Mar 29 15:11:31 2019
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -2638,7 +2638,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Mar 29 11:44:22 2019
+    Info: Processing started: Fri Mar 29 15:11:31 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off e_clock -c e_clock
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
@@ -2654,16 +2654,16 @@ Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "StopCounter" is an undefined clock
     Info: Assuming node "SetAlarm" is an undefined clock
     Info: Assuming node "SetDir" is an undefined clock
-Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+Warning: Found 68 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q1[2]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q0[2]~reg0" as buffer
     Info: Detected gated clock "e_clock_counter:inst14|inst15~3sexp" as buffer
+    Info: Detected gated clock "e_clock_counter:inst14|inst20~6" as buffer
+    Info: Detected gated clock "e_clock_counter:inst14|inst29~63" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[2]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[0]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[1]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst18|q1[3]~reg0" as buffer
-    Info: Detected gated clock "e_clock_counter:inst14|inst20~5" as buffer
-    Info: Detected gated clock "e_clock_counter:inst14|inst29~62" as buffer
     Info: Detected gated clock "e_clock_counter:inst14|inst20~3sexp" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|C" as buffer
     Info: Detected gated clock "e_clock_counter:inst14|inst29~52" as buffer
@@ -2679,9 +2679,9 @@ Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or ga
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q1[3]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0" as buffer
+    Info: Detected gated clock "e_clock_counter:inst14|inst25~86" as buffer
+    Info: Detected gated clock "e_clock_counter:inst14|inst25~85" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|q1[2]~reg0" as buffer
-    Info: Detected gated clock "e_clock_counter:inst14|inst25~83" as buffer
-    Info: Detected gated clock "e_clock_counter:inst14|inst25~82" as buffer
     Info: Detected ripple clock "e_clock_counter:inst14|counter60_counter:inst|q0[1]~reg0" as buffer
     Info: Detected gated clock "e_clock_counter:inst14|inst25~69sexp" as buffer
     Info: Detected gated clock "e_clock_counter:inst14|inst25~67sexp" as buffer
@@ -2695,9 +2695,13 @@ Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or ga
     Info: Detected gated clock "inst29~2" as buffer
     Info: Detected ripple clock "inst6" as buffer
     Info: Detected gated clock "time_core:inst8|inst15~3sexp" as buffer
-    Info: Detected gated clock "time_core:inst8|counter_60_160:inst3|74160:inst|49~18" as buffer
+    Info: Detected gated clock "time_core:inst8|counter_60_160:inst3|74160:inst|49~19" as buffer
     Info: Detected gated clock "time_core:inst8|inst17~2sexp" as buffer
-    Info: Detected gated clock "time_core:inst8|counter_60_160:inst1|74160:inst|49~18" as buffer
+    Info: Detected gated clock "time_core:inst8|counter_60_160:inst1|74160:inst|49~19" as buffer
+    Info: Detected gated clock "time_core:inst8|inst25~54" as buffer
+    Info: Detected gated clock "time_core:inst8|inst25~53" as buffer
+    Info: Detected gated clock "time_core:inst8|inst25~52" as buffer
+    Info: Detected gated clock "time_core:inst8|inst25~51" as buffer
     Info: Detected gated clock "time_core:inst8|inst25~30" as buffer
     Info: Detected gated clock "time_core:inst8|inst25~29" as buffer
     Info: Detected gated clock "time_core:inst8|inst25~28" as buffer
@@ -2714,268 +2718,270 @@ Warning: Found 62 node(s) in clock paths which may be acting as ripple and/or ga
     Info: Detected ripple clock "time_core:inst8|counter_60_160:inst3|74160:inst1|7" as buffer
     Info: Detected ripple clock "time_core:inst8|counter_60_160:inst3|74160:inst1|8" as buffer
     Info: Detected gated clock "time_core:inst8|counter_60_160:inst3|inst8~11sexp" as buffer
+    Info: Detected gated clock "time_core:inst8|counter_24_160:inst8|74160:inst|49~22" as buffer
     Info: Detected gated clock "time_core:inst8|counter_24_160:inst8|74160:inst|49~13" as buffer
+    Info: Detected gated clock "time_core:inst8|counter_24_160:inst8|74160:inst|49~21" as buffer
     Info: Detected ripple clock "time_core:inst8|counter_24_160:inst8|74160:inst|6" as buffer
     Info: Detected ripple clock "time_core:inst8|counter_24_160:inst8|74160:inst|9" as buffer
 Info: Clock "qd" has Internal fmax of 11.24 MHz between source register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" (period= 89.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "qd" to destination register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
         Info: - Longest clock path from clock "qd" to source register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP88; Fanout = 4; COMB Node = 'time_core:inst8|inst25~29'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP29; Fanout = 1; COMB Node = 'time_core:inst8|inst25~29'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "Set1" has Internal fmax of 11.24 MHz between source register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" (period= 89.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "Set1" to destination register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 9; CLK Node = 'Set1'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
         Info: - Longest clock path from clock "Set1" to source register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP82; Fanout = 4; COMB Node = 'time_core:inst8|inst25~30'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 9; CLK Node = 'Set1'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP27; Fanout = 1; COMB Node = 'time_core:inst8|inst25~30'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "SetTime" has Internal fmax of 11.24 MHz between source register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" (period= 89.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "SetTime" to destination register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 34; CLK Node = 'SetTime'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
         Info: - Longest clock path from clock "SetTime" to source register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP82; Fanout = 4; COMB Node = 'time_core:inst8|inst25~30'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 34; CLK Node = 'SetTime'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP27; Fanout = 1; COMB Node = 'time_core:inst8|inst25~30'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "Set2" has Internal fmax of 11.24 MHz between source register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" (period= 89.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is -76.000 ns
         Info: + Shortest clock path from clock "Set2" to destination register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 9; CLK Node = 'Set2'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
         Info: - Longest clock path from clock "Set2" to source register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP89; Fanout = 4; COMB Node = 'time_core:inst8|inst25~28'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 9; CLK Node = 'Set2'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP30; Fanout = 1; COMB Node = 'time_core:inst8|inst25~28'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "CLK" has Internal fmax of 21.28 MHz between source register "inst6" and destination register "inst6" (period= 47.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is -34.000 ns
         Info: + Shortest clock path from clock "CLK" to destination register is 52.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 51; CLK Node = 'CLK'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 52; CLK Node = 'CLK'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP33; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP41; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC36; Fanout = 62; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
             Info: Total interconnect delay = 6.000 ns ( 11.54 % )
         Info: - Longest clock path from clock "CLK" to source register is 86.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 51; CLK Node = 'CLK'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC68; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP123; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~52'
-            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
-            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 52; CLK Node = 'CLK'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP80; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~85'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP79; Fanout = 3; COMB Node = 'e_clock_counter:inst14|inst25~84'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC66; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP111; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~63'
+            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC107; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
+            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC102; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
             Info: Total interconnect delay = 10.000 ns ( 11.63 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "SoundCLK" has Internal fmax of 34.48 MHz between source register "SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]" and destination register "SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]" (period= 29.0 ns)
     Info: + Longest register to register delay is 24.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP7; Fanout = 9; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|freq[0]~38'
-        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 18.000 ns; Loc. = SEXP13; Fanout = 1; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~71'
-        Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 24.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC41; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP3; Fanout = 9; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|freq[0]~38'
+        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 18.000 ns; Loc. = SEXP12; Fanout = 1; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~71'
+        Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 24.000 ns; Loc. = LC11; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
         Info: Total cell delay = 22.000 ns ( 91.67 % )
         Info: Total interconnect delay = 2.000 ns ( 8.33 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "SoundCLK" to destination register is 10.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC10; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC11; Fanout = 10; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt[2]'
             Info: Total cell delay = 8.000 ns ( 80.00 % )
             Info: Total interconnect delay = 2.000 ns ( 20.00 % )
         Info: - Longest clock path from clock "SoundCLK" to source register is 10.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC78; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
+            Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC41; Fanout = 17; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|lpm_counter:clk_rtl_0|dffs[0]'
             Info: Total cell delay = 8.000 ns ( 80.00 % )
             Info: Total interconnect delay = 2.000 ns ( 20.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "StopCounter" has Internal fmax of 76.92 MHz between source register "inst6" and destination register "inst6" (period= 13.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "StopCounter" to destination register is 18.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_65; Fanout = 1; CLK Node = 'StopCounter'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_61; Fanout = 1; CLK Node = 'StopCounter'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 16.000 ns ( 88.89 % )
             Info: Total interconnect delay = 2.000 ns ( 11.11 % )
         Info: - Longest clock path from clock "StopCounter" to source register is 18.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_65; Fanout = 1; CLK Node = 'StopCounter'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_61; Fanout = 1; CLK Node = 'StopCounter'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 16.000 ns ( 88.89 % )
             Info: Total interconnect delay = 2.000 ns ( 11.11 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "SetAlarm" has Internal fmax of 18.18 MHz between source register "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0" and destination register "e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0" (period= 55.0 ns)
     Info: + Longest register to register delay is 16.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC113; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP122; Fanout = 1; COMB Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1~62'
-        Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 16.000 ns; Loc. = LC114; Fanout = 17; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC105; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 10.000 ns; Loc. = SEXP106; Fanout = 1; COMB Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1~62'
+        Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 16.000 ns; Loc. = LC108; Fanout = 17; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0'
         Info: Total cell delay = 14.000 ns ( 87.50 % )
         Info: Total interconnect delay = 2.000 ns ( 12.50 % )
     Info: - Smallest clock skew is -34.000 ns
         Info: + Shortest clock path from clock "SetAlarm" to destination register is 26.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_80; Fanout = 32; CLK Node = 'SetAlarm'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP115; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 26.000 ns; Loc. = LC114; Fanout = 17; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP97; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 26.000 ns; Loc. = LC108; Fanout = 17; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[0]~reg0'
             Info: Total cell delay = 24.000 ns ( 92.31 % )
             Info: Total interconnect delay = 2.000 ns ( 7.69 % )
         Info: - Longest clock path from clock "SetAlarm" to source register is 60.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_80; Fanout = 32; CLK Node = 'SetAlarm'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC68; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP123; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~52'
-            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
-            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-            Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 60.000 ns; Loc. = LC113; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~86'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP79; Fanout = 3; COMB Node = 'e_clock_counter:inst14|inst25~84'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC66; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP111; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~63'
+            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC107; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
+            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+            Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 60.000 ns; Loc. = LC105; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
             Info: Total cell delay = 54.000 ns ( 90.00 % )
             Info: Total interconnect delay = 6.000 ns ( 10.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: Clock "SetDir" has Internal fmax of 76.92 MHz between source register "inst6" and destination register "inst6" (period= 13.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "SetDir" to destination register is 27.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
-            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 23.000 ns ( 85.19 % )
             Info: Total interconnect delay = 4.000 ns ( 14.81 % )
         Info: - Longest clock path from clock "SetDir" to source register is 27.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
-            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 11.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 3: + IC(2.000 ns) + CELL(8.000 ns) = 21.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 4: + IC(0.000 ns) + CELL(6.000 ns) = 27.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 23.000 ns ( 85.19 % )
             Info: Total interconnect delay = 4.000 ns ( 14.81 % )
     Info: + Micro clock to output delay of source is 1.000 ns
@@ -2984,177 +2990,177 @@ Warning: Circuit may not operate. Detected 153 non-operational path(s) clocked b
 Info: Found hold time violation between source  pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" for clock "qd" (Hold time is 71.0 ns)
     Info: + Largest clock skew is 76.000 ns
         Info: + Longest clock path from clock "qd" to destination register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP88; Fanout = 4; COMB Node = 'time_core:inst8|inst25~29'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP29; Fanout = 1; COMB Node = 'time_core:inst8|inst25~29'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "qd" to source register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Warning: Circuit may not operate. Detected 153 non-operational path(s) clocked by clock "Set1" with clock skew larger than data delay. See Compilation Report for details.
 Info: Found hold time violation between source  pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" for clock "Set1" (Hold time is 71.0 ns)
     Info: + Largest clock skew is 76.000 ns
         Info: + Longest clock path from clock "Set1" to destination register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP82; Fanout = 4; COMB Node = 'time_core:inst8|inst25~30'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 9; CLK Node = 'Set1'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP27; Fanout = 1; COMB Node = 'time_core:inst8|inst25~30'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "Set1" to source register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 8; CLK Node = 'Set1'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_63; Fanout = 9; CLK Node = 'Set1'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Warning: Circuit may not operate. Detected 44 non-operational path(s) clocked by clock "SetTime" with clock skew larger than data delay. See Compilation Report for details.
 Info: Found hold time violation between source  pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" for clock "SetTime" (Hold time is 71.0 ns)
     Info: + Largest clock skew is 76.000 ns
         Info: + Longest clock path from clock "SetTime" to destination register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP82; Fanout = 4; COMB Node = 'time_core:inst8|inst25~30'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 34; CLK Node = 'SetTime'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP27; Fanout = 1; COMB Node = 'time_core:inst8|inst25~30'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "SetTime" to source register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 34; CLK Node = 'SetTime'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Warning: Circuit may not operate. Detected 153 non-operational path(s) clocked by clock "Set2" with clock skew larger than data delay. See Compilation Report for details.
 Info: Found hold time violation between source  pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" and destination pin or register "time_core:inst8|counter_24_160:inst8|74160:inst1|6" for clock "Set2" (Hold time is 71.0 ns)
     Info: + Largest clock skew is 76.000 ns
         Info: + Longest clock path from clock "Set2" to destination register is 119.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP89; Fanout = 4; COMB Node = 'time_core:inst8|inst25~28'
-            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 9; CLK Node = 'Set2'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP30; Fanout = 1; COMB Node = 'time_core:inst8|inst25~28'
+            Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+            Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+            Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+            Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+            Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+            Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+            Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+            Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 107.000 ns ( 89.92 % )
             Info: Total interconnect delay = 12.000 ns ( 10.08 % )
         Info: - Shortest clock path from clock "Set2" to source register is 43.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 8; CLK Node = 'Set2'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP101; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_64; Fanout = 9; CLK Node = 'Set2'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP117; Fanout = 1; COMB Node = 'time_core:inst8|inst15~3sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP14; Fanout = 2; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
+            Info: 6: + IC(0.000 ns) + CELL(6.000 ns) = 43.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
             Info: Total cell delay = 39.000 ns ( 90.70 % )
             Info: Total interconnect delay = 4.000 ns ( 9.30 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC108; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC3; Fanout = 9; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Warning: Circuit may not operate. Detected 1 non-operational path(s) clocked by clock "CLK" with clock skew larger than data delay. See Compilation Report for details.
 Info: Found hold time violation between source  pin or register "inst6" and destination pin or register "inst6" for clock "CLK" (Hold time is 29.0 ns)
     Info: + Largest clock skew is 34.000 ns
         Info: + Longest clock path from clock "CLK" to destination register is 86.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 51; CLK Node = 'CLK'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC68; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP123; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~52'
-            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
-            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 52; CLK Node = 'CLK'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP80; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~85'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP79; Fanout = 3; COMB Node = 'e_clock_counter:inst14|inst25~84'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC66; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP111; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~63'
+            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC107; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
+            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC102; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
             Info: Total interconnect delay = 10.000 ns ( 11.63 % )
         Info: - Shortest clock path from clock "CLK" to source register is 52.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 51; CLK Node = 'CLK'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP67; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_58; Fanout = 52; CLK Node = 'CLK'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP33; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~67sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP41; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC36; Fanout = 62; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
             Info: Total interconnect delay = 6.000 ns ( 11.54 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Warning: Circuit may not operate. Detected 109 non-operational path(s) clocked by clock "SetAlarm" with clock skew larger than data delay. See Compilation Report for details.
@@ -3162,106 +3168,106 @@ Info: Found hold time violation between source  pin or register "inst6" and dest
     Info: + Largest clock skew is 34.000 ns
         Info: + Longest clock path from clock "SetAlarm" to destination register is 86.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_80; Fanout = 32; CLK Node = 'SetAlarm'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC68; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
-            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP123; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~52'
-            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
-            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC118; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
-            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~86'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP79; Fanout = 3; COMB Node = 'e_clock_counter:inst14|inst25~84'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC66; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
+            Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP111; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~63'
+            Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC107; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
+            Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+            Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC102; Fanout = 24; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q0[3]~reg0'
+            Info: 9: + IC(2.000 ns) + CELL(7.000 ns) = 70.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 10: + IC(2.000 ns) + CELL(8.000 ns) = 80.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 11: + IC(0.000 ns) + CELL(6.000 ns) = 86.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 76.000 ns ( 88.37 % )
             Info: Total interconnect delay = 10.000 ns ( 11.63 % )
         Info: - Shortest clock path from clock "SetAlarm" to source register is 52.000 ns
             Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_80; Fanout = 32; CLK Node = 'SetAlarm'
-            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
-            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC74; Fanout = 63; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
-            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC119; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
-            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP17; Fanout = 1; COMB Node = 'inst29~2'
-            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+            Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP35; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
+            Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP41; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
+            Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC36; Fanout = 62; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|q0[0]~reg0'
+            Info: 5: + IC(2.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC111; Fanout = 6; COMB Node = 'SoundCtr:inst31|inst11~4'
+            Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP11; Fanout = 1; COMB Node = 'inst29~2'
+            Info: 7: + IC(0.000 ns) + CELL(6.000 ns) = 52.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
             Info: Total cell delay = 46.000 ns ( 88.46 % )
             Info: Total interconnect delay = 6.000 ns ( 11.54 % )
     Info: - Micro clock to output delay of source is 1.000 ns
     Info: - Shortest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
-        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC20; Fanout = 3; REG Node = 'inst6'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
+        Info: 2: + IC(0.000 ns) + CELL(8.000 ns) = 8.000 ns; Loc. = LC10; Fanout = 3; REG Node = 'inst6'
         Info: Total cell delay = 8.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
 Info: tsu for register "SoundCtr:inst31|DigitalClock:inst15|reset" (data pin = "ALARM", clock pin = "SoundCLK") is 32.000 ns
     Info: + Longest pin to register delay is 38.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_68; Fanout = 71; PIN Node = 'ALARM'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP95; Fanout = 20; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~21'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP93; Fanout = 20; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~21'
         Info: 3: + IC(0.000 ns) + CELL(6.000 ns) = 18.000 ns; Loc. = LC83; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~38'
         Info: 4: + IC(0.000 ns) + CELL(1.000 ns) = 19.000 ns; Loc. = LC84; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~44'
         Info: 5: + IC(0.000 ns) + CELL(1.000 ns) = 20.000 ns; Loc. = LC85; Fanout = 1; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~50'
         Info: 6: + IC(0.000 ns) + CELL(2.000 ns) = 22.000 ns; Loc. = LC86; Fanout = 3; COMB Node = 'SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out~27'
-        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 32.000 ns; Loc. = SEXP3; Fanout = 3; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~52'
-        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 38.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
+        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 32.000 ns; Loc. = SEXP1; Fanout = 3; COMB Node = 'SoundCtr:inst31|DigitalClock:inst15|dotcnt~52'
+        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 38.000 ns; Loc. = LC4; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
         Info: Total cell delay = 34.000 ns ( 89.47 % )
         Info: Total interconnect delay = 4.000 ns ( 10.53 % )
     Info: + Micro setup delay of destination is 4.000 ns
     Info: - Shortest clock path from clock "SoundCLK" to destination register is 10.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_57; Fanout = 16; CLK Node = 'SoundCLK'
-        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC3; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC4; Fanout = 30; REG Node = 'SoundCtr:inst31|DigitalClock:inst15|reset'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
 Info: tco from clock "qd" to destination pin "h1[1]" through register "time_core:inst8|counter_24_160:inst8|74160:inst1|7" is 133.000 ns
     Info: + Longest clock path from clock "qd" to source register is 119.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP88; Fanout = 4; COMB Node = 'time_core:inst8|inst25~29'
-        Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC89; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
-        Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP81; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~13'
-        Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC88; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
-        Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP99; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
-        Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP107; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
-        Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC112; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
-        Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP52; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~18'
-        Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC50; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
-        Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP100; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
-        Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP105; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
-        Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC106; Fanout = 10; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
-        Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP104; Fanout = 4; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~13'
-        Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC101; Fanout = 15; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|7'
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP29; Fanout = 1; COMB Node = 'time_core:inst8|inst25~29'
+        Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC29; Fanout = 44; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|6'
+        Info: 4: + IC(2.000 ns) + CELL(8.000 ns) = 29.000 ns; Loc. = SEXP54; Fanout = 2; COMB Node = 'time_core:inst8|counter_60_160:inst1|74160:inst|49~19'
+        Info: 5: + IC(0.000 ns) + CELL(7.000 ns) = 36.000 ns; Loc. = LC52; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst1|74160:inst1|7'
+        Info: 6: + IC(2.000 ns) + CELL(8.000 ns) = 46.000 ns; Loc. = SEXP87; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst1|inst8~11sexp'
+        Info: 7: + IC(0.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP91; Fanout = 4; COMB Node = 'time_core:inst8|inst24~22'
+        Info: 8: + IC(0.000 ns) + CELL(7.000 ns) = 61.000 ns; Loc. = LC88; Fanout = 12; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|6'
+        Info: 9: + IC(2.000 ns) + CELL(8.000 ns) = 71.000 ns; Loc. = SEXP125; Fanout = 3; COMB Node = 'time_core:inst8|counter_60_160:inst3|74160:inst|49~19'
+        Info: 10: + IC(0.000 ns) + CELL(7.000 ns) = 78.000 ns; Loc. = LC128; Fanout = 13; REG Node = 'time_core:inst8|counter_60_160:inst3|74160:inst1|7'
+        Info: 11: + IC(2.000 ns) + CELL(8.000 ns) = 88.000 ns; Loc. = SEXP116; Fanout = 1; COMB Node = 'time_core:inst8|counter_60_160:inst3|inst8~11sexp'
+        Info: 12: + IC(0.000 ns) + CELL(8.000 ns) = 96.000 ns; Loc. = SEXP115; Fanout = 4; COMB Node = 'time_core:inst8|inst23~22'
+        Info: 13: + IC(0.000 ns) + CELL(7.000 ns) = 103.000 ns; Loc. = LC116; Fanout = 12; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|6'
+        Info: 14: + IC(2.000 ns) + CELL(8.000 ns) = 113.000 ns; Loc. = SEXP122; Fanout = 1; COMB Node = 'time_core:inst8|counter_24_160:inst8|74160:inst|49~22'
+        Info: 15: + IC(0.000 ns) + CELL(6.000 ns) = 119.000 ns; Loc. = LC127; Fanout = 15; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|7'
         Info: Total cell delay = 107.000 ns ( 89.92 % )
         Info: Total interconnect delay = 12.000 ns ( 10.08 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Longest register to pin delay is 13.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC101; Fanout = 15; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|7'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC127; Fanout = 15; REG Node = 'time_core:inst8|counter_24_160:inst8|74160:inst1|7'
         Info: 2: + IC(2.000 ns) + CELL(7.000 ns) = 9.000 ns; Loc. = LC19; Fanout = 1; COMB Node = 'SHOWCONTROLER:inst17|inst23[1]~279'
         Info: 3: + IC(0.000 ns) + CELL(4.000 ns) = 13.000 ns; Loc. = PIN_21; Fanout = 0; PIN Node = 'h1[1]'
         Info: Total cell delay = 11.000 ns ( 84.62 % )
         Info: Total interconnect delay = 2.000 ns ( 15.38 % )
 Info: Longest tpd from source pin "SetTime" to destination pin "s0[1]" is 23.000 ns
-    Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 30; CLK Node = 'SetTime'
-    Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP80; Fanout = 11; COMB Node = 'SHOWCONTROLER:inst17|inst17[25]~107'
+    Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_81; Fanout = 34; CLK Node = 'SetTime'
+    Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP75; Fanout = 11; COMB Node = 'SHOWCONTROLER:inst17|inst17[25]~107'
     Info: 3: + IC(0.000 ns) + CELL(7.000 ns) = 19.000 ns; Loc. = LC75; Fanout = 1; COMB Node = 'SHOWCONTROLER:inst17|inst17[21]~160'
     Info: 4: + IC(0.000 ns) + CELL(4.000 ns) = 23.000 ns; Loc. = PIN_50; Fanout = 0; PIN Node = 's0[1]'
     Info: Total cell delay = 21.000 ns ( 91.30 % )
     Info: Total interconnect delay = 2.000 ns ( 8.70 % )
 Info: th for register "e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0" (data pin = "SetDir", clock pin = "qd") is 54.000 ns
     Info: + Longest clock path from clock "qd" to destination register is 60.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 8; CLK Node = 'qd'
-        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~69sexp'
-        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP66; Fanout = 6; COMB Node = 'e_clock_counter:inst14|inst25~65'
-        Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC68; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
-        Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP123; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~52'
-        Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC122; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
-        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP119; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
-        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 60.000 ns; Loc. = LC113; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_60; Fanout = 9; CLK Node = 'qd'
+        Info: 2: + IC(2.000 ns) + CELL(8.000 ns) = 12.000 ns; Loc. = SEXP68; Fanout = 1; COMB Node = 'e_clock_counter:inst14|inst25~86'
+        Info: 3: + IC(0.000 ns) + CELL(8.000 ns) = 20.000 ns; Loc. = SEXP79; Fanout = 3; COMB Node = 'e_clock_counter:inst14|inst25~84'
+        Info: 4: + IC(0.000 ns) + CELL(7.000 ns) = 27.000 ns; Loc. = LC66; Fanout = 3; REG Node = 'e_clock_counter:inst14|counter60_counter:inst|C'
+        Info: 5: + IC(2.000 ns) + CELL(8.000 ns) = 37.000 ns; Loc. = SEXP111; Fanout = 2; COMB Node = 'e_clock_counter:inst14|inst29~63'
+        Info: 6: + IC(0.000 ns) + CELL(7.000 ns) = 44.000 ns; Loc. = LC107; Fanout = 2; REG Node = 'e_clock_counter:inst14|counter60_counter:inst18|C'
+        Info: 7: + IC(2.000 ns) + CELL(8.000 ns) = 54.000 ns; Loc. = SEXP109; Fanout = 8; COMB Node = 'e_clock_counter:inst14|inst30~46'
+        Info: 8: + IC(0.000 ns) + CELL(6.000 ns) = 60.000 ns; Loc. = LC105; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
         Info: Total cell delay = 54.000 ns ( 90.00 % )
         Info: Total interconnect delay = 6.000 ns ( 10.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
     Info: - Shortest pin to register delay is 10.000 ns
         Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_67; Fanout = 83; CLK Node = 'SetDir'
-        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC113; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC105; Fanout = 15; REG Node = 'e_clock_counter:inst14|counter24_counter:inst4|q1[1]~reg0'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 152 megabytes
-    Info: Processing ended: Fri Mar 29 11:44:22 2019
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Fri Mar 29 15:11:31 2019
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -650,11 +650,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 496 -1272)
-	(pt 488 -1272)
-	(bus)
-)
-(connector
 	(text "q00[3..0]" (rect 82 -952 125 -940)(font "Arial" ))
 	(pt 16 -936)
 	(pt 176 -936)
@@ -902,10 +897,6 @@ applicable agreement for further details.
 	(pt -504 -848)
 )
 (connector
-	(pt 360 -904)
-	(pt 360 -912)
-)
-(connector
 	(text "stop" (rect -941 -912 -920 -900)(font "Arial" ))
 	(pt -960 -896)
 	(pt -808 -896)
@@ -978,5 +969,4 @@ applicable agreement for further details.
 )
 (junction (pt -488 -848))
 (junction (pt -504 -848))
-(junction (pt 360 -904))
 (junction (pt -784 -856))

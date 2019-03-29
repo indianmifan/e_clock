@@ -1,12 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="e_clock">
-		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_7ui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|time_core:inst10|lpm_compare1:inst20|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_7ui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|time_core:inst8|lpm_compare2:inst19|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_6ui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|SoundCtr:inst31|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_v7g.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|SoundCtr:inst31|lpm_compare1:inst20|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_7ui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|SoundCtr:inst31|lpm_compare2:inst19|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_6ui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|time_core:inst10|lpm_compare2:inst19|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_6ui.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|e_clock|time_core:inst8|lpm_compare1:inst20|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_7ui.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
