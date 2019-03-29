@@ -1,0 +1,206 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 32.000 ns
+From           : ALARM
+To             : DigitalClock:inst15|dotcnt[2]
+From Clock     : --
+To Clock       : SoundCLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 133.000 ns
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+To             : h1[0]
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 23.000 ns
+From           : SetAlarm
+To             : s0[5]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 54.000 ns
+From           : aa
+To             : e_clock_counter:inst36|counter24_counter:inst4|q1[2]~reg0
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Set2'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.24 MHz ( period = 89.000 ns )
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+From Clock     : Set2
+To Clock       : Set2
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SetTime'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.24 MHz ( period = 89.000 ns )
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+From Clock     : SetTime
+To Clock       : SetTime
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Set1'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.24 MHz ( period = 89.000 ns )
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+From Clock     : Set1
+To Clock       : Set1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'qd'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.24 MHz ( period = 89.000 ns )
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|8
+From Clock     : qd
+To Clock       : qd
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SetAlarm'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.18 MHz ( period = 55.000 ns )
+From           : e_clock_counter:inst36|counter24_counter:inst4|q1[2]~reg0
+To             : e_clock_counter:inst36|counter24_counter:inst4|q1[0]~reg0
+From Clock     : SetAlarm
+To Clock       : SetAlarm
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.28 MHz ( period = 47.000 ns )
+From           : inst6
+To             : inst6
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SoundCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.48 MHz ( period = 29.000 ns )
+From           : DigitalClock:inst15|reset
+To             : DigitalClock:inst15|dotcnt[2]
+From Clock     : SoundCLK
+To Clock       : SoundCLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'aa'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 76.92 MHz ( period = 13.000 ns )
+From           : inst6
+To             : inst6
+From Clock     : aa
+To Clock       : aa
+Failed Paths   : 0
+
+Type           : Clock Setup: 'StopCounter'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 76.92 MHz ( period = 13.000 ns )
+From           : inst6
+To             : inst6
+From Clock     : StopCounter
+To Clock       : StopCounter
+Failed Paths   : 0
+
+Type           : Clock Hold: 'qd'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+From Clock     : qd
+To Clock       : qd
+Failed Paths   : 153
+
+Type           : Clock Hold: 'Set1'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+From Clock     : Set1
+To Clock       : Set1
+Failed Paths   : 153
+
+Type           : Clock Hold: 'SetTime'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+From Clock     : SetTime
+To Clock       : SetTime
+Failed Paths   : 44
+
+Type           : Clock Hold: 'Set2'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+To             : time_core:inst8|counter_24_160:inst8|74160:inst1|6
+From Clock     : Set2
+To Clock       : Set2
+Failed Paths   : 153
+
+Type           : Clock Hold: 'CLK'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst6
+To             : inst6
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 1
+
+Type           : Clock Hold: 'SetAlarm'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst6
+To             : inst6
+From Clock     : SetAlarm
+To Clock       : SetAlarm
+Failed Paths   : 109
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 613
+
+--------------------------------------------------------------------------------------
+

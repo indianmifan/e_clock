@@ -1,0 +1,9 @@
+Fitter Status : Successful - Sat Mar 09 21:09:40 2019
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : DigitalClock
+Top-level Entity Name : DigitalClock
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 63 / 128 ( 49 % )
+Total pins : 7 / 68 ( 10 % )

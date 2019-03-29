@@ -1,0 +1,529 @@
+Fitter report for DigitalClock
+Sat Mar 09 21:09:40 2019
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. Fitter Resource Utilization by Entity
+ 12. Control Signals
+ 13. Non-Global High Fan-Out Signals
+ 14. Interconnect Usage Summary
+ 15. LAB External Interconnect
+ 16. LAB Macrocells
+ 17. Parallel Expander
+ 18. Shareable Expander
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------+
+; Fitter Summary                                                   ;
++-----------------------+------------------------------------------+
+; Fitter Status         ; Successful - Sat Mar 09 21:09:40 2019    ;
+; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name         ; DigitalClock                             ;
+; Top-level Entity Name ; DigitalClock                             ;
+; Family                ; MAX7000S                                 ;
+; Device                ; EPM7128SLC84-15                          ;
+; Timing Models         ; Final                                    ;
+; Total macrocells      ; 63 / 128 ( 49 % )                        ;
+; Total pins            ; 7 / 68 ( 10 % )                          ;
++-----------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7128SLC84-15 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Use TimeQuest Timing Analyzer                                              ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; On              ; On            ;
+; Limit to One Fitting Attempt                                               ; Off             ; Off           ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
+; Use Best Effort Settings for Compilation                                   ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in H:/DigitalClock/output_files/DigitalClock.pin.
+
+
++-------------------------------------------------------+
+; Fitter Resource Usage Summary                         ;
++-----------------------------------+-------------------+
+; Resource                          ; Usage             ;
++-----------------------------------+-------------------+
+; Logic cells                       ; 63 / 128 ( 49 % ) ;
+; Registers                         ; 40 / 128 ( 31 % ) ;
+; Number of pterms used             ; 247               ;
+; User inserted logic elements      ; 0                 ;
+; I/O pins                          ; 7 / 68 ( 10 % )   ;
+;     -- Clock pins                 ; 0 / 2 ( 0 % )     ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )     ;
+; Global signals                    ; 0                 ;
+; Shareable expanders               ; 25 / 128 ( 20 % ) ;
+; Parallel expanders                ; 14 / 120 ( 12 % ) ;
+; Cells using turbo bit             ; 63 / 128 ( 49 % ) ;
+; Maximum fan-out node              ; clk[0]            ;
+; Maximum fan-out                   ; 43                ;
+; Highest non-global fan-out signal ; clk[0]            ;
+; Highest non-global fan-out        ; 43                ;
+; Total fan-out                     ; 1158              ;
+; Average fan-out                   ; 12.19             ;
++-----------------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                     ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; soundclk ; 56    ; --       ; 6   ; 40                    ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; turnOn   ; 65    ; --       ; 7   ; 8                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                              ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; spk  ; 52    ; --       ; 5   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
++------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 4        ; 3          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 5        ; 4          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 6        ; 5          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 8        ; 7          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 9        ; 8          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 10       ; 9          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 11       ; 10         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 12       ; 11         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
+; 15       ; 14         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 16       ; 15         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 17       ; 16         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 18       ; 17         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 19       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 22       ; 21         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 23       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
+; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 27       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 28       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 29       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 30       ; 29         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 31       ; 30         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 32       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 36       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 37       ; 36         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 38       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
+; 44       ; 43         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 45       ; 44         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 46       ; 45         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 47       ; 46         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 48       ; 47         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 49       ; 48         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 50       ; 49         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 51       ; 50         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 52       ; 51         ; --       ; spk            ; output ; TTL          ;         ; Y               ;
+; 53       ; 52         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 54       ; 53         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 55       ; 54         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 56       ; 55         ; --       ; soundclk       ; input  ; TTL          ;         ; Y               ;
+; 57       ; 56         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 58       ; 57         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 59       ; 58         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 60       ; 59         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 61       ; 60         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 62       ; 61         ; --       ; TCK            ; input  ; TTL          ;         ; N               ;
+; 63       ; 62         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 64       ; 63         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 65       ; 64         ; --       ; turnOn         ; input  ; TTL          ;         ; Y               ;
+; 66       ; 65         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 67       ; 66         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 68       ; 67         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 69       ; 68         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 70       ; 69         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 71       ; 70         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
+; 72       ; 71         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 73       ; 72         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 74       ; 73         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 75       ; 74         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 76       ; 75         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 77       ; 76         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 78       ; 77         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
+; 79       ; 78         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 80       ; 79         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 81       ; 80         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 82       ; 81         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 83       ; 82         ; --       ; GND+           ;        ;              ;         ;                 ;
+; 84       ; 83         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                           ;
++------------------------------------+------------+------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Macrocells ; Pins ; Full Hierarchy Name                                                     ; Library Name ;
++------------------------------------+------------+------+-------------------------------------------------------------------------+--------------+
+; |DigitalClock                      ; 63         ; 7    ; |DigitalClock                                                           ; work         ;
+;    |lpm_add_sub:Add2|              ; 5          ; 0    ; |DigitalClock|lpm_add_sub:Add2                                          ; work         ;
+;       |addcore:adder[0]|           ; 5          ; 0    ; |DigitalClock|lpm_add_sub:Add2|addcore:adder[0]                         ; work         ;
+;          |a_csnbuffer:result_node| ; 5          ; 0    ; |DigitalClock|lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node ; work         ;
++------------------------------------+------------+------+-------------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------+
+; Control Signals                                                                          ;
++----------+----------+---------+-------+--------+----------------------+------------------+
+; Name     ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
++----------+----------+---------+-------+--------+----------------------+------------------+
+; soundclk ; PIN_56   ; 40      ; Clock ; no     ; --                   ; --               ;
++----------+----------+---------+-------+--------+----------------------+------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++-------------------+-------------+
+; Name              ; Fan-Out     ;
++-------------------+-------------+
+; reset             ; 43          ;
+; clk[1]            ; 43          ;
+; clk[0]            ; 43          ;
+; clk[2]            ; 42          ;
+; clk[3]            ; 41          ;
+; soundclk          ; 40          ;
+; clk[4]            ; 40          ;
+; clk[5]            ; 39          ;
+; clk[7]            ; 38          ;
+; clk[6]            ; 38          ;
+; clk[9]            ; 36          ;
+; clk[8]            ; 36          ;
+; clk[13]           ; 35          ;
+; clk[12]           ; 35          ;
+; clk[11]           ; 35          ;
+; clk[10]           ; 35          ;
+; clk[14]           ; 34          ;
+; clk[15]           ; 33          ;
+; freq[5]           ; 28          ;
+; freq[4]           ; 26          ;
+; freq[3]           ; 26          ;
+; freq[6]           ; 25          ;
+; freq[1]           ; 25          ;
+; freq[7]           ; 24          ;
+; dotcnt[1]         ; 24          ;
+; dotcnt[3]         ; 22          ;
+; freq[0]           ; 18          ;
+; dotcnt[2]         ; 17          ;
+; dotcnt[0]         ; 17          ;
+; soundcnt[1]       ; 14          ;
+; soundcnt[0]       ; 14          ;
+; songcnt[0]        ; 13          ;
+; soundcnt[5]       ; 12          ;
+; songcnt[1]        ; 12          ;
+; soundcnt[3]       ; 11          ;
+; soundcnt[2]       ; 11          ;
+; soundcnt[4]       ; 10          ;
+; songcnt[2]        ; 10          ;
+; turnOn            ; 8           ;
+; soundcnt[6]       ; 8           ;
+; Equal3~17sexp2bal ; 7           ;
+; Equal3~9sexp1bal  ; 7           ;
+; soundcnt[7]       ; 7           ;
+; Equal3~37         ; 7           ;
+; Equal3~33         ; 7           ;
+; Equal3~29sexp2    ; 4           ;
+; Equal3~29sexp1    ; 4           ;
+; soundcnt~53sexp   ; 4           ;
+; Equal3~42         ; 3           ;
+; Equal3~41         ; 3           ;
++-------------------+-------------+
+
+
++-------------------------------------------------+
+; Interconnect Usage Summary                      ;
++----------------------------+--------------------+
+; Interconnect Resource Type ; Usage              ;
++----------------------------+--------------------+
+; Output enables             ; 0 / 6 ( 0 % )      ;
+; PIA buffers                ; 124 / 288 ( 43 % ) ;
+; PIAs                       ; 127 / 288 ( 44 % ) ;
++----------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB External Interconnect                                                   ;
++-----------------------------------------------+-----------------------------+
+; LAB External Interconnects  (Average = 15.88) ; Number of LABs  (Total = 5) ;
++-----------------------------------------------+-----------------------------+
+; 0 - 2                                         ; 3                           ;
+; 3 - 5                                         ; 0                           ;
+; 6 - 8                                         ; 0                           ;
+; 9 - 11                                        ; 1                           ;
+; 12 - 14                                       ; 0                           ;
+; 15 - 17                                       ; 0                           ;
+; 18 - 20                                       ; 0                           ;
+; 21 - 23                                       ; 0                           ;
+; 24 - 26                                       ; 1                           ;
+; 27 - 29                                       ; 2                           ;
+; 30 - 32                                       ; 1                           ;
++-----------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 7.88) ; Number of LABs  (Total = 5) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 3                           ;
+; 1                                      ; 1                           ;
+; 2                                      ; 0                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 0                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 0                           ;
+; 14                                     ; 0                           ;
+; 15                                     ; 2                           ;
+; 16                                     ; 2                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 9                            ;
+; 2                        ; 1                            ;
+; 3                        ; 1                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 3.13) ; Number of LABs  (Total = 3) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 5                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 0                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 2                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 0                           ;
+; 11                                              ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                 ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC12       ; clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[2], reset, dotcnt[1], dotcnt[3], turnOn, songcnt[0], soundclk                                                                                                                                                            ; songcnt[0], songcnt[1], songcnt[2]~29, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC1        ; dotcnt[0], dotcnt[2], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[7], dotcnt[1]                                                                                                                                                                                 ; freq[7]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC13       ; songcnt[0], clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[2], reset, dotcnt[1], songcnt[1], dotcnt[3], songcnt[1]~21, turnOn, soundclk                                                                                                                                 ; songcnt[1], songcnt[2]~29, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC10       ; songcnt[2]~36, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], songcnt[0], dotcnt[2], reset, dotcnt[1], songcnt[2], dotcnt[3], songcnt[1], songcnt[2]~27, turnOn, songcnt[2]~28, songcnt[2]~29, soundclk                                                                        ; songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  A  ; LC11       ; reset, turnOn, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                                                                                     ; dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~28, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], soundcnt[0], soundcnt[1], soundcnt[2], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, soundcnt[0]~105, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, soundcnt~53sexp, songcnt[2]~36, soundcnt~131                                                                                                                 ;
+;  A  ; LC2        ; freq[7]~105, dotcnt[3], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[7], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                           ; freq[7], soundcnt[0]~34, soundcnt[0]~35, soundcnt[0]~36, soundcnt[0]~37, soundcnt[0]~38, soundcnt[0]~39, Equal3~37, soundcnt[2]~62, soundcnt[2], freq[7]~105, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~125, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC4        ; freq[1]~88, dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[1], dotcnt[2], dotcnt[1], dotcnt[3], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                            ; freq[1], soundcnt[0]~34, soundcnt[0]~36, soundcnt[0]~37, soundcnt[0]~38, soundcnt[0]~39, soundcnt[0]~40, soundcnt[2]~62, soundcnt[2]~63, soundcnt[2], freq[1]~88, soundcnt[0]~107, soundcnt[0]~113, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt[0], Equal3~9sexp1bal, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                                           ;
+;  A  ; LC6        ; freq[3]~91, dotcnt[3], dotcnt[1], dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[3], dotcnt[2], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                            ; freq[3], soundcnt[0]~34, soundcnt[0]~35, soundcnt[0]~37, soundcnt[0]~38, soundcnt[0]~39, soundcnt[0]~40, soundcnt[2]~62, soundcnt[2], freq[3]~91, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt[0], Equal3~17sexp2bal, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                        ;
+;  A  ; LC16       ; dotcnt[0], dotcnt[2], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[3], dotcnt[1], dotcnt~22, turnOn, dotcnt~23, soundclk                                                                                                                                       ; dotcnt[3], dotcnt[0], dotcnt~37, dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~28, songcnt[2], freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], freq[0]~84, freq[1]~88, freq[3]~91, freq[5]~99, freq[6]~103, songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC8        ; dotcnt~50, dotcnt[3], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[2], dotcnt[0], turnOn, soundclk                                                                                                                                                             ; dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], freq[0]~84, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC15       ; reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[0], dotcnt[1], dotcnt~22, turnOn, dotcnt~37, soundclk                                                                                                                                                             ; dotcnt~23, dotcnt[3], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~28, songcnt[2], freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  A  ; LC14       ; reset, dotcnt[2], clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[1], dotcnt[0], dotcnt[3], dotcnt~22, turnOn, soundclk                                                                                                                                                  ; dotcnt~23, dotcnt[3], dotcnt[0], dotcnt~37, dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~28, songcnt[2], freq[0], freq[1], freq[3], freq[7], freq[3]~91, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+;  A  ; LC7        ; dotcnt[1], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15]                                                                                                                                                                                                                ; dotcnt[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  A  ; LC9        ; songcnt[0], songcnt[2], songcnt[1], clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt[2], reset, dotcnt[1], dotcnt[3]                                                                                                                                                      ; songcnt[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  A  ; LC3        ; dotcnt[1], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[1], dotcnt[3]                                                                                                                                                                                            ; freq[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC5        ; dotcnt[3], dotcnt[1], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[3], dotcnt[0], dotcnt[2]                                                                                                                                                                      ; freq[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  B  ; LC23       ; clk[6], clk[5], clk[4], clk[3], clk[2], clk[0], clk[1], clk[7], soundclk                                                                                                                                                                                                                                                                                              ; clk[0], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                        ;
+;  B  ; LC19       ; soundcnt[2]~125, soundcnt[1], soundcnt[2], reset, freq[7], soundcnt[7], freq[1], freq[0], freq[3], freq[4], freq[5], freq[6], soundcnt[2]~62, soundcnt[0], soundcnt[2]~63, soundclk                                                                                                                                                                                   ; soundcnt[2], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[3]~8, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[2]~119, soundcnt[2]~125, soundcnt[0], Equal3~9sexp1bal, Equal3~17sexp2bal                                                                                                                                                                              ;
+;  B  ; LC20       ; clk[0], clk[1], clk[2], soundclk                                                                                                                                                                                                                                                                                                                                      ; clk[0], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                        ;
+;  B  ; LC21       ; clk[2], clk[0], clk[1], clk[3], soundclk                                                                                                                                                                                                                                                                                                                              ; clk[0], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                ;
+;  B  ; LC24       ; clk[3], clk[2], clk[0], clk[1], clk[4], soundclk                                                                                                                                                                                                                                                                                                                      ; clk[0], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                        ;
+;  B  ; LC26       ; clk[4], clk[3], clk[2], clk[0], clk[1], clk[5], soundclk                                                                                                                                                                                                                                                                                                              ; clk[0], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                ;
+;  B  ; LC22       ; clk[6], clk[7], clk[4], clk[5], clk[2], clk[3], clk[0], clk[1], soundclk                                                                                                                                                                                                                                                                                              ; clk[0], clk[6], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                        ;
+;  B  ; LC27       ; Equal3~33, Equal3~37, reset, soundcnt[1], soundclk, soundcnt~53sexp, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp1, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp2, Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~29sexp1, Equal3~29sexp2 ; soundcnt[1], soundcnt[2], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[3]~8, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[0]~107, soundcnt[2]~119, soundcnt[2]~125, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp1, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp2, soundcnt[0], Equal3~9sexp1bal     ;
+;  B  ; LC28       ; Equal3~33, Equal3~37, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, reset, soundcnt[5], soundclk, soundcnt~53sexp, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~29sexp1, Equal3~29sexp2                                                                                    ; lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, soundcnt[5], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, Equal3~29sexp1, Equal3~29sexp2, soundcnt[0]~107, Equal3~41, Equal3~42                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC30       ; Equal3~33, Equal3~37, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, reset, soundcnt[6], soundclk, soundcnt~53sexp, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~29sexp1, Equal3~29sexp2                                                                                    ; Equal3~33, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, soundcnt[6], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, soundcnt[0]~107                                                                                                                                                                                                                                                                                                                                                                                                                   ;
+;  B  ; LC31       ; Equal3~33, Equal3~37, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, reset, soundcnt[7], soundclk, soundcnt~53sexp, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~29sexp1, Equal3~29sexp2                                                                                    ; Equal3~37, soundcnt[2], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[7], soundcnt[0]~113, soundcnt[2]~125, soundcnt[0]~107                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  B  ; LC17       ; soundcnt[2], reset, soundcnt[0], soundcnt[1], freq[6], soundcnt[6], freq[5], soundcnt[5], freq[4], soundcnt[4], freq[3], soundcnt[3]                                                                                                                                                                                                                                  ; soundcnt[2]~125                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  B  ; LC18       ; soundcnt[2]~119, soundcnt[1], soundcnt[2], reset, freq[7], soundcnt[7], freq[3], soundcnt[3], freq[4], soundcnt[4], freq[5], soundcnt[5], freq[6], soundcnt[6]                                                                                                                                                                                                        ; soundcnt[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  B  ; LC25       ; soundcnt[0], freq[0], soundcnt[1], freq[1], soundcnt[2]                                                                                                                                                                                                                                                                                                               ; soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  B  ; LC29       ; soundcnt[2], freq[0], soundcnt[3], freq[3], soundcnt[4], freq[4]                                                                                                                                                                                                                                                                                                      ; soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC41       ; clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], clk[0], soundclk                                                                                                                                                                                                                        ; clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                ;
+;  C  ; LC42       ; clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], clk[0], clk[1], clk[5], clk[2], clk[3], clk[4], clk[6], soundclk                                                                                                                                                                                                                        ; clk[0], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                        ;
+;  C  ; LC43       ; clk[11], clk[12], clk[13], clk[14], clk[15], clk[0], clk[5], clk[3], clk[1], clk[9], clk[2], clk[4], clk[6], clk[7], clk[8], clk[10], soundclk                                                                                                                                                                                                                        ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                ;
+;  C  ; LC44       ; clk[12], clk[13], clk[14], clk[15], clk[0], clk[5], clk[3], clk[1], clk[9], clk[2], clk[4], clk[6], clk[7], clk[8], clk[10], clk[11], soundclk                                                                                                                                                                                                                        ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                ;
+;  C  ; LC45       ; clk[13], clk[14], clk[15], clk[0], clk[5], clk[3], clk[1], clk[9], clk[2], clk[4], clk[6], clk[7], clk[8], clk[10], clk[11], clk[12], soundclk                                                                                                                                                                                                                        ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                ;
+;  C  ; LC46       ; clk[12], clk[11], clk[10], clk[9], clk[8], clk[6], clk[7], clk[4], clk[5], clk[2], clk[3], clk[0], clk[1], clk[13], soundclk                                                                                                                                                                                                                                          ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                ;
+;  C  ; LC39       ; dotcnt[3], dotcnt[1], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[0], dotcnt[0]                                                                                                                                                                                 ; freq[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC48       ; clk[13], clk[12], clk[11], clk[10], clk[9], clk[8], clk[6], clk[7], clk[4], clk[5], clk[2], clk[3], clk[0], clk[1], clk[14], soundclk                                                                                                                                                                                                                                 ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                         ;
+;  C  ; LC47       ; clk[0], clk[5], clk[3], clk[1], clk[14], clk[2], clk[4], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[15], soundclk                                                                                                                                                                                                                        ; clk[0], clk[6], clk[10], clk[11], clk[12], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                                                  ;
+;  C  ; LC37       ; dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[4]                                                                                                                                                                                                       ; freq[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC33       ; dotcnt[3], dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[5], dotcnt[1]                                                                                                                                                                                 ; freq[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC35       ; dotcnt[0], dotcnt[1], dotcnt[3], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[6]                                                                                                                                                                                 ; freq[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC40       ; freq[0]~84, dotcnt[2], dotcnt[1], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[0], dotcnt[3], dotcnt[0], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                            ; freq[0], soundcnt[2]~62, soundcnt[2]~63, soundcnt[2], freq[0]~84, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt[0]~113, Equal3~9sexp1bal, Equal3~17sexp2bal, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                                                                                                                                                      ;
+;  C  ; LC38       ; freq[4]~97, dotcnt[1], dotcnt[3], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[4], dotcnt[0], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                                       ; freq[4], soundcnt[0]~34, soundcnt[0]~35, soundcnt[0]~36, soundcnt[0]~38, soundcnt[0]~39, soundcnt[0]~40, soundcnt[0], soundcnt[2]~62, soundcnt[2], freq[4]~97, soundcnt[2]~119, soundcnt[2]~125, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt[0]~113, soundcnt[0]~105, Equal3~17sexp2bal, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                        ;
+;  C  ; LC34       ; freq[5]~99, dotcnt[3], dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[5], dotcnt[1], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                                       ; freq[5], soundcnt[0]~34, soundcnt[0]~35, soundcnt[0]~36, soundcnt[0]~37, soundcnt[0]~39, soundcnt[0]~40, soundcnt[2]~62, soundcnt[2], freq[5]~99, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, Equal3~29sexp1, Equal3~29sexp2, soundcnt~131, Equal3~41, Equal3~42, soundcnt[2]~132                                                                                                                                                                                                                                                  ;
+;  C  ; LC36       ; freq[6]~103, dotcnt[0], reset, clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], freq[6], dotcnt[1], dotcnt[3], songcnt[0], songcnt[1], songcnt[2], soundclk                                                                                                                      ; freq[6], soundcnt[0]~34, soundcnt[0]~35, soundcnt[0]~36, soundcnt[0]~37, soundcnt[0]~38, soundcnt[0]~40, Equal3~33, soundcnt[2]~62, soundcnt[2], freq[6]~103, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~119, soundcnt[2]~125, soundcnt~53sexp, soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout, soundcnt~131, soundcnt[2]~132                                                                                                                                                                                                                                                                                            ;
+;  D  ; LC52       ; clk[8], clk[6], clk[7], clk[4], clk[5], clk[2], clk[3], clk[0], clk[1], clk[9], soundclk                                                                                                                                                                                                                                                                              ; clk[0], clk[6], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                                                                        ;
+;  E  ; LC69       ; clk[0], clk[1], soundclk                                                                                                                                                                                                                                                                                                                                              ; clk[0], clk[1], clk[2], clk[3], clk[4], clk[5], clk[6], clk[7], clk[8], clk[9], clk[10], clk[11], clk[12], clk[13], clk[14], clk[15], dotcnt~22, dotcnt[3], dotcnt[0], dotcnt[1], dotcnt[2], songcnt[0], songcnt[1]~21, songcnt[1], songcnt[2]~27, songcnt[2], reset, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], dotcnt~50, freq[0]~84, freq[1]~88, freq[3]~91, freq[4]~97, freq[5]~99, freq[6]~103, freq[7]~105, songcnt[2]~36                                                                                                                                                                                                                ;
+;  E  ; LC79       ; soundcnt[2], soundcnt[1], soundcnt[0], soundcnt[3]                                                                                                                                                                                                                                                                                                                    ; soundcnt[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC72       ; Equal3~33, Equal3~37, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[3]~8, reset, soundcnt[3], soundclk, soundcnt~131, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~41, Equal3~42                                                                                                  ; lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[3]~8, soundcnt[3], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[0]~107, soundcnt[2]~119, soundcnt[2]~125, soundcnt[0], Equal3~17sexp2bal                                                                                                                                                                               ;
+;  E  ; LC75       ; soundcnt[3], soundcnt[2], soundcnt[1], soundcnt[0], soundcnt[4]                                                                                                                                                                                                                                                                                                       ; soundcnt[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC73       ; Equal3~33, Equal3~37, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, reset, soundcnt[4], soundclk, soundcnt~131, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~41, Equal3~42                                                                                                 ; lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, soundcnt[4], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[2]~119, soundcnt[2]~125, soundcnt[0], soundcnt[0]~105, Equal3~17sexp2bal                                                                                                                                                                                                                                                         ;
+;  E  ; LC76       ; soundcnt[4], soundcnt[3], soundcnt[2], soundcnt[1], soundcnt[0], soundcnt[5]                                                                                                                                                                                                                                                                                          ; soundcnt[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC70       ; soundcnt[6], freq[6]                                                                                                                                                                                                                                                                                                                                                  ; soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  E  ; LC77       ; soundcnt[5], soundcnt[4], soundcnt[3], soundcnt[2], soundcnt[1], soundcnt[0], soundcnt[6]                                                                                                                                                                                                                                                                             ; soundcnt[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC68       ; soundcnt[0]~113, soundcnt[0], reset, freq[4], soundclk, soundcnt[4], soundcnt[0]~37, soundcnt[0]~36, soundcnt[3], freq[3], soundcnt[0]~35, soundcnt[1], freq[1], soundcnt[0]~34, soundcnt[2]                                                                                                                                                                          ; soundcnt[0], soundcnt[2], lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[3]~8, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[4]~12, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[5]~16, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[6]~20, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[7]~24, soundcnt[0]~105, soundcnt[0]~107, soundcnt[0]~113, soundcnt[2]~119, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp1, lpm_add_sub:Add2|addcore:adder[0]|a_csnbuffer:result_node|sout_node[1]~0sexp2, Equal3~9sexp1bal ;
+;  E  ; LC65       ; soundcnt[0], reset, freq[4], soundcnt[4]                                                                                                                                                                                                                                                                                                                              ; soundcnt[0]~107                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  E  ; LC66       ; soundcnt[0]~105, soundcnt[0], reset, freq[1], freq[3], freq[5], freq[6], freq[7], soundcnt[1], soundcnt[3], soundcnt[7], soundcnt[6], soundcnt[5]                                                                                                                                                                                                                     ; soundcnt[0]~113                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+;  E  ; LC67       ; soundcnt[0]~107, soundcnt[0]~38, soundcnt[5], soundcnt[0], reset, freq[5], soundcnt[0]~39, soundcnt[6], freq[6], soundcnt[0]~40, soundcnt[7], freq[7], freq[1], freq[3], freq[0], freq[4]                                                                                                                                                                             ; soundcnt[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC71       ; soundcnt[7], freq[7]                                                                                                                                                                                                                                                                                                                                                  ; soundcnt[1], soundcnt[3], soundcnt[4], soundcnt[5], soundcnt[6], soundcnt[7], waveout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  E  ; LC78       ; soundcnt[6], soundcnt[5], soundcnt[4], soundcnt[3], soundcnt[2], soundcnt[1], soundcnt[0], soundcnt[7]                                                                                                                                                                                                                                                                ; soundcnt[7]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  E  ; LC80       ; reset, Equal3~33, Equal3~37, waveout, soundclk, soundcnt[2]~132, freq[0], freq[1], freq[3], freq[4], freq[5], freq[6], freq[7], Equal3~9sexp1bal, Equal3~17sexp2bal, Equal3~41, Equal3~42                                                                                                                                                                             ; waveout, spk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-----+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Sat Mar 09 21:09:39 2019
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off DigitalClock -c DigitalClock
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Selected device EPM7128SLC84-15 for design "DigitalClock"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 191 megabytes
+    Info: Processing ended: Sat Mar 09 21:09:40 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

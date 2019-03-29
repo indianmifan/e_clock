@@ -1,0 +1,37 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'soundclk'
+Slack : -13.000
+TNS   : -109.000
+
+Type  : Setup 'clk'
+Slack : -12.000
+TNS   : -96.000
+
+Type  : Hold 'clk'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Hold 'soundclk'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Recovery 'soundclk'
+Slack : -16.000
+TNS   : -144.000
+
+Type  : Removal 'soundclk'
+Slack : 9.000
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'soundclk'
+Slack : -4.500
+TNS   : -81.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -4.500
+TNS   : -72.000
+
+------------------------------------------------------------

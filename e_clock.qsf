@@ -1,0 +1,117 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 222 10/21/2009 SJ Full Version
+# Date created = 08:43:03  March 08, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		e_clock_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128SLC84-15"
+set_global_assignment -name TOP_LEVEL_ENTITY e_clock
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:43:03  MARCH 08, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name BDF_FILE e_clock.bdf
+set_global_assignment -name VHDL_FILE and_gate.vhd
+set_global_assignment -name VHDL_FILE counter60.vhd
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/e_clock/e_clock.dpf"
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_41 -to s1[3]
+set_location_assignment PIN_40 -to s1[2]
+set_location_assignment PIN_39 -to s1[1]
+set_location_assignment PIN_37 -to s1[0]
+set_location_assignment PIN_34 -to m1[3]
+set_location_assignment PIN_33 -to m1[2]
+set_location_assignment PIN_31 -to m1[1]
+set_location_assignment PIN_30 -to m1[0]
+set_location_assignment PIN_18 -to m0[3]
+set_location_assignment PIN_17 -to m0[2]
+set_location_assignment PIN_36 -to m0[1]
+set_location_assignment PIN_35 -to m0[0]
+set_global_assignment -name VHDL_FILE counter24.vhd
+set_location_assignment PIN_29 -to h0[3]
+set_location_assignment PIN_28 -to h0[2]
+set_location_assignment PIN_27 -to h0[1]
+set_location_assignment PIN_25 -to h0[0]
+set_location_assignment PIN_24 -to h1[3]
+set_location_assignment PIN_22 -to h1[2]
+set_location_assignment PIN_21 -to h1[1]
+set_location_assignment PIN_20 -to h1[0]
+set_global_assignment -name VHDL_FILE BCD_seven.vhd
+set_global_assignment -name MISC_FILE "G:/e_clock/e_clock/e_clock.dpf"
+set_location_assignment PIN_44 -to s0[6]
+set_location_assignment PIN_45 -to s0[5]
+set_location_assignment PIN_46 -to s0[4]
+set_location_assignment PIN_48 -to s0[3]
+set_location_assignment PIN_49 -to s0[2]
+set_location_assignment PIN_50 -to s0[1]
+set_location_assignment PIN_51 -to s0[0]
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/e_clock/e_clock/e_clock.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/Arduino-sse/e_clock/e_clock/e_clock.dpf"
+set_global_assignment -name BDF_FILE show.bdf
+set_global_assignment -name BDF_FILE time_core.bdf
+set_global_assignment -name BDF_FILE dmux.bdf
+set_location_assignment PIN_60 -to qd
+set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name BDF_FILE alerm.bdf
+set_global_assignment -name VHDL_FILE count_byly.vhd
+set_global_assignment -name VHDL_FILE count24_byly.vhd
+set_global_assignment -name QIP_FILE lpm_compare0.qip
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name BDF_FILE choose.bdf
+set_global_assignment -name QIP_FILE lpm_compare1.qip
+set_global_assignment -name QIP_FILE lpm_compare2.qip
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/e_clock-master/e_clock.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/ssss/e_clock-master/e_clock.dpf"
+set_global_assignment -name VHDL_FILE selshow.vhd
+set_global_assignment -name BDF_FILE SHOWCONTROLER.bdf
+set_global_assignment -name MISC_FILE "G:/ssss/e_clock-master/e_clock.dpf"
+set_location_assignment PIN_63 -to Set1
+set_location_assignment PIN_64 -to Set2
+set_location_assignment PIN_69 -to SelDir
+set_location_assignment PIN_80 -to SetAlarm
+set_location_assignment PIN_81 -to SetTime
+set_location_assignment PIN_57 -to SoundCLK
+set_location_assignment PIN_52 -to Speaker
+set_location_assignment PIN_65 -to StopCounter
+set_location_assignment PIN_58 -to CLK
+set_location_assignment PIN_70 -to CLR
+set_location_assignment PIN_79 -to choose
+set_location_assignment PIN_67 -to aa
+set_location_assignment PIN_68 -to ALARM
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/e_clock29/e_clock.dpf"

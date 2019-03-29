@@ -1,0 +1,129 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'SoundCLK'
+Slack : -61.000
+TNS   : -427.000
+
+Type  : Setup 'Set1'
+Slack : -20.000
+TNS   : -446.500
+
+Type  : Setup 'SetTime'
+Slack : -12.500
+TNS   : -112.500
+
+Type  : Setup 'time_core:inst22|counter_24_160:inst4|74160:inst|6'
+Slack : -12.000
+TNS   : -48.000
+
+Type  : Setup 'time_core:inst22|counter_60_160:inst1|74160:inst|6'
+Slack : -12.000
+TNS   : -48.000
+
+Type  : Setup 'time_core:inst22|counter_60_160:inst3|74160:inst|6'
+Slack : -12.000
+TNS   : -48.000
+
+Type  : Setup 'StopCounter'
+Slack : -12.000
+TNS   : -12.000
+
+Type  : Hold 'Set1'
+Slack : -22.000
+TNS   : -232.000
+
+Type  : Hold 'SetTime'
+Slack : -22.000
+TNS   : -232.000
+
+Type  : Hold 'SoundCLK'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Hold 'StopCounter'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Hold 'time_core:inst22|counter_24_160:inst4|74160:inst|6'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Hold 'time_core:inst22|counter_60_160:inst1|74160:inst|6'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Hold 'time_core:inst22|counter_60_160:inst3|74160:inst|6'
+Slack : 5.000
+TNS   : 0.000
+
+Type  : Recovery 'time_core:inst22|counter_24_160:inst4|74160:inst|6'
+Slack : -26.500
+TNS   : -106.000
+
+Type  : Recovery 'Set1'
+Slack : -16.500
+TNS   : -66.000
+
+Type  : Recovery 'SetTime'
+Slack : -16.500
+TNS   : -66.000
+
+Type  : Recovery 'time_core:inst22|counter_60_160:inst1|74160:inst|6'
+Slack : -16.000
+TNS   : -64.000
+
+Type  : Recovery 'time_core:inst22|counter_60_160:inst3|74160:inst|6'
+Slack : -16.000
+TNS   : -64.000
+
+Type  : Removal 'Set1'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Removal 'SetTime'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Removal 'time_core:inst22|counter_24_160:inst4|74160:inst|6'
+Slack : 9.000
+TNS   : 0.000
+
+Type  : Removal 'time_core:inst22|counter_60_160:inst1|74160:inst|6'
+Slack : 9.000
+TNS   : 0.000
+
+Type  : Removal 'time_core:inst22|counter_60_160:inst3|74160:inst|6'
+Slack : 9.000
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Set1'
+Slack : -5.500
+TNS   : -418.000
+
+Type  : Minimum Pulse Width 'SetTime'
+Slack : -5.500
+TNS   : -176.000
+
+Type  : Minimum Pulse Width 'time_core:inst22|counter_24_160:inst4|74160:inst|6'
+Slack : -5.500
+TNS   : -44.000
+
+Type  : Minimum Pulse Width 'time_core:inst22|counter_60_160:inst1|74160:inst|6'
+Slack : -5.500
+TNS   : -44.000
+
+Type  : Minimum Pulse Width 'time_core:inst22|counter_60_160:inst3|74160:inst|6'
+Slack : -5.500
+TNS   : -44.000
+
+Type  : Minimum Pulse Width 'StopCounter'
+Slack : -5.500
+TNS   : -11.000
+
+Type  : Minimum Pulse Width 'SoundCLK'
+Slack : -4.500
+TNS   : -144.000
+
+------------------------------------------------------------

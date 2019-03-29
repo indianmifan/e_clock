@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+entity alarm is port(
+	clk:in std_logic;
+	soundclk:in std_logic;	--输入时钟频率 目前为100K
+	reset:in std_logic;		--复位信号 低有效，默认应当为0
+	spk:out std_logic			--扬声器频率输出
+);
+end entity;
+architecture behav of alarm is
+signal music: std_logic;
+signal freqout:std_logic;
+signal freq:std_logic_vector(7 downto 0);
+signal soundcnt:std_logic_vector(7 downto 0);
+constant do:std_logic_vector(7 downto 0):="10111111";	--do的频率100KHz/261.6Hz/2=191.1Hz(方波周期)，二进制10111111
+constant re:std_logic_vector(7 downto 0):="10101010";	--re的频率293.7Hz，计算同上
+constant mi:std_logic_vector(7 downto 0):="10010111";	--mi的频率329.6Hz，计算同上
+constant fa:std_logic_vector(7 downto 0):="10001111";	--fa的频率349.2Hz，计算同上
+constant so:std_logic_vector(7 downto 0):="01111111";	--so的频率392Hz，计算同上
+constant la:std_logic_vector(7 downto 0):="01110001";	--la的频率440Hz，计算同上
+constant si:std_logic_vector(7 downto 0):="01100101";	--la的频率493.9Hz，计算同上
+
+begin
+	spk <= freqout;
+	music <= clk;
+	process(soundclk,reset)
+	begin
+		if reset = '1' then
+			if (soundclk='1' and soundclk'event) then
+				if music = 0 
+					then freq <= do;				--目前是两个音，可以改成自动机播放
+				else freq <= re;
+				end if;
+				
+				if freq = "00000000" 			--没有输入则不响
+					then freqout <= '0';			--假设输出低则蜂鸣器不响
+				else
+						if soundcnt = freq 		--计数器
+						then soundcnt <= "00000000";
+						freqout <= not freqout;	--输出取反，输出方波
+						else cnt <= cnt + 1;
+						end if;
+				end if;
+			end if;
+		else --复位信号有效时
+		freqout <= '0';
+		freq <= "00000000";
+		soundcnt <= "00000000";
+		end if;
+	end process;
+end architecture;
